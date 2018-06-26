@@ -1,0 +1,2 @@
+webpackJsonp([0x5d02a2a11304],{703:function(t,e){t.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/why-arent-you-using-https/"},excerpt:"~ TBC ~",timeToRead:1,frontmatter:{title:"Why aren't you using HTTPS?",category:"guidance"}}}]},site:{siteMetadata:{facebook:{appId:""}}}},pathContext:{category:"guidance"}}}});
+//# sourceMappingURL=path---category-guidance-377bb8e84c2d557edc83.js.map
