@@ -1,2 +1,0 @@
-webpackJsonp([0xd13e24b67c6b],{711:function(t,a){t.exports={data:{page:{id:"/Users/olaf/Projects/lukeoliff-homepage-gatsby/content/pages/2--starters/index.md absPath of file >>> MarkdownRemark",html:'<p><strong>HeroBlog</strong> is not my first <a href="https://www.gatsbyjs.org/">GatsbyJS</a> starter.</p>',frontmatter:{title:"Other GatsbyJS starters"}},site:{siteMetadata:{facebook:{appId:""}}}},pathContext:{slug:"/starters/"}}}});
-//# sourceMappingURL=path---starters-1f275bf9058d2e20fe80.js.map
