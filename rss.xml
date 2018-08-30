@@ -1,8 +1,114 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Luke Oliff]]></title><description><![CDATA[Luke Oliff.]]></description><link>https://lukeoliff.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 27 Jun 2018 13:32:34 GMT</lastBuildDate><item><title><![CDATA[Why aren't you using HTTPS?]]></title><description><![CDATA[~ TBC ~]]></description><link>https://lukeoliff.com/why-arent-you-using-https/</link><guid isPermaLink="false">https://lukeoliff.com/why-arent-you-using-https/</guid><content:encoded>&lt;p&gt;~ TBC ~&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Luke Oliff]]></title><description><![CDATA[Luke Oliff.]]></description><link>https://lukeoliff.com</link><generator>RSS for Node</generator><lastBuildDate>Thu, 30 Aug 2018 17:59:10 GMT</lastBuildDate><item><title><![CDATA[OAuth 2.0: The Complete Guide]]></title><description><![CDATA[This post is original content developed by me for the  Auth0’s blog  and has been re-posted here as part of an online portfolio with…]]></description><link>https://lukeoliff.com/oauth2-the-complete-guide/</link><guid isPermaLink="false">https://lukeoliff.com/oauth2-the-complete-guide/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;This post is original content developed by me for the &lt;a href=&quot;https://auth0.com/blog&quot;&gt;Auth0’s blog&lt;/a&gt; and has been re-posted here as part of an online portfolio with permission. Relevant attribution and canonical links exist. &lt;a href=&quot;%7Bhttps://auth0.com/blog/oauth2-the-complete-guide/%7D&quot;&gt;Click here to see the original&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Have you visited a site recently, where you are given the option of connecting or signing up using Google, Facebook or Twitter? Sure you have! This is basically what OAuth is all about; granting third-party services permission to do something for you–like logging you in. In this article, you will learn what OAuth is, how it started, and how it works. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; For the purposes of this article and the comfort of the target audience, OAuth is to be assumed as OAuth 2.0 unless specifically mentioning another version.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;So what is OAuth?&lt;/h2&gt;
+&lt;p&gt;OAuth (or Open Authorization) is a framework that gives users the ability to grant access to their information stored in one place, from another place. For example, granting Spotify access to your Facebook profile.&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/computer-technology-5ed9d87a0cd2e68095d3158612035a89-a3a7b.jpg&quot;
+    href=&quot;/static/spotify-signup-with-facebook-a23e46329bed98089e635349ca7ada9b-d8af2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 511px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 105.87084148727985%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAIAAADJt1n/AAAACXBIWXMAAAsSAAALEgHS3X78AAACWElEQVQ4y51SW2sTURDOzxIkvokUi5Ja2igoQsEmrVh9LF7wqfjoJQURG9O0Yq1CfWx8KZUqxlhSMDVkk5j7bq67OWv2fs7G2d12s2lMLQ6zX/ZM5tuZ8824ug7TdR2w2Wx+jEQEQbAjw8w1SH60sHBhdHQxEPiwsRHZ3FxdWVkOhSiKGvxWH5kQAgip50dGtra2vkWjn7a3v8din3d28oXCX8hwBg4mgAcOBj0PNmwnYGxQIMFlJWFCFBWrGpZVTRAVRSWAHUEWRBnQeJEgqEECpGGzQYMMP3s/yx5/cMwf9PiWvLfDsw/fT82/uXH37fT99an5Nd+9df+Dd+CTc8se/9Kl2eDF6Ze7idLBnb/G825v4MzlRffks3PXX1y983p8JjQ2E5q4Gfb4XnlvhSFyZW717LXnpyeeuL1PT40//rKb6wnWYlGpUqWZRpapUHQxU62Ap5gSYL7MpOlyminnajTqSOg33EXpqY0x1jRNVRUQzhCmS/SuKYQhDbaGaD66PVFiKuU6PBsIIhdyBZbl6vU6XaErZXjoKhhTLRaKDM1IkmSRdSfZ+jaP+Fg0lsn8oqh0MpmkUqlsNru/n0xnMvH4XuJHAiHeOW2XtRuyLKuqevwy2jWtXeiRWZbleR5C2JiisQO2GYFDNGndPvKRgsSxbcO8r3K73W40GlybAyMna75XWVEUSYKLy6CnubonrgwnUMvYXQ3/T9ss26rVagghu6tjlD/atuOPnpPh5qyss1yL41hwxCMQj2u3kTm5f1cGsiiKgiB2OgDwYpgoSfoQs+/8B05Gi2/pslIUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Spotify uses OAuth for signup with Facebook&quot;
+        title=&quot;&quot;
+        src=&quot;/static/spotify-signup-with-facebook-a23e46329bed98089e635349ca7ada9b-d8af2.png&quot;
+        srcset=&quot;/static/spotify-signup-with-facebook-a23e46329bed98089e635349ca7ada9b-cac10.png 200w,
+/static/spotify-signup-with-facebook-a23e46329bed98089e635349ca7ada9b-2419b.png 400w,
+/static/spotify-signup-with-facebook-a23e46329bed98089e635349ca7ada9b-d8af2.png 511w&quot;
+        sizes=&quot;(max-width: 511px) 100vw, 511px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;The idea is that you’re giving Spotify certain permission to access your Facebook details, so that Facebook can provide Spotify with enough information to sign you up, enhance your profile details, or display what your friends are listening to. Meanwhile, more sensitive information, such as your conversations, remain entirely closed off to Spotify. They only get access to the bits they’re &lt;em&gt;authorized&lt;/em&gt; to see.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/spotify-access-to-facebook-28f64ea328e8366ab413c1c4d63bd94b-f5af0.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 514px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 85.60311284046692%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAAsSAAALEgHS3X78AAABXklEQVQ4y62Sv04CQRDGeRAbE9/BwkYrbUx8AwsT4wuYmGBBYcIbWNpZGCgsTEw0Go1BCxoQtdEAAipw596/heNu9/ZzDohBInioc1823+3M5HeTuRj+ELExuRS72G0cekqQV/REae7Vvfj6aim58hS/4Q/0KlUwGXlPO06+7vPAnYD8+5mVCgmaphUKd+XK81uzUalWDcPopqKRda1ZLpdItVq1WCzW640giDBzx4fVgsGV1QbJdJTdhu3SDVru6ObeV3FXGU5gtsiAd+C4ocjTTdvr7WIE2Re4vMdJDue3OM0NKI+zfGgYx+DwsUEsczC3hak1zG5ieQdLCczHsZjAwjam1zGzgexjWPY5/heyJ3CUxcEV0hmkr/tKZfonSbO+I//PnmUwTkOrHkmmv8VxHMaYlDIyWUrP8/xueJ0wyAhf0KUQ4odmzjlj76bBTCsMIpsmWVvXdUoNFX8Axr/RZcFM9iAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;OAuth used by Spotify for access to Facebook&quot;
+        title=&quot;&quot;
+        src=&quot;/static/spotify-access-to-facebook-28f64ea328e8366ab413c1c4d63bd94b-f5af0.png&quot;
+        srcset=&quot;/static/spotify-access-to-facebook-28f64ea328e8366ab413c1c4d63bd94b-f77db.png 200w,
+/static/spotify-access-to-facebook-28f64ea328e8366ab413c1c4d63bd94b-4245a.png 400w,
+/static/spotify-access-to-facebook-28f64ea328e8366ab413c1c4d63bd94b-f5af0.png 514w&quot;
+        sizes=&quot;(max-width: 514px) 100vw, 514px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“Many luxury cars today come with a valet key. It is a special key you give the parking attendant and unlike your regular key, will not allow the car to drive more than a mile or two. You give someone limited access to your car with a special key, while using your regular key to unlock everything.”&lt;/em&gt; — OAuth.net&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;How did OAuth start?&lt;/h2&gt;
+&lt;p&gt;Before initiatives like OAuth appeared, you would have had to give Spotify access to your Facebook login details for Spotify to be able to access your information on Facebook.&lt;/p&gt;
+&lt;p&gt;OAuth was first developed in 2007 by a group seeking to standardize how we can delegate permissions between different software applications. The latest version, OAuth 2.0, is not backwards compatible with previous versions which have now been deprecated. Despite deprecating old versions, they remain in use widely across the web, including by one of the original drivers behind the general OAuth movement, Twitter. Some feel that it is less secure and it has been described as a &lt;a href=&quot;http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/&quot;&gt;road to hell&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;How does OAuth work?&lt;/h2&gt;
+&lt;p&gt;To understand how OAuth works, we need to understand Roles, grant types, access tokens, and refresh tokens.&lt;/p&gt;
+&lt;h3&gt;Roles&lt;/h3&gt;
+&lt;p&gt;First we need to understand how it separates the responsibility of our requests. Roles are used to define the separate entities involved in a request.&lt;/p&gt;
+&lt;h4&gt;The Client&lt;/h4&gt;
+&lt;p&gt;The client is the application trying to access the user’s account. It needs Authorization to do so. This might be the website you’re on, the app you’ve installed to your phone, or both. In our example, this would be Spotify.&lt;/p&gt;
+&lt;h4&gt;The Resource Server&lt;/h4&gt;
+&lt;p&gt;The resource server is the place storing the user’s information. In our example, this would be Facebook.&lt;/p&gt;
+&lt;h4&gt;The Authorization Server&lt;/h4&gt;
+&lt;p&gt;This is the server that asks the user to approve or deny the request. This would also be Facebook, but a separate service that Facebook operate with the purpose of handling authorization.&lt;/p&gt;
+&lt;h4&gt;The Resource Owner&lt;/h4&gt;
+&lt;p&gt;The resource owner is the person who is giving access to their data. So if you’re giving Spotify permission to access your Facebook info, you’re the resource owner.&lt;/p&gt;
+&lt;h3&gt;Grant types&lt;/h3&gt;
+&lt;p&gt;A grant represents the user’s permission to access their data and can be used to acquire an access token. The OAuth Specification describes four flows for acquiring an access token. These flows are called grant types. Which one is more suitable for you will most likely depend on the type of client.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://auth0.com/docs/api-auth/grant/authorization-code&quot;&gt;Authorization Code&lt;/a&gt;:&lt;/strong&gt; used by Web Apps executing on a server. This is also used by mobile apps, using the &lt;a href=&quot;https://auth0.com/docs/api-auth/grant/authorization-code-pkce&quot;&gt;Proof Key for Code Exchange (PKCE) technique&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://auth0.com/docs/api-auth/grant/implicit&quot;&gt;Implicit&lt;/a&gt;:&lt;/strong&gt; used by JavaScript-centric apps (Single Page Applications) executing on the user’s browser.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://auth0.com/docs/api-auth/grant/password&quot;&gt;Resource Owner Password Credentials&lt;/a&gt;:&lt;/strong&gt; used by trusted apps.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://auth0.com/docs/api-auth/grant/client-credentials&quot;&gt;Client Credentials&lt;/a&gt;:&lt;/strong&gt; used for machine to machine communication, such as API auth.&lt;/p&gt;
+&lt;p&gt;This article will only touch on the most common form of grant type which is going to help us shed light on OAuth, without overcomplicating it. &lt;a href=&quot;https://auth0.com/docs/protocols/oauth2&quot;&gt;Read more about OAuth 2.0 and the other grant types&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Authorization code grant&lt;/h4&gt;
+&lt;p&gt;An authorization code grant is what we’d encounter in our example.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Client&lt;/strong&gt; will redirect the user to the &lt;strong&gt;The Authorization Server&lt;/strong&gt; with some information about what they’re requesting and where they’re requesting it from, among other things. &lt;/p&gt;
+&lt;p&gt;The user will be asked to login to &lt;strong&gt;The Authorization Server&lt;/strong&gt; and approve &lt;strong&gt;The Client&lt;/strong&gt;, receiving an authorization code. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Client&lt;/strong&gt; can now send that code and our grant type to &lt;strong&gt;The Authorization Server&lt;/strong&gt; and receive back an access token. &lt;/p&gt;
+&lt;h3&gt;Access tokens&lt;/h3&gt;
+&lt;p&gt;Access tokens represent your authorization to access &lt;strong&gt;The Resource Owner&lt;/strong&gt;’s information on &lt;strong&gt;The Resource Server&lt;/strong&gt;. You’re required to exchange your grant for an access token, which will have an expiry time.&lt;/p&gt;
+&lt;p&gt;Access tokens expire so that any malicious use and damage is limited. You’ll need a new access token once it has expired. They can be setup to expire after any amount of time, usually a few minutes.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/basic-oauth2-flow-bc1ff15f5c1a10eaa8a0e680e0e44889-7c52b.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -14,25 +120,69 @@
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHDRVYUmL//xAAYEAADAQEAAAAAAAAAAAAAAAAAAhEBIf/aAAgBAQABBQLF7qEKM5T/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwGH/8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGBABAQEBAQAAAAAAAAAAAAAAAQAhUXH/2gAIAQEAAT8hgYZATbDPy8X/2gAMAwEAAgADAAAAENwv/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/EBdn/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Qo//EABkQAQEBAQEBAAAAAAAAAAAAAAERACFhcf/aAAgBAQABPxCoGd1Hw+OOUD8yih3BJGJO1v/Z&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 56.18964003511853%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAAA0ElEQVQoz32SUROCIBCE/f//U19wKkQLSqqv2wkwnfbBWTj2bm+rizHedog7HL7pxO4NrlvoAYTSwwCpYg6vBrzz3o/j2Pf9MAzOuWmauFzXlXu4uiCs4qcBojk0/pmcUhIXOZ6sJcsWyaBGZf9lWTbieZ45a3IIAYfOAKEk22pU1q5iajln7YwYwckA4SjnZwM3cv7PNt/0Bc/UWtDyx2kTKdPwTObBoHYXA7ymTWNyzgYIYoyhl0mUypy9FKGW/4jLT9L+K2S1TVs7q1qSfwPR336AwoN/8AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;img&quot;
+        alt=&quot;Generic OAuth flow&quot;
         title=&quot;&quot;
-        src=&quot;/static/computer-technology-5ed9d87a0cd2e68095d3158612035a89-78f2b.jpg&quot;
-        srcset=&quot;/static/computer-technology-5ed9d87a0cd2e68095d3158612035a89-dce19.jpg 200w,
-/static/computer-technology-5ed9d87a0cd2e68095d3158612035a89-c1413.jpg 400w,
-/static/computer-technology-5ed9d87a0cd2e68095d3158612035a89-78f2b.jpg 800w,
-/static/computer-technology-5ed9d87a0cd2e68095d3158612035a89-ab4c4.jpg 1200w,
-/static/computer-technology-5ed9d87a0cd2e68095d3158612035a89-bc99b.jpg 1600w,
-/static/computer-technology-5ed9d87a0cd2e68095d3158612035a89-34a60.jpg 2400w,
-/static/computer-technology-5ed9d87a0cd2e68095d3158612035a89-a3a7b.jpg 5760w&quot;
+        src=&quot;/static/basic-oauth2-flow-bc1ff15f5c1a10eaa8a0e680e0e44889-48538.png&quot;
+        srcset=&quot;/static/basic-oauth2-flow-bc1ff15f5c1a10eaa8a0e680e0e44889-bed0f.png 200w,
+/static/basic-oauth2-flow-bc1ff15f5c1a10eaa8a0e680e0e44889-5fd34.png 400w,
+/static/basic-oauth2-flow-bc1ff15f5c1a10eaa8a0e680e0e44889-48538.png 800w,
+/static/basic-oauth2-flow-bc1ff15f5c1a10eaa8a0e680e0e44889-b70ec.png 1200w,
+/static/basic-oauth2-flow-bc1ff15f5c1a10eaa8a0e680e0e44889-d134a.png 1600w,
+/static/basic-oauth2-flow-bc1ff15f5c1a10eaa8a0e680e0e44889-f6ead.png 2400w,
+/static/basic-oauth2-flow-bc1ff15f5c1a10eaa8a0e680e0e44889-7c52b.png 4556w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
   &lt;/span&gt;
   
   &lt;/a&gt;
-    &lt;/p&gt;</content:encoded></item></channel></rss>
+    &lt;/p&gt;
+&lt;h3&gt;Refresh tokens&lt;/h3&gt;
+&lt;p&gt;Refresh tokens are a special type of token that can be held &lt;strong&gt;securely&lt;/strong&gt; by &lt;strong&gt;The Client&lt;/strong&gt; with the express purpose of being able to request a new access token from &lt;strong&gt;The Authorization Server&lt;/strong&gt; once the original access token has expired. These can also expire, but are generally long lived with expiry times that can be as long as 14 days or more.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Authorization Server&lt;/strong&gt; should be able to revoke a refresh token in the event that it could have been compromised.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/refresh-oauth2-flow-431b1ced96d6aa54d30866cee0dad99f-7c52b.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.18964003511853%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAAA0klEQVQoz3WSbQ+CMAyE+f//E2IC4saLbsrUx16yTcH7dC133bWhCSHcdgg7HGoasXuFq4FmJuJ8ehggxUzxqoDOez8MQ9u2XddBpmmiuW0bfbimYCzmpwGSU9UJMccYVYocvyxpHZvOuq7wvD/ll3lZFmrFds71fX8yQEir2NGQ1y5mvqWUFNsbsLEwg9hTQS4GnlHyg9h0UOM5GyCoyamLZM1fs9Q4x3GEUErmDGxXrk0GpiYDhHio9TiY51nXYi/9CFr+Y9Zta2jcD+rji2B8A592fWAhrOBJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Refresh OAuth flow&quot;
+        title=&quot;&quot;
+        src=&quot;/static/refresh-oauth2-flow-431b1ced96d6aa54d30866cee0dad99f-48538.png&quot;
+        srcset=&quot;/static/refresh-oauth2-flow-431b1ced96d6aa54d30866cee0dad99f-bed0f.png 200w,
+/static/refresh-oauth2-flow-431b1ced96d6aa54d30866cee0dad99f-5fd34.png 400w,
+/static/refresh-oauth2-flow-431b1ced96d6aa54d30866cee0dad99f-48538.png 800w,
+/static/refresh-oauth2-flow-431b1ced96d6aa54d30866cee0dad99f-b70ec.png 1200w,
+/static/refresh-oauth2-flow-431b1ced96d6aa54d30866cee0dad99f-d134a.png 1600w,
+/static/refresh-oauth2-flow-431b1ced96d6aa54d30866cee0dad99f-f6ead.png 2400w,
+/static/refresh-oauth2-flow-431b1ced96d6aa54d30866cee0dad99f-7c52b.png 4556w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;OAuth at Auth0&lt;/h2&gt;
+&lt;p&gt;Auth0 is a global leader in Identity-as-a-Service (IDaaS) and provides thousands of customers in every market sector with the only identity solution they need for their web, mobile, IoT, and internal applications.&lt;/p&gt;
+&lt;p&gt;At Auth0 we utilize OAuth 2.0 along with Open ID Connect (OIDC) which is an identity layer built upon OAuth 2.0. OAuth is not the only authorization protocol we use, but it is one of the most popular.&lt;/p&gt;
+&lt;p&gt;For more information, visit &lt;a href=&quot;https://auth0.com&quot;&gt;https://auth0.com&lt;/a&gt;, &lt;a href=&quot;https://auth0.com/signup&quot;&gt;sign up for a free Auth0 account here&lt;/a&gt; or follow @auth0 on Twitter.&lt;/p&gt;</content:encoded></item></channel></rss>
