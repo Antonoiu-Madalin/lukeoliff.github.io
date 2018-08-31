@@ -1,8 +1,12 @@
 {
   "assetsByChunkName": {
     "path---category-portfolio": [
-      "path---category-portfolio-fd661a554049e55e71a4.js",
-      "path---category-portfolio-fd661a554049e55e71a4.js.map"
+      "path---category-portfolio-ca238ee6caf18829e90d.js",
+      "path---category-portfolio-ca238ee6caf18829e90d.js.map"
+    ],
+    "path---helloworld-with-auth-0": [
+      "path---helloworld-with-auth-0-f4375fcdda314023f9c5.js",
+      "path---helloworld-with-auth-0-f4375fcdda314023f9c5.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-4cdfe22c0237c1694edf.js",
@@ -29,24 +33,24 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---oauth-2-the-complete-guide": [
-      "path---oauth-2-the-complete-guide-bd39a4dd28e9f3004529.js",
-      "path---oauth-2-the-complete-guide-bd39a4dd28e9f3004529.js.map"
+      "path---oauth-2-the-complete-guide-5a675db14ccfcdf0f894.js",
+      "path---oauth-2-the-complete-guide-5a675db14ccfcdf0f894.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-5753b6e0cb8ea9ba275d.js",
       "component---src-layouts-index-js-5753b6e0cb8ea9ba275d.js.map"
     ],
     "path---category": [
-      "path---category-00ff29131823b1eb0887.js",
-      "path---category-00ff29131823b1eb0887.js.map"
+      "path---category-141effbdb1b35950a0a9.js",
+      "path---category-141effbdb1b35950a0a9.js.map"
     ],
     "component---src-pages-category-js": [
       "component---src-pages-category-js-bbb34571e9395b2ce79b.js",
       "component---src-pages-category-js-bbb34571e9395b2ce79b.js.map"
     ],
     "path---index": [
-      "path---index-073e4bf13fc2a89a9a53.js",
-      "path---index-073e4bf13fc2a89a9a53.js.map"
+      "path---index-479ab0212acf10139763.js",
+      "path---index-479ab0212acf10139763.js.map"
     ],
     "component---src-pages-search-js": [
       "component---src-pages-search-js-b19cdc759675e00eb6db.js",
@@ -91,9 +95,9 @@
       "path---starters-814ccecd5118567d69d9.js.map"
     ],
     "app": [
-      "app-7eaf41f4bc85e693f711.js",
+      "app-0f0600a1c44b61450b57.js",
       "build-js-styles.css",
-      "app-7eaf41f4bc85e693f711.js.map",
+      "app-0f0600a1c44b61450b57.js.map",
       "build-js-styles.css.map"
     ],
     "path---front-end-dev": [

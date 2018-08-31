@@ -1,2 +1,0 @@
-webpackJsonp([3422700230939],{703:function(e,t){e.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/oauth2-the-complete-guide/"},excerpt:"This post is original content developed by me for the  Auth0’s blog  and has been re-posted here as part of an online portfolio with…",timeToRead:6,frontmatter:{title:"OAuth 2.0: The Complete Guide",category:"portfolio"}}}]},site:{siteMetadata:{facebook:{appId:""}}}},pathContext:{category:"portfolio"}}}});
-//# sourceMappingURL=path---category-portfolio-fd661a554049e55e71a4.js.map
