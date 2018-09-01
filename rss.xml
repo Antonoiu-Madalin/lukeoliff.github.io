@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[dad, technical writer, security advocate - Luke Oliff]]></title><description><![CDATA[dad, technical writer, security advocate - writing about digital transformation, software security and new technology]]></description><link>https://lukeoliff.com</link><generator>RSS for Node</generator><lastBuildDate>Sat, 01 Sep 2018 17:03:43 GMT</lastBuildDate><item><title><![CDATA[HelloWorld: With Auth0]]></title><description><![CDATA[This post is original content developed by me for the  Auth0’s blog  and has been re-posted here as part of an online portfolio with…]]></description><link>https://lukeoliff.com/helloworld-with-auth0/</link><guid isPermaLink="false">https://lukeoliff.com/helloworld-with-auth0/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;This post is original content developed by me for the &lt;a href=&quot;https://auth0.com/blog&quot;&gt;Auth0’s blog&lt;/a&gt; and has been re-posted here as part of an online portfolio with permission. Relevant attribution and canonical links exist. &lt;a href=&quot;https://auth0.com/blog/helloworld-with-auth0/&quot;&gt;Click here to see the original&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[dad, technical writer, security advocate - Luke Oliff]]></title><description><![CDATA[dad, technical writer, security advocate - writing about digital transformation, software security and new technology]]></description><link>https://lukeoliff.com</link><generator>RSS for Node</generator><lastBuildDate>Sat, 01 Sep 2018 17:30:49 GMT</lastBuildDate><item><title><![CDATA[HelloWorld: With Auth0]]></title><description><![CDATA[This post is original content developed by me for the  Auth0’s blog  and has been re-posted here as part of an online portfolio with…]]></description><link>https://lukeoliff.com/helloworld-with-auth0/</link><guid isPermaLink="false">https://lukeoliff.com/helloworld-with-auth0/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;This post is original content developed by me for the &lt;a href=&quot;https://auth0.com/blog&quot;&gt;Auth0’s blog&lt;/a&gt; and has been re-posted here as part of an online portfolio with permission. Relevant attribution and canonical links exist. &lt;a href=&quot;https://auth0.com/blog/helloworld-with-auth0/&quot;&gt;Click here to see the original&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; In this guide, you’ll finish adding authentication to our simple &lt;a href=&quot;https://auth0.com/docs/sso/current/single-page-apps&quot;&gt;single page application&lt;/a&gt;, customize Auth0 &lt;a href=&quot;https://auth0.com/docs/libraries/lock/v11&quot;&gt;Lock&lt;/a&gt;, enable &lt;a href=&quot;https://auth0.com/blog/social-login-on-the-rise/&quot;&gt;social login&lt;/a&gt; with Facebook, and set up &lt;a href=&quot;https://auth0.com/docs/multifactor-authentication&quot;&gt;multi-factor authentication&lt;/a&gt;. If none of this makes any sense, don’t worry. We’re going to explain that as well.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; This guide assumes you’re on a Mac. Drop us a comment below and we can provide updated instructions for a Windows machine or Ubuntu machine.&lt;/p&gt;
@@ -782,7 +782,494 @@
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; whitelist &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;gmail.com&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//authorized domains&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;div style=&quot;margin: 20px 0; display: block; text-transform: uppercase; text-align: center;&quot;&gt;~ EOF ~&lt;/div&gt;</content:encoded></item><item><title><![CDATA[OAuth 2.0: The Complete Guide]]></title><description><![CDATA[This post is original content developed by me for the  Auth0’s blog  and has been re-posted here as part of an online portfolio with…]]></description><link>https://lukeoliff.com/oauth2-the-complete-guide/</link><guid isPermaLink="false">https://lukeoliff.com/oauth2-the-complete-guide/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;This post is original content developed by me for the &lt;a href=&quot;https://auth0.com/blog&quot;&gt;Auth0’s blog&lt;/a&gt; and has been re-posted here as part of an online portfolio with permission. Relevant attribution and canonical links exist. &lt;a href=&quot;https://auth0.com/blog/oauth2-the-complete-guide/&quot;&gt;Click here to see the original&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;div style=&quot;margin: 20px 0; display: block; text-transform: uppercase; text-align: center;&quot;&gt;~ EOF ~&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Common Threats in Web Application Security]]></title><description><![CDATA[This post is original content developed by me for the  Auth0’s blog  and has been re-posted here as part of an online portfolio with…]]></description><link>https://lukeoliff.com/common-threats-in-web-app-security/</link><guid isPermaLink="false">https://lukeoliff.com/common-threats-in-web-app-security/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;This post is original content developed by me for the &lt;a href=&quot;https://auth0.com/blog&quot;&gt;Auth0’s blog&lt;/a&gt; and has been re-posted here as part of an online portfolio with permission. Relevant attribution and canonical links exist. &lt;a href=&quot;https://auth0.com/blog/common-threats-in-web-app-security/&quot;&gt;Click here to see the original&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; In this article we’ll attempt to cover a comprehensive security strategy for web applications to protect against common threats in web application security and mitigate their impact.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Whether you manage your own infrastructure or not, having robust infrastructure security is great. But it becomes a bit redundant if your client’s data is just as exposed through your web applications. Having infrastructure security is important, but there are considerations for front and backend developers that &lt;em&gt;must be considered&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In this era of modern web technology, security should not be a band-aid or an after-thought. It should be at the very foundation of planning, managing and building your web applications. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;But it doesn’t stop there.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Web application security is an ongoing and ever-changing climate you &lt;strong&gt;do not&lt;/strong&gt; want to be caught short.&lt;/p&gt;
+&lt;p&gt;You must continuously monitor, and work, to ensure that your company doesn’t become &lt;a href=&quot;http://breachlevelindex.com/top-data-breaches&quot;&gt;another statistic in the world of security breaches&lt;/a&gt;. Regardless of programming language or framework, there are plenty of generic security practices you could follow from the very start of any project.&lt;/p&gt;
+&lt;p&gt;In this article I’ll introduce you to my biggest tips for top to bottom (Front end to Back end) security for your web applications.&lt;/p&gt;
+&lt;h2&gt;HTTP Strict Transport Security (HSTS) header&lt;/h2&gt;
+&lt;p&gt;HSTS is a header you can provide the browser that enforces HTTPS across your entire web application. &lt;/p&gt;
+&lt;p&gt;There is no excuse these days to land on a website that isn’t encrypting the communication between your web browser and their servers. While SSL certificates used to be a marketing tool for corporations to prove how safe they were, these days SSL certificates are both &lt;strong&gt;free&lt;/strong&gt; and &lt;strong&gt;easy to get&lt;/strong&gt;. Certificate authorities like &lt;a href=&quot;https://letsencrypt.org&quot;&gt;Let’s Encrypt&lt;/a&gt; have the backing of &lt;a href=&quot;https://letsencrypt.org/sponsors/&quot;&gt;some of the world’s best known companies&lt;/a&gt;, because &lt;strong&gt;a secure internet is better for everyone!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Simply owning an SSL certificate will not make your web application secure. You need to tell your application how to force traffic through it. Some websites do this with a HTTP redirect, but providing as HSTS header is just as effective, without that overhead.&lt;/p&gt;
+&lt;p&gt;Here are some examples of a HSTS header.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Strict-Transport-Security: max-age=630720; includeSubDomains; preload&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;&lt;em&gt;To see if it’s set on a site with a CURL request:&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; -s -D- https://paypal.com &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; Strict-Transport-Security&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;&lt;em&gt;And to set it in Node.js response:&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;requestHandler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Strict-Transport-Security&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;max-age=630720; includeSubDomains; preload&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“If a website accepts a connection through HTTP and redirects to HTTPS, visitors may initially communicate with the non-encrypted version of the site before being redirected, if, for example, the visitor types &lt;a href=&quot;http://www.foo.com/&quot;&gt;http://www.foo.com/&lt;/a&gt; or even just &lt;a href=&quot;http://foo.com/&quot;&gt;foo.com&lt;/a&gt;. This creates an opportunity for a man-in-the-middle attack. The redirect could be exploited to direct visitors to a malicious site instead of the secure version of the original site.” – &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security&quot;&gt;developer.mozilla.org&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In this example of a HSTS header, we have three &lt;em&gt;directives&lt;/em&gt;.  &lt;code class=&quot;language-text&quot;&gt;max-age&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;includeSubDomains&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;preload&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;max-age=&amp;lt;expire-time&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The time, in seconds, that the browser should remember that a site is only to be accessed using HTTPS. This means that the browser will automatically use HTTPS to access the site for as long as &lt;code class=&quot;language-text&quot;&gt;max-age&lt;/code&gt; has not expired.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;includeSubDomains&lt;/code&gt; &lt;em&gt;Optional&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;If this optional parameter is specified, this rule applies to all of the site’s subdomains as well.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;preload&lt;/code&gt; &lt;em&gt;Optional&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Google maintains &lt;a href=&quot;https://hstspreload.appspot.com/&quot;&gt;a HSTS preload service&lt;/a&gt;. Most modern browsers support (or intend to support) this service and if your site is registered, it will never contact the service through insecure HTTP requests. It will assume the site uses HTTPS before it ever connects.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you start to use HSTS and your site has not been setup with HTTPS certificates then your site would become unreachable.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/strict-transport-security-browser-compatibility-table-48250715a1d7c7c745352d2f61e01f78-f6ead.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 58.08333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABp0lEQVQoz21STW7TQBT2PegBgug5eocuWFYJZwCJU7SiibKoWLOCxBZ0U7WqIAndpF10EYwUCcf2jN84jj0eZ2LzeawE0fTTZ+ubmffevJ+x8uew3kNRFPtm1pO1UkpKOZ/PXdf9vcVsNmOM7ftbska2Y5al+AshYB3VIHycsziO81ymBlvLzMKntd4YQChVlGUJzTlH1KqqoNdrXRkkSYIojQFyrJ1RkjaAMInv0lOgyVbBR8p6J01xrWxE7YxITWAIvQUskDBuwCGE53lNzkEQoBaECQL/P2fAlCRVrgQJ3/chkE4QhP7C9/54gijiEfYRIgzDf86lQbJMlnEcoVuMi4hiIlSJjlFEnHEcxSJmIbrJiMharVIiwaNolWUI8XZ6dTA8O/zabzm9l/Z5y+m2vvVbw3PoV3b3xeD0/fXgw+3lkXNxP53WNzeDISF0lvceJ8c3n06+f+5M7M5o2B7b7Z9OZ2yDb8b269GXj9Mfg4e7d5NL95drobnw9AwWi0XKqWBU0LLCdJ5wU3Oz1mClS0zBal5VsQUWsmaOvj3LzLyq1MztL5hsk9aJPl+mAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;HSTS browser compatibility table&quot;
+        title=&quot;&quot;
+        src=&quot;/static/strict-transport-security-browser-compatibility-table-48250715a1d7c7c745352d2f61e01f78-48538.png&quot;
+        srcset=&quot;/static/strict-transport-security-browser-compatibility-table-48250715a1d7c7c745352d2f61e01f78-bed0f.png 200w,
+/static/strict-transport-security-browser-compatibility-table-48250715a1d7c7c745352d2f61e01f78-5fd34.png 400w,
+/static/strict-transport-security-browser-compatibility-table-48250715a1d7c7c745352d2f61e01f78-48538.png 800w,
+/static/strict-transport-security-browser-compatibility-table-48250715a1d7c7c745352d2f61e01f78-b70ec.png 1200w,
+/static/strict-transport-security-browser-compatibility-table-48250715a1d7c7c745352d2f61e01f78-d134a.png 1600w,
+/static/strict-transport-security-browser-compatibility-table-48250715a1d7c7c745352d2f61e01f78-f6ead.png 2400w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;X-XSS-Protection header&lt;/h2&gt;
+&lt;p&gt;XSS (Cross Site Scripting) is the most common of all web application attacks.&lt;/p&gt;
+&lt;p&gt;XSS occurs when malicious scripts are injected into otherwise trusted web applications. Most modern browsers come prepared to protect against XSS. We can ensure this is enabled by sending the &lt;code class=&quot;language-text&quot;&gt;X-XSS-Protection&lt;/code&gt; header.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;X-XSS-Protection&lt;/code&gt; header is not available in Firefox and has been rendered entirely redundant by the Content Security Policy header, which we detail below.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here are some examples of an &lt;code class=&quot;language-text&quot;&gt;X-XSS-Protection&lt;/code&gt; header.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;X-XSS-Protection: 1; mode=block&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;&lt;em&gt;And to set it in Node.js response:&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;requestHandler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;X-XSS-Protection&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;1; mode=block&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;In this example of a XSS header, we have three &lt;em&gt;directives&lt;/em&gt;.  &lt;code class=&quot;language-text&quot;&gt;1&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;mode&lt;/code&gt;. Also one missing one,&lt;code class=&quot;language-text&quot;&gt;report&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This is basically a boolean value that determines whether XSS filtering is enabled. Change it to &lt;code class=&quot;language-text&quot;&gt;0&lt;/code&gt; to disable it. Without the optional &lt;code class=&quot;language-text&quot;&gt;mode&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;report&lt;/code&gt; directives, the browser will just sanitize the page, even removing the affected parts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;mode=block&lt;/code&gt; &lt;em&gt;Optional&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Enables XSS filtering. Rather than sanitizing the page, the browser will prevent rendering of the page if an attack is detected.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;report=&amp;lt;report url&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Enables XSS filtering. If a cross-site scripting attack is detected, the browser will sanitize the page and report the violation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/x-xss-protection-browser-compatibility-table-55b78984a135a64640df81390f467a9f-f6ead.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 58.08333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABwElEQVQoz3VSPWsbQRDVH3CVxr0rQf6LXRqcJpBg49q1ChuHtAkBG4OEcGcXbowk9GHcuAhSSAgq0ohTIcj5vvbrdHt3e6eT3+6hyAnOYzWM9ubNvJnZSvIfZFmW53lp0zR9Maby4m0cx7PZzLKs6XQ6mUw8z1NK4fJfcqwh/xwpI2NlYEAphRVClGGRwSpSVvCDsIWBUaiKooADDsKXyyX+KpXBwg/DkHMOH8HoRZPLxsoOkwSXaqULraYQDAuOUZ1GkTT6taPJZdaySL4CIgghqICPcGzbLjW7rksIRRrXdf4iA6alOE1SSpnjOHAgx3U959Gxf9uMMhIQ3CMFprgmFwahCAXnvh4WYYRyykIuQKCEBH7AueBCBL7vez5mWZnPIxSBsEhKpKj9vN/oXhx/OWrV9rb69Wr7vNq5qLbOX7fONgfNxod3jY/vX/UbO93L8XisKzPG9FYYy+Ok/mu4/fW2eXP20Dh9O+ocjDr7sMP24bD95segd/Wpe/1593vv5Nvd1LL0I0HZR8BGU3bokwXhnIUBny+iZImG8vXJCn3gFDn2pzRZPQM2JVP9HLElmSSY3vODpxGXz8js7Qn9rZK5YLEXDgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;X-XSS-Protection browser compatibility table&quot;
+        title=&quot;&quot;
+        src=&quot;/static/x-xss-protection-browser-compatibility-table-55b78984a135a64640df81390f467a9f-48538.png&quot;
+        srcset=&quot;/static/x-xss-protection-browser-compatibility-table-55b78984a135a64640df81390f467a9f-bed0f.png 200w,
+/static/x-xss-protection-browser-compatibility-table-55b78984a135a64640df81390f467a9f-5fd34.png 400w,
+/static/x-xss-protection-browser-compatibility-table-55b78984a135a64640df81390f467a9f-48538.png 800w,
+/static/x-xss-protection-browser-compatibility-table-55b78984a135a64640df81390f467a9f-b70ec.png 1200w,
+/static/x-xss-protection-browser-compatibility-table-55b78984a135a64640df81390f467a9f-d134a.png 1600w,
+/static/x-xss-protection-browser-compatibility-table-55b78984a135a64640df81390f467a9f-f6ead.png 2400w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;X-Frame-Options header&lt;/h2&gt;
+&lt;p&gt;Clickjacking occurs when an attacker injects transparent or opaque objects into your web application. These might be an invisible layer over other functionality or designed to look like part of your application. Similar methods can be used for hijacking text boxes, to make you think you’re putting your personal details or payment info (or both) into the application you’re using!&lt;/p&gt;
+&lt;p&gt;One of the most famous examples of Clickjacking was against &lt;a href=&quot;http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager06.html&quot;&gt;the Adobe Flash plugin settings page&lt;/a&gt;. The infected application was loaded into an invisible window and tricked the user into relaxing their security settings, like allowing the web application to use your camera or microphone!&lt;/p&gt;
+&lt;p&gt;To prevent click jacking, there is another header! &lt;/p&gt;
+&lt;p&gt;Servers offer Browsers a Header Protocol named &lt;code class=&quot;language-text&quot;&gt;X-Frame-Options&lt;/code&gt;. This protocol allows us to specify domains to accept iFrames from. It also allows us to state which sites our web application can be embedded on. &lt;/p&gt;
+&lt;p&gt;Here are some examples of an &lt;code class=&quot;language-text&quot;&gt;X-Frame-Options&lt;/code&gt; header.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;X-Frame-Options: SAMEORIGIN&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;&lt;em&gt;And to set it in Node.js response:&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;requestHandler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;X-Frame-Options&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;SAMEORIGIN&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;With this header, we get three possible &lt;em&gt;directives&lt;/em&gt;.  &lt;code class=&quot;language-text&quot;&gt;DENY&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ALLOW-FROM&lt;/code&gt;, and &lt;code class=&quot;language-text&quot;&gt;SAMEORIGIN&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;DENY&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This blocks all framing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ALLOW-FROM&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This allows you to provide a list of domains to allow framing within.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;SAMEORIGIN&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This means framing is only allowed within the current domain.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/x-frame-options-browser-compatibility-table-d2653c437d6309ca9f5bb0106edf3623-f6ead.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 79.08333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsSAAALEgHS3X78AAACaElEQVQoz41TS2sTURi9m1JQUdSF/gb3Lly5c+VPcNutCFZwE6UgFmJa8AHahYhiF7V5tRGDiaYtNlTrY2FFBBPnkXlkcmfmzp0kbTKZTjwzU6XVCh4uH2fmfufe73VJ7x8Y7EK/39/Xh+z7d3NzU5ZlURQFQajVapzzWP/HKWRrLyCD7Xa7pmk6ESzLxme82263f3OAwNv3/e0IIJ7nBUEAa1kWAh4Oh7DYwk9Yxhg0QYQdMbb9CCBxbF6E3XG6rgsO506n048AEopxzDACSFyh+GBcHhOkYNs2vCmluq7DAapWq7VHDHTd9mCr5/c9EEZNH5d2utyyO9ylmu5QE6vDGHecPeLQBoFh0QY1FNts2FQ2DbHVlKihMavJmdxqNswWdlUbxWQOYwTVQ3iIB2Tob5//8ILkUkczqRMLtw/npg9kUscW74ykkyO5W6OZcOEPmZ+8Ws4wWQ3FSAadRG64P3f38o37idOlJ2Ru4kxh5kLx6fHs9MSr/ERl4UopPV5KXy/nxsuZx5WXqijt3KxpGvQQl2+OfX6QHFteJLOJc4WHF4tzJ+enZirFR8ulT9W1r2vrs0ulldXVj2+q3+v1MGd0D/VEaSA+W01fWypcep0hueSh/PRoOnkwmyLPJo9kp55XV96/Wz+Vv5eo5DfertcFgcQtMQwDaZuUflNlQVV+aMqGIn6JlsCo4JiSYzqcu9xtOBbljss5QiZoN1pXr9clScIwNwRRFiVdUamiGQ0FK/AGw4EfDPx4cgIPYzgAgTB8GBgAVVVxBDJXFCXkTV3TQ2i6Fk57r7f16zHs5uTvt/L/+AkNYU4OF2Rn1QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;X-Frame-Options browser compatibility table&quot;
+        title=&quot;&quot;
+        src=&quot;/static/x-frame-options-browser-compatibility-table-d2653c437d6309ca9f5bb0106edf3623-48538.png&quot;
+        srcset=&quot;/static/x-frame-options-browser-compatibility-table-d2653c437d6309ca9f5bb0106edf3623-bed0f.png 200w,
+/static/x-frame-options-browser-compatibility-table-d2653c437d6309ca9f5bb0106edf3623-5fd34.png 400w,
+/static/x-frame-options-browser-compatibility-table-d2653c437d6309ca9f5bb0106edf3623-48538.png 800w,
+/static/x-frame-options-browser-compatibility-table-d2653c437d6309ca9f5bb0106edf3623-b70ec.png 1200w,
+/static/x-frame-options-browser-compatibility-table-d2653c437d6309ca9f5bb0106edf3623-d134a.png 1600w,
+/static/x-frame-options-browser-compatibility-table-d2653c437d6309ca9f5bb0106edf3623-f6ead.png 2400w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;Content Security Policy (CSP) header&lt;/h2&gt;
+&lt;p&gt;CSP is a more modern layer of security that helps detect and mitigate more than one kind of attack, including XSS and data injection attacks.&lt;/p&gt;
+&lt;p&gt;Designed to be fully backwards compatible, browsers that don’t support it will still work with servers using it, by ignoring it and defaulting to the standard same-origin policy for web content.&lt;/p&gt;
+&lt;p&gt;It works by telling the browser exactly which URLs content on your site should be loaded from.&lt;/p&gt;
+&lt;p&gt;To include a CSP header that allows only internal and &lt;em&gt;Google Analytics&lt;/em&gt;, in an Express.js server, you could do the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; express &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; app &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Content-Security-Policy&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;script-src &apos;self&apos; https://analytics.google.com&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;express&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__dirname &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;However, if we do not wish to allow &lt;em&gt;any&lt;/em&gt; external sites to execute scripts on our web application, we could simply include the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;requestHandler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Content-Security-Policy&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;script-src &apos;self&apos;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Note the &lt;code class=&quot;language-text&quot;&gt;script-src&lt;/code&gt; directive here, that we have set to &lt;code class=&quot;language-text&quot;&gt;self&lt;/code&gt;, therefore only allowing scripts from within our own domain. Content Security Policies are both excellent and very powerful, but must be used cautiously. Just as with HSTS, incorrect configuration could cause unforeseen issues or missing content. This will also disable inline JavaScript unless it’s provided &lt;code class=&quot;language-text&quot;&gt;unsafe-inline&lt;/code&gt; keyword, a hash like (‘sha256-OsJINy4ZgkXN5pDjr32TfT/PBETcXuD9koo2t1mYDzg=’), or a nonce (‘nonce-…’), which is great for security!&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/content-security-policy-browser-compatibility-table-0ef4cf1e0c26b0cabf03e8a480192afb-f6ead.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 73.41666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsSAAALEgHS3X78AAACEElEQVQoz31Ty27TQBTNH/QDCIKf4h/YsmEHAhVYgxroHnUPpKggQEW0dEN5iYCKVIztxPY8PONM/KjtSWxzPGmiQiOOxuM743vu3Dv3uFOsgtZ6ZjBdoCzL826dlWRCiGVZvw0cx4GdJMl5fic/gxMDGHEcCyHGC0RRlKYp9jODpXMHD9KrDKbTWVnquq6xIaXEUU3TwIZDbaCUQhQYcG5PRiSUNK9Q62lRgKIxm2EWWud5Ado87SxDau2X05MRqTGoqnp2iipNMySMHSAMBaUUnqicUpYkKQZS+4uMd5ZmZd4eqqJIhgK3jHxCxkLGGSFpHEshOeOcMoRG2icI3ywglWKR9BgLwpAKQaXAMuCcCOGDNI6ElITzgPGJmrQ1ox7kIKMoV/HVjy/Wnt2/vLN5sd/rbvcuPH/Y3XnU7W90tzcu9Xtr/QebB6+v7T658nLLO7baVk0mSoiWHEfjrZ+frh++uvV59+bhm9tf3t77cXDn2976YH99sHd3sH9j8O79r6OnR18ff/8gKevgDjnnUILv+yPPU4TmLMy5wJippMl1c6aopm6q6QyNqqsaXWgVBj3Ytu26LviOO7SHQ8uxMZyhe2xZPgloyAnui7EYUikK9GrerpYMAeFkkEej0VyPMLCESCEJZTAxQGv+1TbEGASB53loJmZwkAJmBNUGpQGMFT8GPizlPd9dGv/HHymCOrBgkUOpAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;CSP browser compatibility table&quot;
+        title=&quot;&quot;
+        src=&quot;/static/content-security-policy-browser-compatibility-table-0ef4cf1e0c26b0cabf03e8a480192afb-48538.png&quot;
+        srcset=&quot;/static/content-security-policy-browser-compatibility-table-0ef4cf1e0c26b0cabf03e8a480192afb-bed0f.png 200w,
+/static/content-security-policy-browser-compatibility-table-0ef4cf1e0c26b0cabf03e8a480192afb-5fd34.png 400w,
+/static/content-security-policy-browser-compatibility-table-0ef4cf1e0c26b0cabf03e8a480192afb-48538.png 800w,
+/static/content-security-policy-browser-compatibility-table-0ef4cf1e0c26b0cabf03e8a480192afb-b70ec.png 1200w,
+/static/content-security-policy-browser-compatibility-table-0ef4cf1e0c26b0cabf03e8a480192afb-d134a.png 1600w,
+/static/content-security-policy-browser-compatibility-table-0ef4cf1e0c26b0cabf03e8a480192afb-f6ead.png 2400w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;Cross Site Request Forgery (CSRF)&lt;/h2&gt;
+&lt;p&gt;Cross Site Request Forgery is an attack where by the attacker impersonates an authorized user and makes requests on their behalf, like resetting a password, or updating an email address.&lt;/p&gt;
+&lt;p&gt;We’ve been mitigating CSRF requests for years by checking HTTP headers such as the &lt;code class=&quot;language-text&quot;&gt;Origin&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;Referer&lt;/code&gt;. Whilst these do work, we have a new defence against CSRF. The &lt;code class=&quot;language-text&quot;&gt;SameSite&lt;/code&gt; cookie directive. &lt;code class=&quot;language-text&quot;&gt;SameSite&lt;/code&gt; is relatively new and has only been around for a year or so. But it’s still widely unknown. Once applied, prevents the browser from sending this cookie along with cross-site requests&lt;/p&gt;
+&lt;p&gt;An example of the SameSite &lt;code class=&quot;language-text&quot;&gt;directive&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Set-Cookie: sess=sessionid123; path=/; SameSite&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cookie-samesite-browser-compatibility-table-0ae83aa18c6170f27664e44ac3b72168-f6ead.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 58.08333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABwElEQVQoz3VSO08cMRDeP8I/SUEUylDTBaWIDqQ0KSIdQUJENElxIjzS0JxEkChAJ1GBEChNolSJ0qS4gtMVm9uXH2fveXe9t7ebz7YgD5FPs6vP4xnPNx57xX9QluXUoqoq8HtjvHu9eZ77vj8YDIbDYb/fj+MY+XD+m5wbZHeWZcoRxhillHNOCJFSuDBlcRuZefggbGYBonVZ1zUIMlGpaRos0QH+4GmaCiHAEay1NsmuMQCkKOC861DDbMMaOVa1Viqz+g0xye5UV6S6BSKgHBWwCRIEgdOM/hnjOCaOo7+SATVRrgIfizCKdaEhJ0FgGAWjgPMxpSyKYoMk+Z1cW6QyFVIklBKKAmMBkymjjDNGCMVCSAkCw44H6VCFliocUTfP+1/anVX5bN5feXSxvvSg9+7Hi8cLp525q+7R1tOk9ZC05g/ethY/bPkbT8youIVM5Wyidm6+d3vv1W472X/19fDNy89nw4PN9U+95W+XH4+3+f7aeK99frL3+vqYHHU8XC6mEobhT2A0ShMCBRgRbIpmZo1GR7OmqZqqNrwwFC7w2nMv0WFaTjEp3EJhLbcvBgTDUeaN/Ok35BcMNpLHA6y+WwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Cookie SameSite browser compatibility table&quot;
+        title=&quot;&quot;
+        src=&quot;/static/cookie-samesite-browser-compatibility-table-0ae83aa18c6170f27664e44ac3b72168-48538.png&quot;
+        srcset=&quot;/static/cookie-samesite-browser-compatibility-table-0ae83aa18c6170f27664e44ac3b72168-bed0f.png 200w,
+/static/cookie-samesite-browser-compatibility-table-0ae83aa18c6170f27664e44ac3b72168-5fd34.png 400w,
+/static/cookie-samesite-browser-compatibility-table-0ae83aa18c6170f27664e44ac3b72168-48538.png 800w,
+/static/cookie-samesite-browser-compatibility-table-0ae83aa18c6170f27664e44ac3b72168-b70ec.png 1200w,
+/static/cookie-samesite-browser-compatibility-table-0ae83aa18c6170f27664e44ac3b72168-d134a.png 1600w,
+/static/cookie-samesite-browser-compatibility-table-0ae83aa18c6170f27664e44ac3b72168-f6ead.png 2400w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;Cookies&lt;/h2&gt;
+&lt;p&gt;Cookies are an important feature of web applications, usually carrying our users session identification, so the server knows you’re you on each request. The &lt;code class=&quot;language-text&quot;&gt;SameSite&lt;/code&gt; directive might be a good way to protect your session information, but &lt;strong&gt;Cookie Prefixing&lt;/strong&gt; is a new and under utilized method to ensure a cookie is absolutely secure.&lt;/p&gt;
+&lt;p&gt;Some user agent implementations support the following cookie prefixes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;__Secure&lt;/code&gt; - Tells the browser that it should only include the cookie in requests that are sent over secure channel.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;__Host&lt;/code&gt; - Tells the browser not only that it should only include the cookie in requests that are sent over secure channel, this will also tell the browser to only use the cookie from a secure origin and the scope is limited to a path attribute passed down by the server. If the server omits the path attribute the “directory” of the request URI is used. It also signals that the domain attribute must not be present, which prevents the cookie from being sent to other domains.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Effectively a &lt;code class=&quot;language-text&quot;&gt;__Host&lt;/code&gt; cookie is very specific to where it was intended to be used and therefore should be considered the most secure way to define one.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cookie-prefixes-browser-compatibility-table-e80b5a7d61557cd025d25f2a9f0c9951-f6ead.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 52.916666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAABlUlEQVQoz3VQu0oDQRTdPwqIYJFvMKAgaG1jZWlhayV+guAjNpIELdTCmAXNGoKJBkNQyRapljx2Z9/Z7HvHszuSQuMphjtn7jlz7uW8RQiCIIqiMAxx+r7v/QPu1911XSgnk4koioPBoN/v67oOBvwC8WwRLMvSNA0yVVVt24bybw9IDsHiDAiJH5IkAUMIwTOllPEgUTuOA0fUjEQDxwYDoMR47ISrnwHZcELmZkCKeUMqZq7sE+YCOzwjOfNFcuS3MmAXpmmCHI/Haey5GAU08PYyJZKzJY1GI5CQSZKkKIphGERVh8NhKsaHTAk/D6siqiETvE9t21I1XSFEUdypM9UNXSamppuGAR4NqRjzTIGZA4ujr2auerLCF7eFa6HbyfPFPH9R7bR2G7dLtbPl2vle467afc09nK4+lSRT5zCPLMsYi8b0WHwrPF5uPFf2X+5bn72txtWmUBF67wft2ppQXhfKh22+/tEt1Es7zZuxbXDzDWN7URDCgkaYIQ5RRwmNEywQVxphpfSHR0+cBJ7/DV5SXdJJ5JF4AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Cookie prefix browser compatibility table&quot;
+        title=&quot;&quot;
+        src=&quot;/static/cookie-prefixes-browser-compatibility-table-e80b5a7d61557cd025d25f2a9f0c9951-48538.png&quot;
+        srcset=&quot;/static/cookie-prefixes-browser-compatibility-table-e80b5a7d61557cd025d25f2a9f0c9951-bed0f.png 200w,
+/static/cookie-prefixes-browser-compatibility-table-e80b5a7d61557cd025d25f2a9f0c9951-5fd34.png 400w,
+/static/cookie-prefixes-browser-compatibility-table-e80b5a7d61557cd025d25f2a9f0c9951-48538.png 800w,
+/static/cookie-prefixes-browser-compatibility-table-e80b5a7d61557cd025d25f2a9f0c9951-b70ec.png 1200w,
+/static/cookie-prefixes-browser-compatibility-table-e80b5a7d61557cd025d25f2a9f0c9951-d134a.png 1600w,
+/static/cookie-prefixes-browser-compatibility-table-e80b5a7d61557cd025d25f2a9f0c9951-f6ead.png 2400w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;The most effective method for maintaining the security of your web applications is keeping up-to-date with vulnerabilities. They’re a dynamic topic in a dynamic environment and the attacker is always one step ahead.&lt;/p&gt;
+&lt;p&gt;Complacency is the enemy. The moment you relax and think you’re safe, you’re going to miss an opportunity to improve security on your web application.&lt;/p&gt;
+&lt;p&gt;By following the advice in this article, staying up-to-date with announcements, and having an in-depth knowledge of your systems, you can rest assured that you’re doing what you can to mitigate attacks.&lt;/p&gt;
+&lt;p&gt;Many developers and organizations ignore security altogether. It does not take an entire development team to implement the changes in this article, but it does take a certain investment in time and culture to know you’re working towards protecting your data.&lt;/p&gt;
+&lt;p&gt;So, from enforcing HTTPS with Strict Transport Security, to securing our web application with a Content Security Policy header, we’re well on our way to ensuring the security of our web applications.&lt;/p&gt;
+&lt;h2&gt;Aside: Auth0 Authentication with JavaScript&lt;/h2&gt;
+&lt;p&gt;At &lt;a href=&quot;https://auth0.com/&quot;&gt;Auth0&lt;/a&gt;, we make heavy use of full-stack JavaScript to help our customers to &lt;a href=&quot;https://auth0.com/user-management&quot;&gt;manage user identities including password resets, creating and provisioning, blocking and deleting users&lt;/a&gt;. We also created a serverless platform, called &lt;a href=&quot;https://auth0.com/extend/&quot;&gt;Auth0 Extend&lt;/a&gt;, that enables customers to run arbitrary JavaScript functions securely. Therefore, it must come as no surprise that using our identity management platform on JavaScript web apps is a piece of cake.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://auth0.com/pricing&quot;&gt;Auth0 offers a &lt;strong&gt;free tier&lt;/strong&gt;&lt;/a&gt; to get started with modern authentication. Check it out, or &lt;a href=&quot;https://auth0.com/signup&quot; data-amp-replace=&quot;CLIENT_ID&quot; data-amp-addparams=&quot;anonId=CLIENT_ID(cid-scope-cookie-fallback-name)&quot;&gt;sign up for a free Auth0 account here&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/hosted-login-41f4f39672fe6576e361ff6516607827-e2649.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 78.38086476540938%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD0UlEQVQ4y51SXWibVRiOTmfBq/6si06Q/TRpkqb5////bZPZWqpTNh0owmARWyp4IagIiqIXXnnhxvRGRptvbFPZhQ7BDWT0ZtNK1t6Y9su6Jkv3NT+lS7Ke5Ht8z9epw0s/eDgnOe/znOd9z6O69N6Zx/MLv762KN58a/XWakYsiJlKZSOzvl7OiOJKplAoKKsoipmVlZXM8nI+k8//+V+cpP9ncrmcTnXi+Bv9i7mF5vrGXZSKJayu3kaxWMTaWhGiWFD2pdIdFEsllMvrqFSqqFZrD6EKSZLAGMOVK1ffVvX07nnKZvOVXc4g3O7wtscTYbQyvgaDCRaJpFgkmqY1zaK0xmJpFgqN0FmS+f1x5vVGeW3L4wnDYLBMq7q7+9QGg1UymdywmD0dm80vu90R2Wh0yp9+8rm8kFuSb/z4nfzH3Ffy9Ru/yZcv/yxHwimZ19ntftli8cgmk4tx/sCAYVrV29uvNpvdknPHYcfrjYEcwGr14/Tpb7BRq6OwlEPx93ncLpVxc3EJ6fQkeJ3PFwe5k4nLnM4Q9HrLjqDV6pXIFR1GO35/AtHoYdjtQWTnzgHooHGvina7CXl7ExWphPHxlxAIjCAYHOHCvCPG+dTptKqvb6+arEsPbuyEQqOIx8fho99fnjqLi/NNfHv1PoRrDF//AvwwX8eRF49RFynQXEk4KROXcb7RaNsRdDgCErdPh51wOI144nmEqe2PvziDGWENJ883MHVxC8dmm/jsp7s4+vKrCEcOUyfPcZcycRnnDw/b/xYM/iPIb00mJ8htAmdnz0NiwHLtPsT6Nm5tAflyjRweV8Q4qKOHBB3/OuSWaX7kMIUEOXS7YzgnXAD/WHML7VZD2Tc265icfEVpl8+aO+Qtc0Gj0c4fZa+acijRg/ABd/igY/ExOJ1hzD0Q3LzXQIu1lX1tcwsTE0dJaBT8csqiTFzG+UNDNMOenn41ZUlyucLKK/ObeCGPTXY2C8htbNwpoi6V0ahXaV/C2NgRJTI8EcSRXa4QI+zEhrdsNDrKZrMH5HSb8sQCvigzOmNs7gULw5SetaasjM04mPymnlVPDLGUL8Bc3jjzUFx4BiklLQo6BgdNU6quriefdrmCrTi1mUyOK7PxeiJwehN43WfBR4EBvB/U4YOQHh8GtHjXP4iwl7rxxsGzxwPNxez2ADQa4zuqXbt2d+t0w6fMZscFm82dpacXDh3SC4PaIeEZrVXo0TiEPYQ+jZ3A93ZhQDssaDQGpe7gQZ1w4IA2u3+/5vt9+54dVdH3COExQhfhif8Jzt1NePQvbuB/QsKwBlMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Auth0 Login Page&quot;
+        title=&quot;&quot;
+        src=&quot;/static/hosted-login-41f4f39672fe6576e361ff6516607827-48538.png&quot;
+        srcset=&quot;/static/hosted-login-41f4f39672fe6576e361ff6516607827-bed0f.png 200w,
+/static/hosted-login-41f4f39672fe6576e361ff6516607827-5fd34.png 400w,
+/static/hosted-login-41f4f39672fe6576e361ff6516607827-48538.png 800w,
+/static/hosted-login-41f4f39672fe6576e361ff6516607827-b70ec.png 1200w,
+/static/hosted-login-41f4f39672fe6576e361ff6516607827-d134a.png 1600w,
+/static/hosted-login-41f4f39672fe6576e361ff6516607827-e2649.png 2174w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;It’s as easy as installing the &lt;a href=&quot;https://github.com/auth0/auth0.js&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;auth0-js&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/auth0/jwt-decode&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;jwt-decode&lt;/code&gt;&lt;/a&gt; node modules like so:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; jwt-decode auth0-js --save&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Then implement the following in your JS app:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; auth0 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;auth0&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;WebAuth&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  clientID&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;YOUR-AUTH0-CLIENT-ID&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// E.g., you.auth0.com&lt;/span&gt;
+  domain&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;YOUR-AUTH0-DOMAIN&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  scope&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;openid email profile YOUR-ADDITIONAL-SCOPES&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  audience&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;YOUR-API-AUDIENCES&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// See https://auth0.com/docs/api-auth&lt;/span&gt;
+  responseType&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;token id_token&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  redirectUri&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;http://localhost:9000&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//YOUR-REDIRECT-URL&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;logout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;removeItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;id_token&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;removeItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;access_token&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;href &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;showProfileInfo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;profile&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; btnLogin &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;btn-login&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; btnLogout &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;btn-logout&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; avatar &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;avatar&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;nickname&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;textContent &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; profile&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nickname&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  btnLogin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;display &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;none&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  avatar&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;src &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; profile&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;picture&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  avatar&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;display &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;block&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  btnLogout&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;display &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;block&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;retrieveProfile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; idToken &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;id_token&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;idToken&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; profile &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;jwt_decode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;idToken&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token function&quot;&gt;showProfileInfo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;profile&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token function&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;There was an error getting the profile: &apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; err&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;message&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+auth0&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;parseHash&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hash&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;result&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;token comment&quot;&gt;// Handle error&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// You can use the ID token to get user information in the frontend.&lt;/span&gt;
+  localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;id_token&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;idToken&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// You can use this token to interact with server-side APIs.&lt;/span&gt;
+  localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;access_token&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;accessToken&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;retrieveProfile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;afterLoad&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// buttons&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; btnLogin &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;btn-login&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; btnLogout &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;btn-logout&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  btnLogin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;click&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    auth0&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;authorize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  btnLogout&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;click&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;logout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;retrieveProfile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;load&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; afterLoad&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Get &lt;a href=&quot;https://github.com/auth0-blog/es2015-rundown-example&quot;&gt;the full example using this code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Go ahead and check out our &lt;a href=&quot;https://auth0.com/docs/quickstarts&quot;&gt;Quick Start tutorials&lt;/a&gt; to learn how to implement authentication using different languages and frameworks in your apps.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[OAuth 2.0: The Complete Guide]]></title><description><![CDATA[This post is original content developed by me for the  Auth0’s blog  and has been re-posted here as part of an online portfolio with…]]></description><link>https://lukeoliff.com/oauth2-the-complete-guide/</link><guid isPermaLink="false">https://lukeoliff.com/oauth2-the-complete-guide/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;This post is original content developed by me for the &lt;a href=&quot;https://auth0.com/blog&quot;&gt;Auth0’s blog&lt;/a&gt; and has been re-posted here as part of an online portfolio with permission. Relevant attribution and canonical links exist. &lt;a href=&quot;https://auth0.com/blog/oauth2-the-complete-guide/&quot;&gt;Click here to see the original&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Have you visited a site recently, where you are given the option of connecting or signing up using Google, Facebook or Twitter? Sure you have! This is basically what OAuth is all about; granting third-party services permission to do something for you–like logging you in. In this article, you will learn what OAuth is, how it started, and how it works. &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; For the purposes of this article and the comfort of the target audience, OAuth is to be assumed as OAuth 2.0 unless specifically mentioning another version.&lt;/p&gt;
