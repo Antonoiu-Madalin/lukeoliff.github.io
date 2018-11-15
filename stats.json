@@ -61,9 +61,9 @@
       "path---privacy-89341dd48dc54a723e27.js.map"
     ],
     "commons": [
-      "commons-a2189e2e1773534eecce.js",
+      "commons-b7210ffd62abc2fad7ee.js",
       "build-js-styles.css",
-      "commons-a2189e2e1773534eecce.js.map",
+      "commons-b7210ffd62abc2fad7ee.js.map",
       "build-js-styles.css.map"
     ],
     "path---404-html": [
@@ -101,8 +101,8 @@
       "path---search-a1eea1489feed082ff7d.js.map"
     ],
     "path---about": [
-      "path---about-a01be4f9bd45ce3b62fa.js",
-      "path---about-a01be4f9bd45ce3b62fa.js.map"
+      "path---about-ce27028b0d4204d2e34d.js",
+      "path---about-ce27028b0d4204d2e34d.js.map"
     ]
   }
 }

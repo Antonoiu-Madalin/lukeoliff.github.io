@@ -1,2 +1,0 @@
-webpackJsonp([0xf927f8900006],{598:function(e,t){e.exports={data:{page:{id:"/home/travis/build/lukeoliff/gatsby-homepage/content/pages/1--about/index.md absPath of file >>> MarkdownRemark",html:'<iframe src="https://docs.google.com/document/d/e/2PACX-1vRB3yRczro2LHviwx0IHh1rfhxRhA-AX71fVNR7onvwYIpFIgei7FeW0lwfafoLPoRgN57t4sdjBjlB/pub?embedded=true"></iframe>',frontmatter:{title:"About me"}},site:{siteMetadata:{facebook:{appId:""}}}},pathContext:{slug:"/about/"}}}});
-//# sourceMappingURL=path---about-a01be4f9bd45ce3b62fa.js.map
