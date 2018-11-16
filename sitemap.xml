@@ -3,6 +3,7 @@
 <url> <loc>https://lukeoliff.com/category/portfolio/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lukeoliff.com/helloworld-with-auth0/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lukeoliff.com/common-threats-in-web-app-security/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lukeoliff.com/building-a-blog-with-gatsby-react-and-webtask/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lukeoliff.com/oauth2-the-complete-guide/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lukeoliff.com/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lukeoliff.com/terms/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

@@ -1,16 +1,20 @@
 {
   "assetsByChunkName": {
     "path---category-portfolio": [
-      "path---category-portfolio-f2e5cddbb0e966ec273e.js",
-      "path---category-portfolio-f2e5cddbb0e966ec273e.js.map"
+      "path---category-portfolio-2df219313e6ff86dd81b.js",
+      "path---category-portfolio-2df219313e6ff86dd81b.js.map"
     ],
     "path---helloworld-with-auth-0": [
-      "path---helloworld-with-auth-0-74d5e4b354bdf7ff995c.js",
-      "path---helloworld-with-auth-0-74d5e4b354bdf7ff995c.js.map"
+      "path---helloworld-with-auth-0-93599d8dcbcc0e2d08c3.js",
+      "path---helloworld-with-auth-0-93599d8dcbcc0e2d08c3.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-4cdfe22c0237c1694edf.js",
       "component---src-pages-index-js-4cdfe22c0237c1694edf.js.map"
+    ],
+    "path---building-a-blog-with-gatsby-react-and-webtask": [
+      "path---building-a-blog-with-gatsby-react-and-webtask-3fb1a26adc6104960c09.js",
+      "path---building-a-blog-with-gatsby-react-and-webtask-3fb1a26adc6104960c09.js.map"
     ],
     "path---": [
       "path----1c45b9cbfed9af352b94.js",
@@ -29,24 +33,24 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---oauth-2-the-complete-guide": [
-      "path---oauth-2-the-complete-guide-dfe56768d4d7fa97f397.js",
-      "path---oauth-2-the-complete-guide-dfe56768d4d7fa97f397.js.map"
+      "path---oauth-2-the-complete-guide-6db321eb2223e928f752.js",
+      "path---oauth-2-the-complete-guide-6db321eb2223e928f752.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-51093b88744bb31359c7.js",
       "component---src-layouts-index-js-51093b88744bb31359c7.js.map"
     ],
     "path---category": [
-      "path---category-b9cd84035f4fd25f455b.js",
-      "path---category-b9cd84035f4fd25f455b.js.map"
+      "path---category-3c035ca1c7e2b8fc92e8.js",
+      "path---category-3c035ca1c7e2b8fc92e8.js.map"
     ],
     "component---src-pages-category-js": [
       "component---src-pages-category-js-bbb34571e9395b2ce79b.js",
       "component---src-pages-category-js-bbb34571e9395b2ce79b.js.map"
     ],
     "path---index": [
-      "path---index-ce842585ab1fc3aab86f.js",
-      "path---index-ce842585ab1fc3aab86f.js.map"
+      "path---index-403a19b2965f864f4a53.js",
+      "path---index-403a19b2965f864f4a53.js.map"
     ],
     "component---src-pages-search-js": [
       "component---src-pages-search-js-31e1970d09f08933da90.js",
@@ -71,8 +75,8 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---common-threats-in-web-app-security": [
-      "path---common-threats-in-web-app-security-26bc97a6e9c8be4e1fa1.js",
-      "path---common-threats-in-web-app-security-26bc97a6e9c8be4e1fa1.js.map"
+      "path---common-threats-in-web-app-security-b1aa607b183b7d4bfe6d.js",
+      "path---common-threats-in-web-app-security-b1aa607b183b7d4bfe6d.js.map"
     ],
     "component---src-templates-post-template-js": [
       "component---src-templates-post-template-js-efb6222c664f8637d165.js",
@@ -83,9 +87,9 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-654e3f9d347f2294ce99.js",
+      "app-eed12efc12bb56b97249.js",
       "build-js-styles.css",
-      "app-654e3f9d347f2294ce99.js.map",
+      "app-eed12efc12bb56b97249.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-templates-page-template-js": [
