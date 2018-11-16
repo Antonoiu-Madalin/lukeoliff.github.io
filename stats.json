@@ -1,12 +1,12 @@
 {
   "assetsByChunkName": {
     "path---category-portfolio": [
-      "path---category-portfolio-2df219313e6ff86dd81b.js",
-      "path---category-portfolio-2df219313e6ff86dd81b.js.map"
+      "path---category-portfolio-abfe5f8003db8473b533.js",
+      "path---category-portfolio-abfe5f8003db8473b533.js.map"
     ],
     "path---helloworld-with-auth-0": [
-      "path---helloworld-with-auth-0-93599d8dcbcc0e2d08c3.js",
-      "path---helloworld-with-auth-0-93599d8dcbcc0e2d08c3.js.map"
+      "path---helloworld-with-auth-0-987b9b28137f91515b1e.js",
+      "path---helloworld-with-auth-0-987b9b28137f91515b1e.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-4cdfe22c0237c1694edf.js",
@@ -33,24 +33,24 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---oauth-2-the-complete-guide": [
-      "path---oauth-2-the-complete-guide-6db321eb2223e928f752.js",
-      "path---oauth-2-the-complete-guide-6db321eb2223e928f752.js.map"
+      "path---oauth-2-the-complete-guide-39d028d86fec6034ab46.js",
+      "path---oauth-2-the-complete-guide-39d028d86fec6034ab46.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-51093b88744bb31359c7.js",
       "component---src-layouts-index-js-51093b88744bb31359c7.js.map"
     ],
     "path---category": [
-      "path---category-3c035ca1c7e2b8fc92e8.js",
-      "path---category-3c035ca1c7e2b8fc92e8.js.map"
+      "path---category-6bad50f0266ff0f0388e.js",
+      "path---category-6bad50f0266ff0f0388e.js.map"
     ],
     "component---src-pages-category-js": [
       "component---src-pages-category-js-bbb34571e9395b2ce79b.js",
       "component---src-pages-category-js-bbb34571e9395b2ce79b.js.map"
     ],
     "path---index": [
-      "path---index-403a19b2965f864f4a53.js",
-      "path---index-403a19b2965f864f4a53.js.map"
+      "path---index-a79de9694db5f6888e25.js",
+      "path---index-a79de9694db5f6888e25.js.map"
     ],
     "component---src-pages-search-js": [
       "component---src-pages-search-js-31e1970d09f08933da90.js",
@@ -75,8 +75,8 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---common-threats-in-web-app-security": [
-      "path---common-threats-in-web-app-security-b1aa607b183b7d4bfe6d.js",
-      "path---common-threats-in-web-app-security-b1aa607b183b7d4bfe6d.js.map"
+      "path---common-threats-in-web-app-security-a5f6771fa003b3228bef.js",
+      "path---common-threats-in-web-app-security-a5f6771fa003b3228bef.js.map"
     ],
     "component---src-templates-post-template-js": [
       "component---src-templates-post-template-js-efb6222c664f8637d165.js",
@@ -87,9 +87,9 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-eed12efc12bb56b97249.js",
+      "app-b97bfefd3aeed9fc19ca.js",
       "build-js-styles.css",
-      "app-eed12efc12bb56b97249.js.map",
+      "app-b97bfefd3aeed9fc19ca.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-templates-page-template-js": [
@@ -103,6 +103,10 @@
     "path---search": [
       "path---search-a1eea1489feed082ff7d.js",
       "path---search-a1eea1489feed082ff7d.js.map"
+    ],
+    "path---build-your-first-app-with-polymer-and-web-components": [
+      "path---build-your-first-app-with-polymer-and-web-components-83f4ae148e9fdb687140.js",
+      "path---build-your-first-app-with-polymer-and-web-components-83f4ae148e9fdb687140.js.map"
     ],
     "path---about": [
       "path---about-ce27028b0d4204d2e34d.js",
