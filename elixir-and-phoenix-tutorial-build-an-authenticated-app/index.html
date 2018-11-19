@@ -1,0 +1,903 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/component---src-layouts-index-js-51093b88744bb31359c7.js" as="script"/><link rel="preload" href="/component---src-templates-post-template-js-efb6222c664f8637d165.js" as="script"/><link rel="preload" href="/path---elixir-and-phoenix-tutorial-build-an-authenticated-app-db077bbb6eaa9c6bfea1.js" as="script"/><link rel="preload" href="/app-0e1379c963ee306cf932.js" as="script"/><link rel="preload" href="/commons-44750fa6a1ae314db841.js" as="script"/><title data-react-helmet="true">Elixir &amp; Phoenix Tutorial: Build an Authenticated App - technical writer - Luke Oliff</title><link data-react-helmet="true" rel="canonical" href="https://auth0.com/blog/elixir-and-phoenix-tutorial-build-an-authenticated-app/"/><meta data-react-helmet="true" name="description" content="You can&#x27;t escape Phoenix if you&#x27;re looking for a good framework to build on when using Elixir"/><meta data-react-helmet="true" property="og:url" content="https://lukeoliff.com/elixir-and-phoenix-tutorial-build-an-authenticated-app/"/><meta data-react-helmet="true" property="og:title" content="Elixir &amp; Phoenix Tutorial: Build an Authenticated App - technical writer - Luke Oliff"/><meta data-react-helmet="true" property="og:description" content="You can&#x27;t escape Phoenix if you&#x27;re looking for a good framework to build on when using Elixir"/><meta data-react-helmet="true" property="og:image" content="[object Object]"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="fb:app_id" content=""/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="mroliff"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#666"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style id="__jsx-2231607196">.item.jsx-2231607196,.showItem.jsx-2231607196{background:transparent;-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.item.jsx-2231607196 a,.showItem.jsx-2231607196 a{padding:10px;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.item.jsx-2231607196 svg,.showItem.jsx-2231607196 svg{margin:0 5px 0 0;opacity:0.3;}
+.itemList .hideItem{display:none;}
+@media screen and (min-width:1024px){.item.jsx-2231607196 a{color:#3e3e3c;padding:10px;-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;border-radius:5px;}.homepage:not(.fixed) .item.jsx-2231607196 a{color:#ffffff;}.item.jsx-2231607196 a:hover{color:#4e5a6d;background:#ffffff;background:rgba(255,255,255,0.4);}.item.jsx-2231607196 svg{-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;}.item.jsx-2231607196:hover svg{fill:#4e5a6d;opacity:1;}.hero .item.jsx-2231607196:hover svg svg{fill:green;}.showItem.jsx-2231607196{display:none;}.hiddenItem.jsx-2231607196{text-align:left;padding:5px;}.hiddenItem.jsx-2231607196 a.inHiddenItem{color:#3e3e3c;}.hiddenItem.jsx-2231607196 a.inHiddenItem:hover{color:#4e5a6d;}}</style><style id="__jsx-3546659225">.menu.jsx-3546659225{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#ffffff;bottom:0;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-ms-flex-positive:1;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;left:0;max-height:50px;padding:0 10px;position:fixed;width:100%;z-index:1;-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;}
+.itemList.jsx-3546659225{display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;list-style:none;margin:0;padding:0;position:relative;width:100%;}
+@media screen and (max-width:1023px){.menu.jsx-3546659225:after{position:absolute;content:"";left:20px;right:20px;top:0;height:1px;background:#4e5a6d;}.menu.open.jsx-3546659225{padding:20px;}.homepage:not(.fixed) .menu.jsx-3546659225{bottom:-100px;}}
+@media screen and (min-width:1024px){.menu.jsx-3546659225{border-top:none;background:transparent;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;-webkit-box-pack:end;-ms-flex-pack:end;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;padding-left:50px;-webkit-transition:none;-webkit-transition:none;transition:none;}.itemList.jsx-3546659225{-webkit-box-pack:end;-ms-flex-pack:end;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;padding:0;}.hiddenItemList.jsx-3546659225{list-style:none;margin:0;position:absolute;background:#ffffff;border:1px solid #ecebea;top:48px;right:10px;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;padding:20px;border-radius:5px;border-top-right-radius:0;}.hiddenItemList.jsx-3546659225:after{content:"";background:#ffffff;z-index:10;top:-10px;right:-1px;width:44px;height:10px;position:absolute;border-left:1px solid #ecebea;border-right:1px solid #ecebea;}.homepage:not(.fixed) .hiddenItemList.jsx-3546659225{border:1px solid transparent;background:#ffffff;background:rgba(255,255,255,0.9);top:50px;}.homepage:not(.fixed) .hiddenItemList.jsx-3546659225:after{top:-11px;border-left:1px solid transparent;border-right:1px solid transparent;background:#ffffff;background:rgba(255,255,255,0.9);}.fixed .hiddenItemList.jsx-3546659225{top:44px;}}</style><style id="__jsx-768897745">.header.jsx-768897745{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:#ffffff;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:80px;position:relative;top:0;width:100%;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.header.jsx-768897745 a.logoType{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:"column";-webkit-flex-direction:"column";-ms-flex-direction:"column";flex-direction:"column";color:#3e3e3c;}
+.header.jsx-768897745 a.logoType .logo.jsx-768897745{-ms-flex-negative:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}
+.header.homepage.jsx-768897745{position:absolute;background-color:transparent;height:100px;;}
+h1.jsx-768897745{font-size:1.35em;font-weight:400;margin:0 0 5px 0;}
+h2.jsx-768897745{font-weight:400;font-size:.8em;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;margin:0;}
+.logo.jsx-768897745{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:44px;margin:0 20px 0 0;overflow:hidden;width:44px;-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;}
+.homepage.jsx-768897745 .logo.jsx-768897745{height:60px;width:60px;}
+.logo.jsx-768897745 img.jsx-768897745{width:100%;}
+.sensor.jsx-768897745{display:block;position:absolute;bottom:0;z-index:1;left:0;right:0;height:1px;top:80px;}
+@media screen and (min-width:600px){.header.jsx-768897745{padding:40px;}.header.homepage.jsx-768897745{height:100px;;}}
+@media screen and (max-width:1023px){.header.homepage.jsx-768897745 .logo.jsx-768897745{border:none;}.header.homepage.jsx-768897745 a.logoType,.header.homepage.jsx-768897745 h1.jsx-768897745{color:#ffffff;}.header.homepage.jsx-768897745 h2.jsx-768897745{color:#dddbda;}}
+@media screen and (min-width:1024px){.header.jsx-768897745{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#ffffff;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;top:0;width:100%;-webkit-box-pack:justify;-ms-flex-pack:justify;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-transition:padding 0.5s;-webkit-transition:padding 0.5s;transition:padding 0.5s;}.header.fixed.jsx-768897745{height:50px;;background-color:#ffffff;left:0;padding:0 20px;position:fixed;top:0;width:100%;z-index:1;}.header.fixed.jsx-768897745 h1.jsx-768897745{margin:0 0 2px 0;}.header.fixed.jsx-768897745 h2.jsx-768897745{display:none;}.header.homepage.jsx-768897745:not(.fixed) a.logoType,.header.homepage.jsx-768897745:not(.fixed) h1.jsx-768897745{color:#ffffff;}.header.homepage.jsx-768897745:not(.fixed) h2.jsx-768897745{color:#dddbda;}.header.jsx-768897745 a.logoType{text-align:left;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-ms-flex-negative:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:auto;}.logo.jsx-768897745{margin:0 20px 0 0;}.fixed.jsx-768897745 .logo.jsx-768897745{height:36px;width:36px;}.header.homepage.jsx-768897745:not(.fixed) .logo.jsx-768897745{border:none;}h2.jsx-768897745{-webkit-animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-duration:0.5s;-webkit-animation-name:h2Entry;-webkit-animation-name:h2Entry-jsx-768897745;animation-name:h2Entry-jsx-768897745;}@-webkit-keyframes h2Entry{from.jsx-768897745{opacity:0;}to.jsx-768897745{opacity:1;}}@-webkit-keyframes h2Entry-jsx-768897745{from{opacity:0;}to{opacity:1;}}@keyframes h2Entry-jsx-768897745{from{opacity:0;}to{opacity:1;}}}</style><style id="__jsx-2210477915">h1.jsx-2210477915{font-size:2.2em;margin:0 0 40px 0;-webkit-animation-name:headlineEntry;-webkit-animation-name:headlineEntry-jsx-2210477915;animation-name:headlineEntry-jsx-2210477915;-webkit-animation-duration:1s;-webkit-animation-duration:1s;animation-duration:1s;}
+h1.jsx-2210477915 span{font-weight:400;display:block;font-size:0.5em;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;margin:0 0 5px 0;}
+h1.jsx-2210477915 svg{height:0.75em;fill:#4e5a6d;}
+@-webkit-keyframes headlineEntry{from.jsx-2210477915{opacity:0.5;}to.jsx-2210477915{opacity:1;}}
+@-webkit-keyframes headlineEntry-jsx-2210477915{from{opacity:0.5;}to{opacity:1;}}
+@keyframes headlineEntry-jsx-2210477915{from{opacity:0.5;}to{opacity:1;}}
+@media screen and (min-width:600px){h1.jsx-2210477915{font-size:calc(2em * 1.2);}}
+@media screen and (min-width:1024px){h1.jsx-2210477915{font-size:calc(2em * 1.4);}}</style><style id="__jsx-1230805486">.meta.jsx-1230805486{display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;font-size:0.8em;margin:20px 0;background:transparent;}
+.meta.jsx-1230805486 svg{fill:#4e5a6d;margin:0 5px 0 0;}
+.meta.jsx-1230805486 span.jsx-1230805486{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;text-transform:uppercase;margin:5px 10px 5px 0;}
+@media screen and (min-width:600px){.meta.jsx-1230805486{margin:calc(20px * 1.5) 0 20px;}}</style><style id="__jsx-1548652502">.bodytext.jsx-1548652502{-webkit-animation-name:bodytextEntry;-webkit-animation-name:bodytextEntry-jsx-1548652502;animation-name:bodytextEntry-jsx-1548652502;-webkit-animation-duration:1s;-webkit-animation-duration:1s;animation-duration:1s;}
+.bodytext.jsx-1548652502 h2,.bodytext.jsx-1548652502 h3{margin:1.5em 0 1em;}
+.bodytext.jsx-1548652502 h2{line-height:1.2;font-size:1.7em;}
+.bodytext.jsx-1548652502 h3{font-size:1.35em;line-height:1.3;}
+.bodytext.jsx-1548652502 p{font-size:1.1em;line-height:1.6;margin:0 0 1.5em;}
+.bodytext.jsx-1548652502 ul{list-style:circle;margin:0 0 1.5em;padding:0 0 0 1.5em;}
+.bodytext.jsx-1548652502 li{margin:0.7em 0;line-height:1.5;}
+.bodytext.jsx-1548652502 a{font-weight:600;color:#4e5a6d;-webkit-text-decoration:underline;text-decoration:underline;}
+.bodytext.jsx-1548652502 a.gatsby-resp-image-link{border:0;display:block;margin:2.5em 0;border-radius:10px;overflow:hidden;border:1px solid #ecebea;}
+.bodytext.jsx-1548652502 code.language-text{background:#ecebea;text-shadow:none;color:inherit;padding:0.1em 0.3em 0.2em;border-radius:0.1em;}
+@-webkit-keyframes bodytextEntry{from.jsx-1548652502{opacity:0;}to.jsx-1548652502{opacity:1;}}
+@-webkit-keyframes bodytextEntry-jsx-1548652502{from{opacity:0;}to{opacity:1;}}
+@keyframes bodytextEntry-jsx-1548652502{from{opacity:0;}to{opacity:1;}}</style><style id="__jsx-646394116">.author.jsx-646394116{margin:40px 0;padding:40px 0;border-top:1px solid #ecebea;border-bottom:1px solid #ecebea;}
+.avatar.jsx-646394116{float:left;border-radius:65% 75%;border:1px solid #ecebea;display:inline-block;height:50px;margin:5px 20px 0 0;overflow:hidden;width:50px;}
+.avatar.jsx-646394116 img.jsx-646394116{width:100%;}
+.note.jsx-646394116{font-size:0.9em;line-height:1.6;}
+@media screen and (min-width:600px){.author.jsx-646394116{display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}.avatar.jsx-646394116{-webkit-box-flex:0;-ms-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;}}</style><style id="__jsx-126278577">.links.jsx-126278577{display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:0 20px 40px;border-bottom:1px solid #ecebea;margin:0 0 40px 0;}
+.links.jsx-126278577 a{display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+.links.jsx-126278577 a:nth-child(2){margin:20px 0 0;}
+.links.jsx-126278577 svg{fill:orange;width:20px;height:20px;-ms-flex-negative:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-box-flex:0;-ms-flex-positive:0;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;margin:0 20px 0 0;}
+h4.jsx-126278577{font-weight:600;margin:0;font-size:1.1em;}
+time.jsx-126278577{color:#969492;display:block;font-weight:400;font-size:0.8em;margin-top:0.5em;}
+@media screen and (min-width:1024px){.links.jsx-126278577{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}.links.jsx-126278577 a{-ms-flex-preferred-size:50%;-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;}.links.jsx-126278577 a:nth-child(2){margin:0;}.links.jsx-126278577 svg{-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;margin:0 10px 0 0;}@media (hover:hover){.links.jsx-126278577 a:hover svg{-webkit-transform:scale(1.5);-webkit-transform:scale(1.5);-ms-transform:scale(1.5);transform:scale(1.5);}}}</style><style id="__jsx-3595558049">.comments.jsx-3595558049{margin:0 -8px 20px;}</style><style id="__jsx-4002454992">.article.jsx-4002454992{padding:20px;margin:0 auto;}
+@media screen and (min-width:600px){.article.jsx-4002454992{padding:calc(20px) calc(20px * 2);max-width:650px;}}
+@media screen and (min-width:1024px){.article.jsx-4002454992{padding:calc(20px * 2 + 90px) 0 calc(20px * 2);max-width:1000px;}}</style><style id="__jsx-2344609357">.footer.jsx-2344609357{background:#ffffff;padding:20px;padding-top:0;padding-bottom:120px;}
+.footer.jsx-2344609357 ul{list-style:none;text-align:center;padding:0;}
+.footer.jsx-2344609357 ul li{color:#969492;font-size:.8em;padding:2px 10px;position:relative;display:inline-block;}
+.footer.jsx-2344609357 ul li:after{content:"•";position:absolute;right:calc(5px * -1);}
+.footer.jsx-2344609357 ul li:last-child:after{content:"";}
+@media screen and (min-width:1024px){.footer.jsx-2344609357{padding:0 1em 1.5em;}}</style><style id="__jsx-1304903616">main.jsx-1304903616{min-height:80vh;}</style><style id="__jsx-3347019808">html{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*,*:after,*:before{-webkit-box-sizing:inherit;box-sizing:inherit;margin:0;padding:0;}
+body{font-family:Arial, sans-serif;;}
+h1,h2,h3{font-weight:400;line-height:1.1;-webkit-letter-spacing:-0.03em;-moz-letter-spacing:-0.03em;-ms-letter-spacing:-0.03em;letter-spacing:-0.03em;margin:0;}
+h1{-webkit-letter-spacing:-0.04em;-moz-letter-spacing:-0.04em;-ms-letter-spacing:-0.04em;letter-spacing:-0.04em;}
+p{margin:0;}
+strong{font-weight:400;}
+a{-webkit-text-decoration:none;text-decoration:none;color:#666;}
+main{width:auto;display:block;}</style><style id="gatsby-inlined-css">@font-face{font-family:Open Sans;font-style:normal;font-display:swap;font-weight:300;src:local("Open Sans Light "),local("Open Sans-Light"),url(/static/open-sans-latin-300.60c86674.woff2) format("woff2"),url(/static/open-sans-latin-300.521d17bc.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-display:swap;font-weight:300;src:local("Open Sans Light italic"),local("Open Sans-Lightitalic"),url(/static/open-sans-latin-300italic.06bbd318.woff2) format("woff2"),url(/static/open-sans-latin-300italic.8a648ff3.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-display:swap;font-weight:400;src:local("Open Sans Regular "),local("Open Sans-Regular"),url(/static/open-sans-latin-400.cffb686d.woff2) format("woff2"),url(/static/open-sans-latin-400.bf2d0783.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-display:swap;font-weight:400;src:local("Open Sans Regular italic"),local("Open Sans-Regularitalic"),url(/static/open-sans-latin-400italic.987032ea.woff2) format("woff2"),url(/static/open-sans-latin-400italic.db70d0b9.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-display:swap;font-weight:600;src:local("Open Sans SemiBold "),local("Open Sans-SemiBold"),url(/static/open-sans-latin-600.223a277b.woff2) format("woff2"),url(/static/open-sans-latin-600.1cd5320f.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-display:swap;font-weight:600;src:local("Open Sans SemiBold italic"),local("Open Sans-SemiBolditalic"),url(/static/open-sans-latin-600italic.4950a720.woff2) format("woff2"),url(/static/open-sans-latin-600italic.318ea1ad.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-display:swap;font-weight:700;src:local("Open Sans Bold "),local("Open Sans-Bold"),url(/static/open-sans-latin-700.d08c09f2.woff2) format("woff2"),url(/static/open-sans-latin-700.623e3205.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-display:swap;font-weight:700;src:local("Open Sans Bold italic"),local("Open Sans-Bolditalic"),url(/static/open-sans-latin-700italic.c02f5da6.woff2) format("woff2"),url(/static/open-sans-latin-700italic.72e19cbb.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-display:swap;font-weight:800;src:local("Open Sans ExtraBold "),local("Open Sans-ExtraBold"),url(/static/open-sans-latin-800.aaeffaf2.woff2) format("woff2"),url(/static/open-sans-latin-800.c6aa0c4a.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-display:swap;font-weight:800;src:local("Open Sans ExtraBold italic"),local("Open Sans-ExtraBolditalic"),url(/static/open-sans-latin-800italic.6b3973ff.woff2) format("woff2"),url(/static/open-sans-latin-800italic.79b58175.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#D0E0D8"/><meta name="apple-mobile-web-app-title" content="Lazywill"/><link rel="apple-touch-icon" href="/icons/apple-icon-57x57.png" sizes="57x57"/><link rel="apple-touch-icon" href="/icons/apple-icon-60x60.png" sizes="60x60"/><link rel="apple-touch-icon" href="/icons/apple-icon-72x72.png" sizes="72x72"/><link rel="apple-touch-icon" href="/icons/apple-icon-76x76.png" sizes="76x76"/><link rel="apple-touch-icon" href="/icons/apple-icon-114x114.png" sizes="114x114"/><link rel="apple-touch-icon" href="/icons/apple-icon-120x120.png" sizes="120x120"/><link rel="apple-touch-icon" href="/icons/apple-icon-144x144.png" sizes="144x144"/><link rel="apple-touch-icon" href="/icons/apple-icon-152x152.png" sizes="152x152"/><link rel="apple-touch-icon" href="/icons/apple-icon-180x180.png" sizes="180x180"/><link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png"/></head><body><noscript>You need to enable JavaScript to run this app!</noscript><div id="___gatsby"><header class="jsx-768897745 header  "><a class="logoType" href="/"><div class="jsx-768897745 logo"><img src="/static/avatar.fe8a3f2f.jpg" alt="dad, technical writer, security advocate - Luke Oliff" class="jsx-768897745"/></div><div class="jsx-768897745 type"><h1 class="jsx-768897745">Luke Oliff</h1><h2 class="jsx-768897745">dad, technical writer, security advocate</h2></div></a><nav rel="js-menu" class="jsx-3546659225 menu "><ul class="jsx-3546659225 itemList"><li class="jsx-2231607196 item"><a class="" data-slug="/" href="/"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" style="vertical-align:middle"><g><path d="m32.9 22.1v10.8q0 0.5-0.4 1t-1 0.4h-8.6v-8.6h-5.7v8.6h-8.6q-0.5 0-1-0.4t-0.4-1v-10.8q0 0 0 0t0-0.1l12.9-10.6 12.8 10.6q0 0.1 0 0.1z m5-1.5l-1.4 1.7q-0.2 0.2-0.4 0.2h-0.1q-0.3 0-0.5-0.2l-15.4-12.8-15.5 12.8q-0.2 0.2-0.5 0.2-0.3 0-0.5-0.2l-1.4-1.7q-0.1-0.2-0.1-0.5t0.2-0.5l16.1-13.4q0.7-0.6 1.7-0.6t1.7 0.6l5.4 4.6v-4.4q0-0.3 0.2-0.5t0.5-0.2h4.3q0.3 0 0.5 0.2t0.2 0.5v9.1l4.9 4.1q0.2 0.2 0.3 0.5t-0.2 0.5z"></path></g></svg> <!-- -->Home</a></li><li class="jsx-2231607196 item"><a class="" data-slug="/category/" href="/category/"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" style="vertical-align:middle"><g><path d="m13 10q0-1.2-0.8-2t-2.1-0.9-2 0.9-0.8 2 0.8 2 2 0.9 2.1-0.9 0.8-2z m23.8 12.9q0 1.1-0.8 2l-11 10.9q-0.8 0.9-2 0.9-1.2 0-2-0.9l-16-15.9q-0.8-0.9-1.4-2.3t-0.6-2.6v-9.3q0-1.1 0.8-2t2.1-0.8h9.2q1.2 0 2.7 0.5t2.2 1.5l16 15.9q0.8 0.9 0.8 2.1z"></path></g></svg> <!-- -->Categories</a></li><li class="jsx-2231607196 item"><a class="" data-slug="/search/" href="/search/"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" style="vertical-align:middle"><g><path d="m27.2 18.6q0-4.2-2.9-7.1t-7.1-2.9-7 2.9-3 7.1 2.9 7 7.1 3 7.1-3 2.9-7z m11.4 18.5q0 1.2-0.8 2.1t-2 0.8q-1.2 0-2-0.8l-7.7-7.7q-4 2.8-8.9 2.8-3.2 0-6.1-1.3t-5-3.3-3.4-5-1.2-6.1 1.2-6.1 3.4-5.1 5-3.3 6.1-1.2 6.1 1.2 5 3.3 3.4 5.1 1.2 6.1q0 4.9-2.7 8.9l7.6 7.6q0.8 0.9 0.8 2z"></path></g></svg> <!-- -->Search</a></li><li class="jsx-2231607196 item"><a class="" data-slug="/about/" href="/about/"> <!-- -->About me</a></li></ul></nav></header><div class="jsx-768897745 sensor"></div><main class="jsx-1304903616 jsx-3347019808"><article class="jsx-4002454992 article"><header><h1 class="jsx-2210477915">Elixir &amp; Phoenix Tutorial: Build an Authenticated App</h1><p class="jsx-1230805486 meta"><span class="jsx-1230805486"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="18" width="18" viewBox="0 0 40 40" style="vertical-align:middle"><g><path d="m4.4 37.1h6.4v-6.4h-6.4v6.4z m7.8 0h7.2v-6.4h-7.2v6.4z m-7.8-7.8h6.4v-7.2h-6.4v7.2z m7.8 0h7.2v-7.2h-7.2v7.2z m-7.8-8.6h6.4v-6.4h-6.4v6.4z m16.4 16.4h7.1v-6.4h-7.1v6.4z m-8.6-16.4h7.2v-6.4h-7.2v6.4z m17.2 16.4h6.4v-6.4h-6.4v6.4z m-8.6-7.8h7.1v-7.2h-7.1v7.2z m-7.9-19.3v-6.4q0-0.3-0.2-0.5t-0.5-0.2h-1.4q-0.3 0-0.5 0.2t-0.2 0.5v6.4q0 0.3 0.2 0.5t0.5 0.2h1.4q0.3 0 0.5-0.2t0.2-0.5z m16.5 19.3h6.4v-7.2h-6.4v7.2z m-8.6-8.6h7.1v-6.4h-7.1v6.4z m8.6 0h6.4v-6.4h-6.4v6.4z m0.7-10.7v-6.4q0-0.3-0.2-0.5t-0.5-0.2h-1.5q-0.3 0-0.5 0.2t-0.2 0.5v6.4q0 0.3 0.2 0.5t0.5 0.2h1.5q0.2 0 0.5-0.2t0.2-0.5z m8.5-1.4v28.5q0 1.2-0.8 2.1t-2 0.8h-31.4q-1.2 0-2.1-0.9t-0.8-2v-28.5q0-1.2 0.8-2t2.1-0.9h2.8v-2.1q0-1.5 1.1-2.6t2.5-1h1.4q1.5 0 2.5 1.1t1.1 2.5v2.1h8.6v-2.1q0-1.5 1-2.6t2.5-1h1.5q1.4 0 2.5 1.1t1 2.5v2.1h2.9q1.1 0 2 0.9t0.8 2z"></path></g></svg> <!-- -->2017-12-14</span><span class="jsx-1230805486"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="18" width="18" viewBox="0 0 40 40" style="vertical-align:middle"><g><path d="m35.9 31.4q0 2.6-1.6 4.2t-4.3 1.5h-19.5q-2.7 0-4.4-1.5t-1.6-4.2q0-1.2 0.1-2.3t0.3-2.5 0.6-2.4 0.9-2.2 1.4-1.8 1.9-1.2 2.5-0.4q0.2 0 1 0.5t1.6 1 2.4 1.1 3 0.5 3-0.5 2.4-1.1 1.7-1 0.9-0.5q1.4 0 2.5 0.4t1.9 1.2 1.4 1.8 0.9 2.2 0.6 2.4 0.4 2.5 0 2.3z m-7.1-20q0 3.6-2.5 6.1t-6.1 2.5-6-2.5-2.6-6.1 2.6-6 6-2.5 6.1 2.5 2.5 6z"></path></g></svg> <!-- -->luke oliff</span><span class="jsx-1230805486"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="18" width="18" viewBox="0 0 40 40" style="vertical-align:middle"><g><path d="m13 10q0-1.2-0.8-2t-2.1-0.9-2 0.9-0.8 2 0.8 2 2 0.9 2.1-0.9 0.8-2z m23.8 12.9q0 1.1-0.8 2l-11 10.9q-0.8 0.9-2 0.9-1.2 0-2-0.9l-16-15.9q-0.8-0.9-1.4-2.3t-0.6-2.6v-9.3q0-1.1 0.8-2t2.1-0.8h9.2q1.2 0 2.7 0.5t2.2 1.5l16 15.9q0.8 0.9 0.8 2.1z"></path></g></svg><a href="/category/portfolio">portfolio</a></span></p></header><div class="jsx-1548652502 bodytext"><p><strong>TL;DR:</strong> The <a href="https://elixir-lang.org">Elixir language</a> is dynamically typed with lots of helpful documentation. It builds on <a href="http://www.erlang.org">Erlang</a> and the Erlang VM. You can be up and running almost immediately. If your app compiles, it’s already deployable. The <a href="http://phoenixframework.org">Phoenix framework for Elixir apps</a> is genuinely exciting to use. Let’s build an easy-to-use application that manages upcoming events, built with the Phoenix Framework and authenticated with <a href="https://auth0.com">Auth0</a>. The final code can be found at the <a href="https://github.com/lukeoliff/auth0-elixir-countdown">auth0-elixir-countdown GitHub repo</a>.</p>
+<p><strong>This post is original content developed by me for the <a href="https://auth0.com/blog">Auth0’s blog</a> and has been re-posted here as part of an online portfolio with permission. Relevant attribution and canonical links exist. <a href="https://auth0.com/blog/oauth2-the-complete-guide/">Click here to see the original</a>.</strong></p>
+<hr>
+<h2>Elixir language</h2>
+<p>Personally, I’ve been stuck under a rock as a developer. I’ve missed plenty of cool languages whilst playing with PHP—and the <a href="https://elixir-lang.org">Elixir language</a> is no exception. Fortunately for me, Elixir (like PHP) is a dynamically typed language with lots of helpful documentation. My brain didn’t have to work <strong><em>too</em></strong> hard to build something practical and fun. Elixir builds on <a href="http://www.erlang.org">Erlang</a> and leverages the Erlang VM. Its got a super small footprint and is surprisingly robust. You can be up and running almost immediately.</p>
+<p><strong><em>It doesn’t stop there.</em></strong></p>
+<p>If your Elixir app compiles, it’s practically deployable already and the how-to guides come ready to talk you through getting it online with <a href="https://www.heroku.com">Heroku</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> This article was written assuming you have a good understanding of functional programming languages. Elixir is a functional, concurrent, general-purpose programming language. It runs on the Erlang virtual machine (BEAM). Elixir builds on top of Erlang and shares the same abstractions for building distributed, fault-tolerant applications. Check out Elixir School for <a href="https://elixirschool.com/en/">lessons about the Elixir programming language</a>.</p>
+</blockquote>
+<h2>Phoenix framework</h2>
+<p>You can’t escape the <a href="http://phoenixframework.org">Phoenix framework</a> if you’re looking for a good tool to build on in Elixir. They portray themselves as a fresh approach to tried and tested MVC development. Phoenix genuinely excites me. One aspect is just how well we can separate our concerns across an extremely well thought out, logical structure. Another is that it provides a fantastic command line interface.</p>
+<p>Phoenix is an MVC framework written in Elixir and will be welcoming and comfortable to use for anyone familiar with <a href="http://rubyonrails.org/">Rails</a> or <a href="https://www.djangoproject.com/">Django</a>.</p>
+<blockquote>
+<p>The Phoenix framework provides the best of both worlds: high developer productivity and high application performance. It also has some interesting new twists like channels for implementing realtime features and pre-compiled templates for blazing speed.</p>
+</blockquote>
+<h2>What should we build?</h2>
+<p>With holiday season fast approaching and a growing family, we’re counting down the days when we can sit at home, in front of our (fake) fireplace and open some presents! :)</p>
+<p>So, I thought, why not build an application where I can see countdowns to my favorite events?</p>
+<ul>
+<li><a href="https://days.to/until/easter">https://days.to/until/easter</a></li>
+<li><a href="http://www.xmasclock.com">http://www.xmasclock.com</a></li>
+</ul>
+<h2>Getting ready</h2>
+<h3>Install Elixir</h3>
+<p>Follow the Elixir language install guide here: <a href="http://elixir-lang.org/install.html">http://elixir-lang.org/install.html</a></p>
+<p>Next, we run a <code class="language-text">mix</code> command to install the Hex package manager. Mix is a build tool that provides tasks for creating, compiling, and testing Elixir projects, managing its dependencies, and more. If you know Ruby well, Mix is Rake, Bundler, and RubyGems combined.</p>
+<p>Now use mix to install hex: <a href="https://hexdocs.pm/mix/1.0.5/Mix.Tasks.Local.Hex.html">https://hexdocs.pm/mix/1.0.5/Mix.Tasks.Local.Hex.html</a></p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ mix local.hex</code></pre>
+      </div>
+<h3>Install Phoenix</h3>
+<p>Phoenix needs at least Elixir 1.4 and Erlang 18 or later, run:</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ elixir -v
+Erlang/OTP 19 <span class="token punctuation">[</span>erts-8.3<span class="token punctuation">]</span> <span class="token punctuation">[</span>source<span class="token punctuation">]</span> <span class="token punctuation">[</span>64-bit<span class="token punctuation">]</span> <span class="token punctuation">[</span>smp:8:8<span class="token punctuation">]</span> <span class="token punctuation">[</span>async-threads:10<span class="token punctuation">]</span> <span class="token punctuation">[</span>hipe<span class="token punctuation">]</span> <span class="token punctuation">[</span>kernel-poll:false<span class="token punctuation">]</span> <span class="token punctuation">[</span>dtrace<span class="token punctuation">]</span>
+
+Elixir 1.4.2</code></pre>
+      </div>
+<p>Now we can install Phoenix v1.3.0:</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new-1.3.0.ez</code></pre>
+      </div>
+<h3>Other requirements</h3>
+<p>To follow this guide fully, make sure you also have PostgreSQL and npm installed.</p>
+<ul>
+<li><a href="http://postgresguide.com/setup/install.html">http://postgresguide.com/setup/install.html</a></li>
+<li><a href="https://docs.npmjs.com/getting-started/installing-node">https://docs.npmjs.com/getting-started/installing-node</a></li>
+</ul>
+<p>If you choose to use another database provider, make sure you edit the configuration appropriately.</p>
+<ul>
+<li><a href="https://phoenixframework.readme.io/docs/using-mysql">https://phoenixframework.readme.io/docs/using-mysql</a></li>
+</ul>
+<h2>Our Phoenix application skeleton</h2>
+<p>Now we can create a new application with the Phoenix framework. Let’s call our application “countdown”.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ mix phx.new countdown</code></pre>
+      </div>
+<p>It will now generate a skeleton application with config, controllers, routing, etc… Everything you need, really!</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">* creating countdown/config/config.exs
+* creating countdown/config/dev.exs
+* creating countdown/config/prod.exs
+<span class="token punctuation">..</span>.
+* creating countdown/assets/static/favicon.ico</code></pre>
+      </div>
+<p>When prompted, fetch and install dependencies.</p>
+<blockquote>
+<p>Phoenix uses <a href="http://brunch.io">Brunch.io</a> for asset management. Brunch.io’s dependencies are installed via the node package manager, not mix. Phoenix will prompt us to install them at the end of the mix phx.new task. If we say “no” at that point, and if we don’t install those dependencies later with npm install, our application will raise errors when we try to start it, and our assets may not load properly. If we don’t want to use Brunch.io at all, we can simply pass —no-brunch to mix phx.new.</p>
+</blockquote>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">Fetch and <span class="token function">install</span> dependencies? <span class="token punctuation">[</span>Yn<span class="token punctuation">]</span> Y</code></pre>
+      </div>
+<p>It will fetch and compile our dependencies.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">* running mix deps.get
+* running mix deps.compile
+* running <span class="token function">cd</span> assets <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> node node_modules/brunch/bin/brunch build</code></pre>
+      </div>
+<p>Once it’s finished it will give you some helpful info to check that it’s all working, running your application, and even how to interact with your app inside IEx (Interactive Elixir).</p>
+<p>Check out the following to learn more about <a href="http://blog.plataformatec.com.br/2016/04/debugging-techniques-in-elixir-lang/">debugging techniques in Elixir using IEx</a>.</p>
+<p>So let’s change directory and check we can run the application.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ <span class="token function">cd</span> countdown <span class="token operator">&amp;&amp;</span> mix phx.server</code></pre>
+      </div>
+<p>It shows us the compilation including any warnings or errors including deprecations or unused variables. Very cool.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash"><span class="token punctuation">[</span>info<span class="token punctuation">]</span> Running CountdownWeb.Endpoint with Cowboy using http://localhost:4000
+Compiling 13 files <span class="token punctuation">(</span>.ex<span class="token punctuation">)</span>
+<span class="token punctuation">..</span>
+<span class="token operator">==</span><span class="token operator">></span> mime
+Compiling 1 <span class="token function">file</span> <span class="token punctuation">(</span>.ex<span class="token punctuation">)</span>
+warning: String.strip/1 is deprecated, use String.trim/1
+  lib/mime.ex:28
+<span class="token punctuation">..</span>.
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> Sent 200 <span class="token keyword">in</span> 18ms</code></pre>
+      </div>
+<p>Now we can take a look our app by visiting <a href="http://localhost:4000">http://localhost:4000</a>. It should look something like…</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/phoenix_app-created-6156a13fa4805f4525300ae5e7620033-ba6af.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 782px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 76.72634271099746%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdtcEj//xAAXEAADAQAAAAAAAAAAAAAAAAAAAREg/9oACAEBAAEFAmXP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGxAAAwACAwAAAAAAAAAAAAAAAAEREJExQWH/2gAIAQEAAT8hhXnYlvexOkJ5j//aAAwDAQACAAMAAAAQM8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAZEAEBAQEBAQAAAAAAAAAAAAABEQAhMZH/2gAIAQEAAT8QuTPV4zRp9KaS6VVDJviYA8N//9k='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Phoenix app starter"
+        title=""
+        src="/static/phoenix_app-created-6156a13fa4805f4525300ae5e7620033-ba6af.jpg"
+        srcset="/static/phoenix_app-created-6156a13fa4805f4525300ae5e7620033-3f251.jpg 250w,
+/static/phoenix_app-created-6156a13fa4805f4525300ae5e7620033-2ce4e.jpg 500w,
+/static/phoenix_app-created-6156a13fa4805f4525300ae5e7620033-ba6af.jpg 782w"
+        sizes="(max-width: 782px) 100vw, 782px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h2>Countdown Application</h2>
+<h3>CRUD pattern</h3>
+<p>We need to be able to store the events we are going to count down to.</p>
+<p>Before we can start adding our data, we need to set up the database. Open up <code class="language-text">config/dev.exs</code>, and edit the username and password near the bottom of the file. (They will both be set to “postgres” by default.)</p>
+<div class="gatsby-highlight">
+      <pre class="language-elixir"><code class="language-elixir"><span class="token operator">...</span>
+config <span class="token atom symbol">:countdown</span><span class="token punctuation">,</span> Countdown<span class="token punctuation">.</span>Repo<span class="token punctuation">,</span>
+  <span class="token attr-name">adapter:</span> Ecto<span class="token punctuation">.</span>Adapters<span class="token punctuation">.</span>Postgres<span class="token punctuation">,</span>
+  <span class="token attr-name">username:</span> <span class="token string">"auth0"</span><span class="token punctuation">,</span>
+  <span class="token attr-name">password:</span> <span class="token string">"phoenixelixir"</span><span class="token punctuation">,</span>
+  <span class="token attr-name">database:</span> <span class="token string">"countdown"</span><span class="token punctuation">,</span>
+<span class="token operator">...</span></code></pre>
+      </div>
+<p>If you didn’t run it yet, let’s create the database now.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ mix ecto.create
+The database <span class="token keyword">for</span> Countdown.Repo has been created</code></pre>
+      </div>
+<p>Now comes the backbone of our application, the CRUD actions for the events. In order to achieve this, Phoenix supports us with four different generators:</p>
+<blockquote>
+<p><code class="language-text">mix phoenix.gen.html</code>
+Gen HTML creates: model, view, controllers, repository, templates, tests</p>
+</blockquote>
+<blockquote>
+<p><code class="language-text">mix phoenix.gen.channel</code>
+Gen Channel creates: channel and tests</p>
+</blockquote>
+<blockquote>
+<p><code class="language-text">mix phoenix.gen.json</code>
+Gen JSON, for APIs really, creates: model, view, controllers, repository, tests</p>
+</blockquote>
+<blockquote>
+<p><code class="language-text">mix phoenix.gen.model</code>
+Gen Model creates: model and repository</p>
+</blockquote>
+<p>We use the first generator which creates all resources and actions for us, the same as rails generators. We need to declare the name as a collection, singular and plural, and next the field names with types.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ mix phx.gen.html Events Event events title due:datetime</code></pre>
+      </div>
+<p>We’re pretty close to having a CRUD application ready to go!</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">* creating lib/countdown_web/controllers/event_controller.ex
+* creating lib/countdown_web/templates/event/edit.html.eex
+<span class="token punctuation">..</span>.
+* injecting test/countdown/events/events_test.exs</code></pre>
+      </div>
+<p>Go and edit <code class="language-text">lib/countdown_web/router.ex</code> and place <code class="language-text">resources &quot;/events&quot;, EventController</code> inside the <code class="language-text">CountdownWeb</code> scope.</p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">   ...
+   scope "/", CountdownWeb do
+     pipe_through :browser # Use the default browser stack
+
+     get "/", PageController, :index
+<span class="token inserted">+    resources "/events", EventController</span>
+   end
+   ...</code></pre>
+      </div>
+<p>Now we can migrate our new model into the database.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ mix ecto.migrate
+Compiling 10 files <span class="token punctuation">(</span>.ex<span class="token punctuation">)</span>
+Generated countdown app
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> <span class="token operator">==</span> Running Countdown.Repo.Migrations.CreateEvents.change/0 forward
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> create table events
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> <span class="token operator">==</span> Migrated <span class="token keyword">in</span> 0.0s</code></pre>
+      </div>
+<p>Let’s run our server to make sure it’s still working.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ mix phx.server</code></pre>
+      </div>
+<p>If it is still working, this time we can head to <a href="http://localhost:4000/events">http://localhost:4000/events</a> and see our new CRUD interfaces.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/phoenix_app-list-8a1856baba202c4a6c888d4fe0a02a3e-76553.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 764px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 49.083769633507856%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAQACBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe5pQmP/xAAVEAEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAQABBQIr/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAERIOH/2gAIAQEAAT8hm9ZELH//2gAMAwEAAgADAAAAEGAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxABAQACAwEAAAAAAAAAAAAAAREAISAxQZH/2gAIAQEAAT8QUpEK9ZBbL9cQ2XT6cP/Z'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Phoenix CRUD List"
+        title=""
+        src="/static/phoenix_app-list-8a1856baba202c4a6c888d4fe0a02a3e-76553.jpg"
+        srcset="/static/phoenix_app-list-8a1856baba202c4a6c888d4fe0a02a3e-d98b9.jpg 250w,
+/static/phoenix_app-list-8a1856baba202c4a6c888d4fe0a02a3e-0bf60.jpg 500w,
+/static/phoenix_app-list-8a1856baba202c4a6c888d4fe0a02a3e-76553.jpg 764w"
+        sizes="(max-width: 764px) 100vw, 764px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h3>Showing off our events</h3>
+<p>We could list all events on our homepage, but as we are going to have countdown clocks, it’s important we only list future events. For this, we’re going to need a way to fetch events in the future. Let’s give it a go…</p>
+<p>Edit <code class="language-text">lib/countdown/events/events.ex</code> which is the repository module for our events.</p>
+<p>You’ll find the query structure familiar, especially if you’ve used any well-known database abstraction layers, like Doctrine or Django ORM, or even if you are experienced with SQL itself. We’re going to be selecting <code class="language-text">from</code> <code class="language-text">Countdown.Events.Event</code> where <code class="language-text">due</code> is greater than or equal to the current UTC timestamp.</p>
+<div class="gatsby-highlight">
+      <pre class="language-elixir"><code class="language-elixir">query <span class="token operator">=</span> from e <span class="token operator">in</span> Countdown<span class="token punctuation">.</span>Events<span class="token punctuation">.</span>Event<span class="token punctuation">,</span>
+        <span class="token attr-name">where:</span> e<span class="token punctuation">.</span>due <span class="token operator">>=</span> <span class="token operator">^</span>DateTime<span class="token punctuation">.</span>utc_now</code></pre>
+      </div>
+<blockquote>
+<p>The docblock shows you how to run the method in IEx (interactive Elixir) and the format of the response, usually an example <code class="language-text">[%Map{}, ...]</code>.</p>
+</blockquote>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">   ...
+
+   def list_events do
+     Repo.all(Event)
+   end
+<span class="token inserted">+</span>
+<span class="token inserted">+   @doc """</span>
+<span class="token inserted">+   Returns the list of future events.</span>
+<span class="token inserted">+</span>
+<span class="token inserted">+   ## Examples</span>
+<span class="token inserted">+</span>
+<span class="token inserted">+       iex> list_future_events()</span>
+<span class="token inserted">+       [%Event{}, ...]</span>
+<span class="token inserted">+</span>
+<span class="token inserted">+   """</span>
+<span class="token inserted">+   def list_future_events do</span>
+<span class="token inserted">+     query = from e in Countdown.Events.Event,</span>
+<span class="token inserted">+       where: e.due >= ^DateTime.utc_now</span>
+<span class="token inserted">+     Repo.all(query)</span>
+<span class="token inserted">+   end</span>
+
+   ...</code></pre>
+      </div>
+<p>Next, we add this to the controller and display some items on the homepage. Let’s edit our homepage controller at <code class="language-text">lib/countdown_web/controllers/page_controller.ex</code></p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">   ...
+   use CountdownWeb, :controller
+<span class="token inserted">+  alias Countdown.Events</span>
+ 
+   def index(conn, _params) do
+<span class="token inserted">+    events = Events.list_future_events()</span>
+<span class="token deleted">-    render conn, "index.html"</span>
+<span class="token inserted">+    render conn, "index.html", events: events</span>
+   end
+   ...</code></pre>
+      </div>
+<p>Nowe we’ll edit our homepage template at <code class="language-text">lib/countdown_web/templates/page/index.html.eex</code> and add a very simple list of items, we’ll come back and make turn this into our countdown clocks later.</p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">   &lt;div class="jumbotron">
+     &lt;h2>&lt;%= gettext "Welcome to %{name}!", name: "Phoenix" %>&lt;/h2>
+     &lt;p class="lead">A productive web framework that&lt;br />does not compromise speed and maintainability.&lt;/p>
+   &lt;/div>
+
+<span class="token inserted">+  &lt;ul></span>
+<span class="token inserted">+  &lt;%= for event &lt;- @events do %></span>
+<span class="token inserted">+    &lt;li>&lt;%= event.title %>, &lt;%= event.due %>&lt;/li></span>
+<span class="token inserted">+  &lt;% end %></span>
+<span class="token inserted">+  &lt;/ul></span>
+   ...</code></pre>
+      </div>
+<blockquote>
+<p><strong>Note:</strong> I’ve added last Christmas so we can see our query works, only showing future events.</p>
+</blockquote>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/phoenix_app-list-last-xmas-93b5c378a9349bb931b60eb1dec9fdc8-c37b5.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 759px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 54.28194993412385%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe5qiKP/xAAWEAEBAQAAAAAAAAAAAAAAAAARECD/2gAIAQEAAQUCI4//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAZEAEAAgMAAAAAAAAAAAAAAAABABEgMfD/2gAIAQEAAT8hpywDcBh//9oADAMBAAIAAwAAABAzz//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABkQAQEAAwEAAAAAAAAAAAAAAAERACAxkf/aAAgBAQABPxBdVoV4Xc4C+uIsbGOn/9k='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Phoenix adding Christmas"
+        title=""
+        src="/static/phoenix_app-list-last-xmas-93b5c378a9349bb931b60eb1dec9fdc8-c37b5.jpg"
+        srcset="/static/phoenix_app-list-last-xmas-93b5c378a9349bb931b60eb1dec9fdc8-afe88.jpg 250w,
+/static/phoenix_app-list-last-xmas-93b5c378a9349bb931b60eb1dec9fdc8-66418.jpg 500w,
+/static/phoenix_app-list-last-xmas-93b5c378a9349bb931b60eb1dec9fdc8-c37b5.jpg 759w"
+        sizes="(max-width: 759px) 100vw, 759px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Now we can see our list is limited to only events in the future. Perfect!</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/phoenix_app-home-list-7fa674c8a3bc69705809804c9c3e7b40-de178.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 775px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 77.54838709677419%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe1dgo//xAAXEAADAQAAAAAAAAAAAAAAAAAAEBEh/9oACAEBAAEFAsKo/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAZEAACAwEAAAAAAAAAAAAAAAABEQAQUZH/2gAIAQEAAT8hKb2AXAXRDK//2gAMAwEAAgADAAAAEAPP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGhABAQEAAwEAAAAAAAAAAAAAAREAITFh0f/aAAgBAQABPxAGUAdA/ufwG+rpLgNpNyTQDo3/2Q=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Phoenix future events list"
+        title=""
+        src="/static/phoenix_app-home-list-7fa674c8a3bc69705809804c9c3e7b40-de178.jpg"
+        srcset="/static/phoenix_app-home-list-7fa674c8a3bc69705809804c9c3e7b40-9c1cf.jpg 250w,
+/static/phoenix_app-home-list-7fa674c8a3bc69705809804c9c3e7b40-5bd81.jpg 500w,
+/static/phoenix_app-home-list-7fa674c8a3bc69705809804c9c3e7b40-de178.jpg 775w"
+        sizes="(max-width: 775px) 100vw, 775px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h3>Adding our countdown clocks</h3>
+<p>We’re going to use <a href="http://flipclockjs.com">FlipClock.js</a> to create our countdown clocks. Edit the base app template <code class="language-text">lib/countdown_web/templates/layout/app.html.eex</code></p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">    ...
+    &lt;link rel="stylesheet" href="&lt;%= static_path(@conn, "/css/app.css") %>">
+<span class="token inserted">+   &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css" /></span>
+<span class="token inserted">+   &lt;script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">&lt;/script></span>
+<span class="token inserted">+   &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js">&lt;/script></span>
+    ...</code></pre>
+      </div>
+<p>Now edit the homepage template <code class="language-text">lib/countdown_web/templates/page/index.html.eex</code> and replace it with the contents below. It uses a very basic jQuery loop to apply FlipClock to each <code class="language-text">.countdownClock</code> element. The Bootstrap jumbotron is perfect for the quick and easy layout we want here because of its clear heading and very basic markup.</p>
+<div class="gatsby-highlight">
+      <pre class="language-html"><code class="language-html">&lt;%= for event <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>-</span> <span class="token attr-name">@events</span> <span class="token attr-name">do</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jumbotron<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>h1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Days until &lt;%= event.title %><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>countdownClock<span class="token punctuation">"</span></span> <span class="token attr-name">data-due</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%= event.due %><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+&lt;% end %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+<span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.countdownClock'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> el<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> today <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">var</span> due <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token string">'due'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token function">$</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">FlipClock</span><span class="token punctuation">(</span><span class="token punctuation">(</span>due<span class="token operator">/</span><span class="token number">1000</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span>today<span class="token operator">/</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          clockFace<span class="token punctuation">:</span> <span class="token string">'DailyCounter'</span><span class="token punctuation">,</span>
+            countdown<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            showSeconds<span class="token punctuation">:</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+<p>Our last little styling tweaks are just to center the countdown clocks and replace the logo with something more appropriate :)</p>
+<p>Edit <code class="language-text">assets/css/app.css</code> and add the following. You’re going to need your own logo!</p>
+<div class="gatsby-highlight">
+      <pre class="language-css"><code class="language-css"><span class="token comment">/* This file is for your main application css. */</span>
+
+<span class="token selector">.auth0-logo</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(http://placehold.jp/ffffff/003366/200x80.png?text=Auth0%20meets%0AElixir)</span><span class="token punctuation">;</span>
+  <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
+  <span class="token property">background-size</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.jumbotron .flip-clock-wrapper</span> <span class="token punctuation">{</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> 8em<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>Now edit <code class="language-text">lib/countdown_web/templates/layout/app.html.eex</code> to use the new logo styling.</p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff"><span class="token deleted">-       &lt;span class="logo">&lt;/span></span>
+<span class="token inserted">+       &lt;span class="auth0-logo">&lt;/span></span></code></pre>
+      </div>
+<p>We should see something like this, our own app in which we can control what events we display!</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/phoenix_app-home-styled-74a0c2a5fa518a4804f4e1b9aa8d5881-bf469.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 768px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 71.09375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHtoUmwH//EABsQAAIBBQAAAAAAAAAAAAAAAAABEgIDEBNB/9oACAEBAAEFAuyYiu3M0Y//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAdEAABAwUBAAAAAAAAAAAAAAABABAxAhEhMlGR/9oACAEBAAY/AoUMMkW4t6vW/8QAGxAAAwACAwAAAAAAAAAAAAAAAAERITFRYYH/2gAIAQEAAT8hbm5nZGq1Cz1AmPloSwf/2gAMAwEAAgADAAAAEFAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHxABAAIBAwUAAAAAAAAAAAAAAQARITFBYXGRodHw/9oACAEBAAE/EFaucOJ8Z7i3K4MvjfLoX17RYK7ybPEYpP/Z'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Phoenix Countdown"
+        title=""
+        src="/static/phoenix_app-home-styled-74a0c2a5fa518a4804f4e1b9aa8d5881-bf469.jpg"
+        srcset="/static/phoenix_app-home-styled-74a0c2a5fa518a4804f4e1b9aa8d5881-87434.jpg 250w,
+/static/phoenix_app-home-styled-74a0c2a5fa518a4804f4e1b9aa8d5881-b8c9c.jpg 500w,
+/static/phoenix_app-home-styled-74a0c2a5fa518a4804f4e1b9aa8d5881-bf469.jpg 768w"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h2>Authentication with Auth0</h2>
+<p>Last of all, we’ll secure administration of events with Auth0’s <a href="https://auth0.com/docs/hosted-pages/login">Centralized Login Page</a>. Providing us with Auth0’s <a href="http://jwt.io">JSON Web Token</a>, we will be able to securely verify users inside the application.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-46973.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 1000px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 75.88717015468607%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEAv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAVTPSaGH/8QAGBABAQEBAQAAAAAAAAAAAAAAAwIBBBP/2gAIAQEAAQUC1k9nTZnmS6jQX2fFWecriP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB8QAAEDAwUAAAAAAAAAAAAAAAEAAhIRMUETISJCgf/aAAgBAQAGPwIie0lwc66Jccouj2rdAadPUQ4ZX//EABoQAQADAQEBAAAAAAAAAAAAAAEAETEhUUH/2gAIAQEAAT8h6ywz5cGpnVkRivEMAJ4PYaODeZUQetn/2gAMAwEAAgADAAAAEDjP/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARMf/aAAgBAwEBPxCHV//EABYRAAMAAAAAAAAAAAAAAAAAAAEQEf/aAAgBAgEBPxChf//EABsQAQADAQEBAQAAAAAAAAAAAAEAESFRMWHR/9oACAEBAAE/ED10qoMw5yOsFKXlPT5BYthQMo5LJ5DCzUBp69l5UMirAByj8n//2Q=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Auth0 hosted login screen"
+        title=""
+        src="/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-2b053.jpg"
+        srcset="/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-8a2b5.jpg 250w,
+/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-b0cf5.jpg 500w,
+/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-2b053.jpg 1000w,
+/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-46973.jpg 1099w"
+        sizes="(max-width: 1000px) 100vw, 1000px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h3>Sign Up for Auth0</h3>
+<p>You’ll need an <a href="https://auth0.com">Auth0</a> account to manage authentication. You can sign up for a <a href="https://auth0.com/signup">free account here</a>. Next, set up an Auth0 Client and API so Auth0 can interface with your app and API.</p>
+<h3>Set Up a Client App</h3>
+<ol>
+<li>Go to your <a href="https://manage.auth0.com/#/"><strong>Auth0 Dashboard</strong></a> and click the ”<a href="https://manage.auth0.com/#/clients/create">create a new client</a>” button. </li>
+<li>Name your new app and select “Regular Web Applications”. </li>
+<li>In the <strong>Settings</strong> for your new Auth0 client app, add <code class="language-text">http://0.0.0.0:4000/auth/auth0/callback</code> to the <strong>Allowed Callback URLs</strong>.</li>
+<li>Click the “Save Changes” button.</li>
+<li>If you’d like, you can <a href="https://manage.auth0.com/#/connections/social">set up some social connections</a>. You can then enable them for your app in the <strong>Client</strong> options under the <strong>Connections</strong> tab. The example shown in the screenshot above utilizes username/password database, Facebook, Google, and Twitter.</li>
+</ol>
+<blockquote>
+<p>Note: On the <strong>OAuth</strong> tab of <strong>Advanced Settings</strong> (at the bottom of the <strong>Settings</strong> section) you can see the <strong>JsonWebToken Signature Algorithm</strong> is set to <code class="language-text">RS256</code>. This is now the default, <a href="https://community.auth0.com/questions/6942/jwt-signing-algorithms-rs256-vs-hs256">read more about RS256 vs HS256 here</a>.</p>
+</blockquote>
+<h3>Install the Ueberauth module</h3>
+<p>Edit <code class="language-text">mix.exs</code> and add the <code class="language-text">Ueberauth</code> module to your dependencies and application compilation order.</p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">   ...
+
+   def application do
+     [
+       mod: {Countdown.Application, []},
+<span class="token deleted">-      extra_applications: [:logger, :runtime_tools]</span>
+<span class="token inserted">+      extra_applications: [:ueberauth, :ueberauth_auth0, :logger, :runtime_tools]</span>
+     ]
+   end
+
+   ...
+
+   defp deps do
+     [
+       ...
+<span class="token deleted">-      {:cowboy, "~> 1.0"}</span>
+<span class="token inserted">+      {:cowboy, "~> 1.0"},</span>
+<span class="token inserted">+      {:ueberauth, "~> 0.4"},</span>
+<span class="token inserted">+      {:ueberauth_auth0, "~> 0.3"}</span>
+     ]
+   end
+
+   ...</code></pre>
+      </div>
+<p>You can also use a GitHub repository as your package source to use the latest changes. Beware—it might have breaking and unstable code. For example:</p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">   ...
+
+   defp deps do
+     [
+       ...
+<span class="token deleted">-      {:cowboy, "~> 1.0"}</span>
+<span class="token inserted">+      {:cowboy, "~> 1.0"},</span>
+<span class="token inserted">+      {:ueberauth_auth0, github: "sntran/ueberauth_auth0"}</span>
+     ]
+   end
+
+   ...</code></pre>
+      </div>
+<p>Now that it’s configured we need to install our dependencies.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ mix deps.get</code></pre>
+      </div>
+<p>Edit <code class="language-text">config/config.exs</code> to configure <code class="language-text">Ueberauth</code>.</p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">...
+import_config "#{Mix.env}.exs"
+
+<span class="token inserted">+</span>
+<span class="token inserted">+# Configures Ueberauth</span>
+<span class="token inserted">+config :ueberauth, Ueberauth,</span>
+<span class="token inserted">+  providers: [</span>
+<span class="token inserted">+    auth0: { Ueberauth.Strategy.Auth0, [] },</span>
+<span class="token inserted">+  ]</span>
+<span class="token inserted">+</span>
+<span class="token inserted">+# Configures Ueberauth's Auth0 auth provider</span>
+<span class="token inserted">+config :ueberauth, Ueberauth.Strategy.Auth0.OAuth,</span>
+<span class="token inserted">+  domain: System.get_env("AUTH0_DOMAIN"),</span>
+<span class="token inserted">+  client_id: System.get_env("AUTH0_CLIENT_ID"),</span>
+<span class="token inserted">+  client_secret: System.get_env("AUTH0_CLIENT_SECRET")</span></code></pre>
+      </div>
+<p>Configured like this, we can now control our config through environment variables. For more information on how to define these check out <a href="http://www.tricksofthetrades.net/2015/06/14/notes-bash-env-variables/">this guide on bash environment variables</a>.</p>
+<p>Later, we’ll be looking at starting our application with environment variables included. You can choose to set them up however you wish, but they’re required at compile time to make our authentication work.</p>
+<p>An example of how to launch the application with environment variables:</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ AUTH0_DOMAIN<span class="token operator">=</span><span class="token operator">&lt;</span>Your domain<span class="token operator">></span> \
+  AUTH0_CLIENT_ID<span class="token operator">=</span><span class="token operator">&lt;</span>Your client ID<span class="token operator">></span> \
+  AUTH0_CLIENT_SECRET<span class="token operator">=</span><span class="token operator">&lt;</span>Your client secret<span class="token operator">></span> \
+  mix phx.server</code></pre>
+      </div>
+<h3>Setup authentication</h3>
+<p>First, we’ll create a new model for reading user info. Open a new file at <code class="language-text">lib/countdown_web/models/user_from_auth.ex</code>. This model, courtesy of <a href="https://twitter.com/IT_Supertramp">Thomas Peitz</a>, will give us easy access to details obtained back from authentication payload. It also supports multiple formats of profile information. For example, providers like GitHub and Facebook give a profile image url, slightly different.
+</p>
+<div class="gatsby-highlight">
+      <pre class="language-elixir"><code class="language-elixir"><span class="token keyword">defmodule</span> UserFromAuth <span class="token keyword">do</span>
+  <span class="token attribute variable">@moduledoc</span> <span class="token string">"""
+  Retrieve the user information from an auth request
+  """</span>
+  <span class="token keyword">require</span> Logger
+  <span class="token keyword">require</span> Poison
+
+  <span class="token keyword">alias</span> Ueberauth<span class="token punctuation">.</span>Auth
+
+  <span class="token keyword">def</span> find_or_create<span class="token punctuation">(</span><span class="token punctuation">%</span>Auth<span class="token punctuation">{</span><span class="token attr-name">provider:</span> <span class="token atom symbol">:identity</span><span class="token punctuation">}</span> <span class="token operator">=</span> auth<span class="token punctuation">)</span> <span class="token keyword">do</span>
+    <span class="token keyword">case</span> validate_pass<span class="token punctuation">(</span>auth<span class="token punctuation">.</span>credentials<span class="token punctuation">)</span> <span class="token keyword">do</span>
+      <span class="token atom symbol">:ok</span> <span class="token operator">-></span>
+        <span class="token punctuation">{</span><span class="token atom symbol">:ok</span><span class="token punctuation">,</span> basic_info<span class="token punctuation">(</span>auth<span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token punctuation">{</span><span class="token atom symbol">:error</span><span class="token punctuation">,</span> reason<span class="token punctuation">}</span> <span class="token operator">-></span> <span class="token punctuation">{</span><span class="token atom symbol">:error</span><span class="token punctuation">,</span> reason<span class="token punctuation">}</span>
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">def</span> find_or_create<span class="token punctuation">(</span><span class="token punctuation">%</span>Auth<span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token operator">=</span> auth<span class="token punctuation">)</span> <span class="token keyword">do</span>
+    <span class="token punctuation">{</span><span class="token atom symbol">:ok</span><span class="token punctuation">,</span> basic_info<span class="token punctuation">(</span>auth<span class="token punctuation">)</span><span class="token punctuation">}</span>
+  <span class="token keyword">end</span>
+
+  <span class="token comment"># github does it this way</span>
+  <span class="token keyword">defp</span> avatar_from_auth<span class="token punctuation">(</span> <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">info:</span> <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">urls:</span> <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">avatar_url:</span> image<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token attr-name">do:</span> image
+
+  <span class="token comment"># facebook does it this way</span>
+  <span class="token keyword">defp</span> avatar_from_auth<span class="token punctuation">(</span> <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">info:</span> <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">image:</span> image<span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token attr-name">do:</span> image
+
+  <span class="token comment"># default case if nothing matches</span>
+  <span class="token keyword">defp</span> avatar_from_auth<span class="token punctuation">(</span> auth <span class="token punctuation">)</span> <span class="token keyword">do</span>
+    Logger<span class="token punctuation">.</span>warn auth<span class="token punctuation">.</span>provider <span class="token operator">&lt;></span> <span class="token string">" needs to find an avatar URL!"</span>
+    Logger<span class="token punctuation">.</span>debug<span class="token punctuation">(</span>Poison<span class="token punctuation">.</span>encode!<span class="token punctuation">(</span>auth<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token boolean">nil</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">defp</span> basic_info<span class="token punctuation">(</span>auth<span class="token punctuation">)</span> <span class="token keyword">do</span>
+    <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">id:</span> auth<span class="token punctuation">.</span>uid<span class="token punctuation">,</span> <span class="token attr-name">name:</span> name_from_auth<span class="token punctuation">(</span>auth<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token attr-name">avatar:</span> avatar_from_auth<span class="token punctuation">(</span>auth<span class="token punctuation">)</span><span class="token punctuation">}</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">defp</span> name_from_auth<span class="token punctuation">(</span>auth<span class="token punctuation">)</span> <span class="token keyword">do</span>
+    <span class="token keyword">if</span> auth<span class="token punctuation">.</span>info<span class="token punctuation">.</span>name <span class="token keyword">do</span>
+      auth<span class="token punctuation">.</span>info<span class="token punctuation">.</span>name
+    <span class="token keyword">else</span>
+      name <span class="token operator">=</span> <span class="token punctuation">[</span>auth<span class="token punctuation">.</span>info<span class="token punctuation">.</span>first_name<span class="token punctuation">,</span> auth<span class="token punctuation">.</span>info<span class="token punctuation">.</span>last_name<span class="token punctuation">]</span>
+      <span class="token operator">|></span> Enum<span class="token punctuation">.</span>filter<span class="token punctuation">(</span><span class="token capture function">&amp;</span><span class="token punctuation">(</span><span class="token argument variable">&amp;1</span> <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token keyword">and</span> <span class="token argument variable">&amp;1</span> <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+      <span class="token keyword">cond</span> <span class="token keyword">do</span>
+        length<span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">-></span> auth<span class="token punctuation">.</span>info<span class="token punctuation">.</span>nickname
+        <span class="token boolean">true</span> <span class="token operator">-></span> Enum<span class="token punctuation">.</span>join<span class="token punctuation">(</span>name<span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">)</span>
+      <span class="token keyword">end</span>
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">defp</span> validate_pass<span class="token punctuation">(</span><span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">other:</span> <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">password:</span> <span class="token string">""</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token keyword">do</span>
+    <span class="token punctuation">{</span><span class="token atom symbol">:error</span><span class="token punctuation">,</span> <span class="token string">"Password required"</span><span class="token punctuation">}</span>
+  <span class="token keyword">end</span>
+  <span class="token keyword">defp</span> validate_pass<span class="token punctuation">(</span><span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">other:</span> <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">password:</span> pw<span class="token punctuation">,</span> <span class="token attr-name">password_confirmation:</span> pw<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token keyword">do</span>
+    <span class="token atom symbol">:ok</span>
+  <span class="token keyword">end</span>
+  <span class="token keyword">defp</span> validate_pass<span class="token punctuation">(</span><span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">other:</span> <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">password:</span> _<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token keyword">do</span>
+    <span class="token punctuation">{</span><span class="token atom symbol">:error</span><span class="token punctuation">,</span> <span class="token string">"Passwords do not match"</span><span class="token punctuation">}</span>
+  <span class="token keyword">end</span>
+  <span class="token keyword">defp</span> validate_pass<span class="token punctuation">(</span>_<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token attr-name">do:</span> <span class="token punctuation">{</span><span class="token atom symbol">:error</span><span class="token punctuation">,</span> <span class="token string">"Password Required"</span><span class="token punctuation">}</span>
+<span class="token keyword">end</span></code></pre>
+      </div>
+<p>Next, create a new controller. Call it <code class="language-text">AuthController</code> and create it at <code class="language-text">lib/countdown_web/controllers/auth_controller.ex</code>. This controller has a few responsibilities:</p>
+<ul>
+<li><strong>Callback</strong> Handles the success or failure of our auth request. On success, stores the user in a session.</li>
+<li><strong>Logout</strong> Drops the session.</li>
+<li><strong>Helpers</strong> Providers a basepath for our <code class="language-text">Ueberauth</code> strategy helpers, meaning <code class="language-text">/auth/auth0</code> will now allow us to authenticate with the Auth0 provider we setup.</li>
+</ul>
+<div class="gatsby-highlight">
+      <pre class="language-elixir"><code class="language-elixir"><span class="token keyword">defmodule</span> CountdownWeb<span class="token punctuation">.</span>AuthController <span class="token keyword">do</span>
+  <span class="token keyword">use</span> CountdownWeb<span class="token punctuation">,</span> <span class="token atom symbol">:controller</span>
+  <span class="token keyword">alias</span> CountdownWeb<span class="token punctuation">.</span>Router<span class="token punctuation">.</span>Helpers
+
+  plug Ueberauth
+
+  <span class="token keyword">alias</span> Ueberauth<span class="token punctuation">.</span>Strategy<span class="token punctuation">.</span>Helpers
+
+  <span class="token keyword">def</span> logout<span class="token punctuation">(</span>conn<span class="token punctuation">,</span> _params<span class="token punctuation">)</span> <span class="token keyword">do</span>
+    conn
+    <span class="token operator">|></span> put_flash<span class="token punctuation">(</span><span class="token atom symbol">:info</span><span class="token punctuation">,</span> <span class="token string">"You have been logged out!"</span><span class="token punctuation">)</span>
+    <span class="token operator">|></span> configure_session<span class="token punctuation">(</span><span class="token attr-name">drop:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token operator">|></span> redirect<span class="token punctuation">(</span><span class="token attr-name">to:</span> <span class="token string">"/"</span><span class="token punctuation">)</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">def</span> callback<span class="token punctuation">(</span><span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">assigns:</span> <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">ueberauth_failure:</span> _fails<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">=</span> conn<span class="token punctuation">,</span> _params<span class="token punctuation">)</span> <span class="token keyword">do</span>
+    conn
+    <span class="token operator">|></span> put_flash<span class="token punctuation">(</span><span class="token atom symbol">:error</span><span class="token punctuation">,</span> <span class="token string">"Failed to authenticate."</span><span class="token punctuation">)</span>
+    <span class="token operator">|></span> redirect<span class="token punctuation">(</span><span class="token attr-name">to:</span> <span class="token string">"/"</span><span class="token punctuation">)</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">def</span> callback<span class="token punctuation">(</span><span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">assigns:</span> <span class="token punctuation">%</span><span class="token punctuation">{</span><span class="token attr-name">ueberauth_auth:</span> auth<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">=</span> conn<span class="token punctuation">,</span> _params<span class="token punctuation">)</span> <span class="token keyword">do</span>
+    <span class="token keyword">case</span> UserFromAuth<span class="token punctuation">.</span>find_or_create<span class="token punctuation">(</span>auth<span class="token punctuation">)</span> <span class="token keyword">do</span>
+      <span class="token punctuation">{</span><span class="token atom symbol">:ok</span><span class="token punctuation">,</span> user<span class="token punctuation">}</span> <span class="token operator">-></span>
+        conn
+        <span class="token operator">|></span> put_flash<span class="token punctuation">(</span><span class="token atom symbol">:info</span><span class="token punctuation">,</span> <span class="token string">"Successfully authenticated as "</span> <span class="token operator">&lt;></span> user<span class="token punctuation">.</span>name <span class="token operator">&lt;></span> <span class="token string">"."</span><span class="token punctuation">)</span>
+        <span class="token operator">|></span> put_session<span class="token punctuation">(</span><span class="token atom symbol">:current_user</span><span class="token punctuation">,</span> user<span class="token punctuation">)</span>
+        <span class="token operator">|></span> redirect<span class="token punctuation">(</span><span class="token attr-name">to:</span> <span class="token string">"/"</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span><span class="token atom symbol">:error</span><span class="token punctuation">,</span> reason<span class="token punctuation">}</span> <span class="token operator">-></span>
+        conn
+        <span class="token operator">|></span> put_flash<span class="token punctuation">(</span><span class="token atom symbol">:error</span><span class="token punctuation">,</span> reason<span class="token punctuation">)</span>
+        <span class="token operator">|></span> redirect<span class="token punctuation">(</span><span class="token attr-name">to:</span> <span class="token string">"/"</span><span class="token punctuation">)</span>
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span></code></pre>
+      </div>
+<p>Now we need to add endpoints for the controller to the router. Edit <code class="language-text">lib/countdown_web/router.ex</code> to configure these routes.</p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff"> defmodule CountdownWeb.Router do
+   use CountdownWeb, :router
+<span class="token inserted">+  require Ueberauth</span>
+
+...
+
+<span class="token inserted">+  scope "/auth", CountdownWeb do</span>
+<span class="token inserted">+    pipe_through :browser</span>
+<span class="token inserted">+</span>
+<span class="token inserted">+    get "/:provider", AuthController, :request</span>
+<span class="token inserted">+    get "/:provider/callback", AuthController, :callback</span>
+<span class="token inserted">+    post "/:provider/callback", AuthController, :callback</span>
+<span class="token inserted">+  end</span>
+<span class="token inserted">+</span>
+
+...
+
+   scope "/", CountdownWeb do
+      pipe_through :browser # Use the default browser stack
+      get "/", PageController, :index
+<span class="token inserted">+     get "/logout", AuthController, :logout</span>
+
+...</code></pre>
+      </div>
+<h3>Secure our application</h3>
+<p>To secure our events controller, edit <code class="language-text">lib/countdown_web/controllers/event_controller.ex</code> and add a <code class="language-text">Plug</code> which will be called by the controller prior to every endpoint. This will now check our current session for a verified user.</p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">   ...
+   alias Countdown.Events.Event
+<span class="token inserted">+</span>
+<span class="token inserted">+  plug :secure</span>
+<span class="token inserted">+</span>
+<span class="token inserted">+  defp secure(conn, _params) do</span>
+<span class="token inserted">+    user = get_session(conn, :current_user)</span>
+<span class="token inserted">+    case user do</span>
+<span class="token inserted">+     nil -></span>
+<span class="token inserted">+         conn |> redirect(to: "/auth/auth0") |> halt</span>
+<span class="token inserted">+     _ -></span>
+<span class="token inserted">+       conn</span>
+<span class="token inserted">+       |> assign(:current_user, user)</span>
+<span class="token inserted">+    end</span>
+<span class="token inserted">+  end</span>
+
+   def index(conn, _params) do
+   ...</code></pre>
+      </div>
+<p>Now our <code class="language-text">/events</code> endpoints are secured, we just need a helpful menu to navigate the site.</p>
+<p><strong>Nearly there!</strong></p>
+<p>Lets edit our <code class="language-text">PageController</code> found at <code class="language-text">lib/countdown_web/controllers/page_controller.ex</code> to add our <code class="language-text">current_user</code> property, allowing us to access it elsewhere.</p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">   def index(conn, _params) do
+     events = Events.list_future_events()
+<span class="token deleted">-    render conn, "index.html", events: events</span>
+<span class="token inserted">+    render conn, "index.html", events: events, current_user: get_session(conn, :current_user)</span>
+   end</code></pre>
+      </div>
+<p>The base app template needs to be edited <code class="language-text">lib/countdown_web/templates/layout/app.html.eex</code>, it is going to check for our current user. If we don’t have one, we’ll show a link to login.</p>
+<div class="gatsby-highlight">
+      <pre class="language-diff"><code class="language-diff">...
+   &lt;ul class="nav nav-pills pull-right">
+<span class="token deleted">-    &lt;li>&lt;a href="http://www.phoenixframework.org/docs">Get Started&lt;/a>&lt;/li></span>
+<span class="token inserted">+    &lt;%= if @current_user do %></span>
+<span class="token inserted">+    &lt;li>&lt;a href="/">Home&lt;/a>&lt;/li></span>
+<span class="token inserted">+    &lt;li>&lt;a href="/events">Events&lt;/a>&lt;/li></span>
+<span class="token inserted">+    &lt;li class="active">&lt;a href="/logout">Logout&lt;/a>&lt;/li></span>
+<span class="token inserted">+    &lt;% else %></span>
+<span class="token inserted">+    &lt;li>&lt;a href="/">Home&lt;/a>&lt;/li></span>
+<span class="token inserted">+    &lt;li>&lt;a href="/auth/auth0">Login&lt;/a>&lt;/li></span>
+<span class="token inserted">+    &lt;% end %></span>
+   &lt;/ul>
+...</code></pre>
+      </div>
+<p>Start our application, remembering our environment variables. </p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">$ AUTH0_DOMAIN<span class="token operator">=</span><span class="token operator">&lt;</span>Your domain<span class="token operator">></span> \
+  AUTH0_CLIENT_ID<span class="token operator">=</span><span class="token operator">&lt;</span>Your client ID<span class="token operator">></span> \
+  AUTH0_CLIENT_SECRET<span class="token operator">=</span><span class="token operator">&lt;</span>Your client secret<span class="token operator">></span> \
+  mix phx.server</code></pre>
+      </div>
+<p><strong>Log in, have a play and it should look something like this!</strong></p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/phoenix_app-end-ebc5ccfb60adbd779f3feda6309eae8f-eb434.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 774px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 70.15503875968993%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIDBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHbEhLQwf/EABkQAQADAQEAAAAAAAAAAAAAAAABAhITQf/aAAgBAQABBQL3SF6bcUP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAbEAABBAMAAAAAAAAAAAAAAAABAAIQMTIzcf/aAAgBAQAGPwKlRjIji2Oj/8QAGxAAAgMAAwAAAAAAAAAAAAAAAAERITFhgaH/2gAIAQEAAT8hbjZkizN3yTlhfY9s6JR//9oADAMBAAIAAwAAABDTD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB0QAQACAQUBAAAAAAAAAAAAAAEAETEhYYHR4fD/2gAIAQEAAT8Qtq3RifcdwCqFVopqPkqdVcotEyeCUUn/2Q=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Phoenix Countdown End"
+        title=""
+        src="/static/phoenix_app-end-ebc5ccfb60adbd779f3feda6309eae8f-eb434.jpg"
+        srcset="/static/phoenix_app-end-ebc5ccfb60adbd779f3feda6309eae8f-71c85.jpg 250w,
+/static/phoenix_app-end-ebc5ccfb60adbd779f3feda6309eae8f-634c2.jpg 500w,
+/static/phoenix_app-end-ebc5ccfb60adbd779f3feda6309eae8f-eb434.jpg 774w"
+        sizes="(max-width: 774px) 100vw, 774px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h2>Credits</h2>
+<p>A big thanks to <a href="https://twitter.com/IT_Supertramp">Thomas Peitz</a> for his help and suggestions.</p>
+<h2>Conclusion</h2>
+<p>We’ve learned how to build a basic CRUD application in Elixir. It utilizes the Phoenix framework, allowing us to create applications in a straightforward way using the simple command line interface. We’ve also learned how to write some basic security using <a href="https://auth0.com">Auth0</a> inside Elixir.</p>
+<p>To learn more about the Phoenix Framework, check out <a href="http://phoenixframework.org">phoenixframework.org</a>.</p>
+<p>To learn more about Elixir, check out <a href="https://elixir-lang.org">elixir-lang.org</a>.</p>
+<p>I went into this project with no prior knowledge of Elixir or Phoenix. The result is, I believe I can probably deliver a robust application that is production ready and deployable faster using Phoenix than I could in some other languages. It has been an amazing and eye-opening experience and I’m looking forward to getting the opportunity to pick up more languages and doing something cool with them.</p>
+<p><strong>The final code can be found at the <a href="https://github.com/lukeoliff/auth0-elixir-countdown">auth0-elixir-countdown GitHub repo</a>.</strong></p></div><footer><div>Loading...</div><div class="jsx-646394116 author"><div class="jsx-646394116 avatar"><img src="/static/avatar.fe8a3f2f.jpg" alt="dad, technical writer, security advocate - Luke Oliff" class="jsx-646394116"/></div><div class="jsx-646394116 note"><p><strong>Luke Oliff</strong> dad, technical writer, security advocate - writing about digital transformation, software security and new technology</p></div></div><div class="jsx-126278577 links"><a href="/build-your-first-app-with-polymer-and-web-components/"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" style="vertical-align:middle"><g><path d="m36.4 21.4q0 1.2-0.9 2.1l-14.5 14.5q-0.9 0.8-2 0.8-1.2 0-2-0.8l-1.7-1.7q-0.9-0.8-0.9-2t0.9-2l6.5-6.6h-15.7q-1.1 0-1.9-0.8t-0.7-2v-2.9q0-1.2 0.7-2t1.9-0.9h15.7l-6.5-6.5q-0.9-0.8-0.9-2t0.9-2l1.7-1.7q0.8-0.9 2-0.9 1.2 0 2 0.9l14.5 14.5q0.9 0.8 0.9 2z"></path></g></svg><h4 class="jsx-126278577">Build Your First App with Polymer and Web Components<!-- --> <time class="jsx-126278577">2018-01-15<!-- --> </time></h4></a></div><div id="post-comments" class="jsx-3595558049 comments"><div><div class="fb-comments" data-href="https://lukeoliff.com/elixir-and-phoenix-tutorial-build-an-authenticated-app/" data-width="100%"></div></div></div></footer></article></main><footer class="jsx-2344609357 footer"><ul>
+<li>owned by <a href="/">Luke Oliff</a></li>
+<li>powered by <a href="https://www.gatsbyjs.org/">GatsbyJS</a></li>
+<li>hosted by <a href="https://pages.github.com/">GitHub Pages</a></li>
+<li>cached and secured by <a href="https://www.cloudflare.com/">Cloudflare</a></li>
+<li>graphics from <a href="https://pxhere.com">pxhere.com</a></li>
+<li><a href="/privacy/">privacy policy</a></li>
+<li><a href="/terms/">terms &#x26; conditions</a></li>
+</ul></footer></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"0":"0-c54303c9791f2f3ceb85.js","231608221292675":"app-0e1379c963ee306cf932.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","78839606078735":"component---src-templates-category-template-js-ccbdb357ea067077af6d.js","198517197184460":"component---src-templates-post-template-js-efb6222c664f8637d165.js","235131596041995":"component---src-templates-page-template-js-277489605b32655c14af.js","162898551421021":"component---src-pages-404-js-cf325d2e9bf981eec2f6.js","118442821920679":"component---src-pages-category-js-bbb34571e9395b2ce79b.js","35783957827783":"component---src-pages-index-js-4cdfe22c0237c1694edf.js","142807904292071":"component---src-pages-search-js-31e1970d09f08933da90.js","60335399758886":"path----1c45b9cbfed9af352b94.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","3422700230939":"path---category-portfolio-943fcf8c337cdf892327.js","24663704475854":"path---helloworld-with-auth-0-987b9b28137f91515b1e.js","179155616915032":"path---common-threats-in-web-app-security-a5f6771fa003b3228bef.js","48830299300409":"path---building-a-blog-with-gatsby-react-and-webtask-f48d119a26bdd82c5e3a.js","102443490631562":"path---oauth-2-the-complete-guide-39d028d86fec6034ab46.js","255549171910776":"path---build-your-first-app-with-polymer-and-web-components-4c4a503362ecf2ba2a6f.js","135457678329293":"path---elixir-and-phoenix-tutorial-build-an-authenticated-app-db077bbb6eaa9c6bfea1.js","273950069227526":"path---about-ce27028b0d4204d2e34d.js","89335538696419":"path---terms-b80415cd83c07b9cac75.js","166922164162147":"path---privacy-89341dd48dc54a723e27.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","115052432080904":"path---category-83a770a0561be5ad7608.js","142629428675168":"path---index-c5116b558c1ca501b4d6.js","254572558124955":"path---search-a1eea1489feed082ff7d.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-51093b88744bb31359c7.js"}/*]]>*/</script><script>
+            
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'undefined', 'auto');
+      }
+      </script><script>/*<![CDATA[*/["/commons-44750fa6a1ae314db841.js","/app-0e1379c963ee306cf932.js","/path---elixir-and-phoenix-tutorial-build-an-authenticated-app-db077bbb6eaa9c6bfea1.js","/component---src-templates-post-template-js-efb6222c664f8637d165.js","/component---src-layouts-index-js-51093b88744bb31359c7.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>

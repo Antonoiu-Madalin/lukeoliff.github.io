@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[dad, technical writer, security advocate - Luke Oliff]]></title><description><![CDATA[dad, technical writer, security advocate - writing about digital transformation, software security and new technology]]></description><link>https://lukeoliff.com</link><generator>RSS for Node</generator><lastBuildDate>Fri, 16 Nov 2018 11:50:57 GMT</lastBuildDate><item><title><![CDATA[HelloWorld: With Auth0]]></title><description><![CDATA[TL;DR:  In this guide, you’ll finish adding authentication to our simple  single page application , customize Auth0  Lock , enable  social…]]></description><link>https://lukeoliff.com/helloworld-with-auth0/</link><guid isPermaLink="false">https://lukeoliff.com/helloworld-with-auth0/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; In this guide, you’ll finish adding authentication to our simple &lt;a href=&quot;https://auth0.com/docs/sso/current/single-page-apps&quot;&gt;single page application&lt;/a&gt;, customize Auth0 &lt;a href=&quot;https://auth0.com/docs/libraries/lock/v11&quot;&gt;Lock&lt;/a&gt;, enable &lt;a href=&quot;https://auth0.com/blog/social-login-on-the-rise/&quot;&gt;social login&lt;/a&gt; with Facebook, and set up &lt;a href=&quot;https://auth0.com/docs/multifactor-authentication&quot;&gt;multi-factor authentication&lt;/a&gt;. If none of this makes any sense, don’t worry. We’re going to explain that as well.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[dad, technical writer, security advocate - Luke Oliff]]></title><description><![CDATA[dad, technical writer, security advocate - writing about digital transformation, software security and new technology]]></description><link>https://lukeoliff.com</link><generator>RSS for Node</generator><lastBuildDate>Mon, 19 Nov 2018 19:20:04 GMT</lastBuildDate><item><title><![CDATA[HelloWorld: With Auth0]]></title><description><![CDATA[TL;DR:  In this guide, you’ll finish adding authentication to our simple  single page application , customize Auth0  Lock , enable  social…]]></description><link>https://lukeoliff.com/helloworld-with-auth0/</link><guid isPermaLink="false">https://lukeoliff.com/helloworld-with-auth0/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; In this guide, you’ll finish adding authentication to our simple &lt;a href=&quot;https://auth0.com/docs/sso/current/single-page-apps&quot;&gt;single page application&lt;/a&gt;, customize Auth0 &lt;a href=&quot;https://auth0.com/docs/libraries/lock/v11&quot;&gt;Lock&lt;/a&gt;, enable &lt;a href=&quot;https://auth0.com/blog/social-login-on-the-rise/&quot;&gt;social login&lt;/a&gt; with Facebook, and set up &lt;a href=&quot;https://auth0.com/docs/multifactor-authentication&quot;&gt;multi-factor authentication&lt;/a&gt;. If none of this makes any sense, don’t worry. We’re going to explain that as well.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;This post is original content developed by me for the &lt;a href=&quot;https://auth0.com/blog&quot;&gt;Auth0’s blog&lt;/a&gt; and has been re-posted here as part of an online portfolio with permission. Relevant attribution and canonical links exist. &lt;a href=&quot;https://auth0.com/blog/helloworld-with-auth0/&quot;&gt;Click here to see the original&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; This guide assumes you’re on a Mac. Drop us a comment below and we can provide updated instructions for a Windows machine or Ubuntu machine.&lt;/p&gt;
@@ -1786,7 +1786,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;We’re also going to be following the &lt;a href=&quot;https://auth0.com/docs/quickstart/spa/react&quot;&gt;Auth0 React Quickstart&lt;/a&gt; to get set up with Auth0 authentication on our new application. If you’re confident with React you could skip straight to the quickstart or get the code you need from the &lt;a href=&quot;https://github.com/auth0-samples/auth0-react-samples/tree/embedded-login&quot;&gt;Auth0 React samples repository&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&quot;https://auth0.com/docs/hosted-pages/login&quot;&gt;Auth0 login page&lt;/a&gt; is the easiest way to set up authentication in your application.&lt;/p&gt;
 &lt;h3&gt;Sign Up for Auth0&lt;/h3&gt;
-&lt;p&gt;You’ll need an &lt;a href=&quot;https://auth0.com&quot;&gt;Auth0&lt;/a&gt; account to manage authentication. You can &lt;a href=&quot;https://auth0.com/signup&quot; data-amp-replace=&quot;CLIENT_ID&quot; data-amp-addparams=&quot;anonId=CLIENT_ID(cid-scope-cookie-fallback-name)&quot;&gt;sign up for a free Auth0 account here&lt;/a&gt;. Next, set up an Auth0 Application so Auth0 can interface with your app.&lt;/p&gt;
+&lt;p&gt;You’ll need an &lt;a href=&quot;https://auth0.com&quot;&gt;Auth0&lt;/a&gt; account to manage authentication. You can &lt;a href=&quot;https://auth0.com/signup&quot;&gt;sign up for a free Auth0 account here&lt;/a&gt;. Next, set up an Auth0 Application so Auth0 can interface with your app.&lt;/p&gt;
 &lt;h3&gt;Set Up an Application App&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Go to your &lt;a href=&quot;https://manage.auth0.com/#/&quot;&gt;&lt;strong&gt;Auth0 Dashboard&lt;/strong&gt;&lt;/a&gt; and click the ”&lt;a href=&quot;https://manage.auth0.com/#/applications/create&quot;&gt;create a new application&lt;/a&gt;” button. &lt;/li&gt;
@@ -4221,7 +4221,7 @@ app-header a&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/
   &lt;/a&gt;
     &lt;/p&gt;
 &lt;h3&gt;Sign Up for Auth0&lt;/h3&gt;
-&lt;p&gt;You’ll need an &lt;a href=&quot;https://auth0.com&quot;&gt;Auth0&lt;/a&gt; account to manage authentication. You can sign up for a &lt;a href=&quot;https://auth0.com/signup&quot; data-amp-replace=&quot;CLIENT_ID&quot; data-amp-addparams=&quot;anonId=CLIENT_ID(cid-scope-cookie-fallback-name)&quot;&gt;free account here&lt;/a&gt;. Next, set up an Auth0 Client and API so Auth0 can interface with your app and API.&lt;/p&gt;
+&lt;p&gt;You’ll need an &lt;a href=&quot;https://auth0.com&quot;&gt;Auth0&lt;/a&gt; account to manage authentication. You can sign up for a &lt;a href=&quot;https://auth0.com/signup&quot;&gt;free account here&lt;/a&gt;. Next, set up an Auth0 Client and API so Auth0 can interface with your app and API.&lt;/p&gt;
 &lt;h3&gt;Set Up a Client App&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Go to your &lt;a href=&quot;https://manage.auth0.com/#/&quot;&gt;&lt;strong&gt;Auth0 Dashboard&lt;/strong&gt;&lt;/a&gt; and click the ”&lt;a href=&quot;https://manage.auth0.com/#/clients/create&quot;&gt;create a new client&lt;/a&gt;” button. &lt;/li&gt;
@@ -4454,4 +4454,820 @@ polymer serve --open&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The beauty of web components is that they’re composed of native DOM features: they’re literally the future of the web. Web developers have a long history of struggling with DOM encapsulation and CSS scoping—and subsequently &lt;a href=&quot;https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/&quot;&gt;inventing&lt;/a&gt; &lt;a href=&quot;http://getbem.com/introduction/&quot;&gt;paradigms&lt;/a&gt; &lt;a href=&quot;https://smacss.com/&quot;&gt;to compensate&lt;/a&gt;. Web components offer solutions.&lt;/p&gt;
 &lt;p&gt;Remember that Polymer itself is &lt;em&gt;not a framework&lt;/em&gt;. It’s a library to facilitate easy, compatible web component usage. When you use Polymer, your framework is the DOM. It’s also important to know that &lt;a href=&quot;http://blog.thoughtram.io/angular/2015/06/29/shadow-dom-strategies-in-angular2.html&quot;&gt;JS frameworks like Angular 2 are currently leveraging web component concepts&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;Web components may be the future, but there’s no reason not to get started with them today. Google uses Polymer in many of its sites, &lt;a href=&quot;http://webcomponents.org/articles/interview-with-joshua-peek/&quot;&gt;GitHub uses web components&lt;/a&gt;, and &lt;a href=&quot;https://youtu.be/fD2As5RmM8Q?t=15m56s&quot;&gt;there are&lt;/a&gt; many others leveraging these technologies. Custom elements are being built and shared with the community every day. In addition to Google’s &lt;a href=&quot;https://elements.polymer-project.org/&quot;&gt;Polymer Element Catalog&lt;/a&gt;, developers can take advantage of &lt;a href=&quot;https://vaadin.com/elements&quot;&gt;element libraries like Vaadin&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Polymer&lt;/strong&gt; delivers a way to use web components cross-browser while learning the native spec at the same time. Learning Polymer isn’t like tackling a massive JS framework: it’s a veneer over native features. You can build something simple or complex with web components. Polymer is intuitive to learn and the experience with web components will be invaluable for many projects, frameworks, and libraries to come.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;&lt;strong&gt;Polymer&lt;/strong&gt; delivers a way to use web components cross-browser while learning the native spec at the same time. Learning Polymer isn’t like tackling a massive JS framework: it’s a veneer over native features. You can build something simple or complex with web components. Polymer is intuitive to learn and the experience with web components will be invaluable for many projects, frameworks, and libraries to come.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Elixir & Phoenix Tutorial: Build an Authenticated App]]></title><description><![CDATA[TL;DR:  The  Elixir language  is dynamically typed with lots of helpful documentation. It builds on  Erlang  and the Erlang VM. You can be…]]></description><link>https://lukeoliff.com/elixir-and-phoenix-tutorial-build-an-authenticated-app/</link><guid isPermaLink="false">https://lukeoliff.com/elixir-and-phoenix-tutorial-build-an-authenticated-app/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; The &lt;a href=&quot;https://elixir-lang.org&quot;&gt;Elixir language&lt;/a&gt; is dynamically typed with lots of helpful documentation. It builds on &lt;a href=&quot;http://www.erlang.org&quot;&gt;Erlang&lt;/a&gt; and the Erlang VM. You can be up and running almost immediately. If your app compiles, it’s already deployable. The &lt;a href=&quot;http://phoenixframework.org&quot;&gt;Phoenix framework for Elixir apps&lt;/a&gt; is genuinely exciting to use. Let’s build an easy-to-use application that manages upcoming events, built with the Phoenix Framework and authenticated with &lt;a href=&quot;https://auth0.com&quot;&gt;Auth0&lt;/a&gt;. The final code can be found at the &lt;a href=&quot;https://github.com/lukeoliff/auth0-elixir-countdown&quot;&gt;auth0-elixir-countdown GitHub repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This post is original content developed by me for the &lt;a href=&quot;https://auth0.com/blog&quot;&gt;Auth0’s blog&lt;/a&gt; and has been re-posted here as part of an online portfolio with permission. Relevant attribution and canonical links exist. &lt;a href=&quot;https://auth0.com/blog/oauth2-the-complete-guide/&quot;&gt;Click here to see the original&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Elixir language&lt;/h2&gt;
+&lt;p&gt;Personally, I’ve been stuck under a rock as a developer. I’ve missed plenty of cool languages whilst playing with PHP—and the &lt;a href=&quot;https://elixir-lang.org&quot;&gt;Elixir language&lt;/a&gt; is no exception. Fortunately for me, Elixir (like PHP) is a dynamically typed language with lots of helpful documentation. My brain didn’t have to work &lt;strong&gt;&lt;em&gt;too&lt;/em&gt;&lt;/strong&gt; hard to build something practical and fun. Elixir builds on &lt;a href=&quot;http://www.erlang.org&quot;&gt;Erlang&lt;/a&gt; and leverages the Erlang VM. Its got a super small footprint and is surprisingly robust. You can be up and running almost immediately.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;It doesn’t stop there.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If your Elixir app compiles, it’s practically deployable already and the how-to guides come ready to talk you through getting it online with &lt;a href=&quot;https://www.heroku.com&quot;&gt;Heroku&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This article was written assuming you have a good understanding of functional programming languages. Elixir is a functional, concurrent, general-purpose programming language. It runs on the Erlang virtual machine (BEAM). Elixir builds on top of Erlang and shares the same abstractions for building distributed, fault-tolerant applications. Check out Elixir School for &lt;a href=&quot;https://elixirschool.com/en/&quot;&gt;lessons about the Elixir programming language&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Phoenix framework&lt;/h2&gt;
+&lt;p&gt;You can’t escape the &lt;a href=&quot;http://phoenixframework.org&quot;&gt;Phoenix framework&lt;/a&gt; if you’re looking for a good tool to build on in Elixir. They portray themselves as a fresh approach to tried and tested MVC development. Phoenix genuinely excites me. One aspect is just how well we can separate our concerns across an extremely well thought out, logical structure. Another is that it provides a fantastic command line interface.&lt;/p&gt;
+&lt;p&gt;Phoenix is an MVC framework written in Elixir and will be welcoming and comfortable to use for anyone familiar with &lt;a href=&quot;http://rubyonrails.org/&quot;&gt;Rails&lt;/a&gt; or &lt;a href=&quot;https://www.djangoproject.com/&quot;&gt;Django&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Phoenix framework provides the best of both worlds: high developer productivity and high application performance. It also has some interesting new twists like channels for implementing realtime features and pre-compiled templates for blazing speed.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;What should we build?&lt;/h2&gt;
+&lt;p&gt;With holiday season fast approaching and a growing family, we’re counting down the days when we can sit at home, in front of our (fake) fireplace and open some presents! :)&lt;/p&gt;
+&lt;p&gt;So, I thought, why not build an application where I can see countdowns to my favorite events?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://days.to/until/easter&quot;&gt;https://days.to/until/easter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.xmasclock.com&quot;&gt;http://www.xmasclock.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Getting ready&lt;/h2&gt;
+&lt;h3&gt;Install Elixir&lt;/h3&gt;
+&lt;p&gt;Follow the Elixir language install guide here: &lt;a href=&quot;http://elixir-lang.org/install.html&quot;&gt;http://elixir-lang.org/install.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Next, we run a &lt;code class=&quot;language-text&quot;&gt;mix&lt;/code&gt; command to install the Hex package manager. Mix is a build tool that provides tasks for creating, compiling, and testing Elixir projects, managing its dependencies, and more. If you know Ruby well, Mix is Rake, Bundler, and RubyGems combined.&lt;/p&gt;
+&lt;p&gt;Now use mix to install hex: &lt;a href=&quot;https://hexdocs.pm/mix/1.0.5/Mix.Tasks.Local.Hex.html&quot;&gt;https://hexdocs.pm/mix/1.0.5/Mix.Tasks.Local.Hex.html&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ mix local.hex&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h3&gt;Install Phoenix&lt;/h3&gt;
+&lt;p&gt;Phoenix needs at least Elixir 1.4 and Erlang 18 or later, run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ elixir -v
+Erlang/OTP 19 &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;erts-8.3&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;source&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;64-bit&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;smp:8:8&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;async-threads:10&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;hipe&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;kernel-poll:false&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;dtrace&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+Elixir 1.4.2&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Now we can install Phoenix v1.3.0:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new-1.3.0.ez&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h3&gt;Other requirements&lt;/h3&gt;
+&lt;p&gt;To follow this guide fully, make sure you also have PostgreSQL and npm installed.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://postgresguide.com/setup/install.html&quot;&gt;http://postgresguide.com/setup/install.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/getting-started/installing-node&quot;&gt;https://docs.npmjs.com/getting-started/installing-node&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you choose to use another database provider, make sure you edit the configuration appropriately.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://phoenixframework.readme.io/docs/using-mysql&quot;&gt;https://phoenixframework.readme.io/docs/using-mysql&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Our Phoenix application skeleton&lt;/h2&gt;
+&lt;p&gt;Now we can create a new application with the Phoenix framework. Let’s call our application “countdown”.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ mix phx.new countdown&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;It will now generate a skeleton application with config, controllers, routing, etc… Everything you need, really!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;* creating countdown/config/config.exs
+* creating countdown/config/dev.exs
+* creating countdown/config/prod.exs
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+* creating countdown/assets/static/favicon.ico&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;When prompted, fetch and install dependencies.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Phoenix uses &lt;a href=&quot;http://brunch.io&quot;&gt;Brunch.io&lt;/a&gt; for asset management. Brunch.io’s dependencies are installed via the node package manager, not mix. Phoenix will prompt us to install them at the end of the mix phx.new task. If we say “no” at that point, and if we don’t install those dependencies later with npm install, our application will raise errors when we try to start it, and our assets may not load properly. If we don’t want to use Brunch.io at all, we can simply pass —no-brunch to mix phx.new.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Fetch and &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; dependencies? &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;Yn&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Y&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;It will fetch and compile our dependencies.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;* running mix deps.get
+* running mix deps.compile
+* running &lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; assets &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; node node_modules/brunch/bin/brunch build&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Once it’s finished it will give you some helpful info to check that it’s all working, running your application, and even how to interact with your app inside IEx (Interactive Elixir).&lt;/p&gt;
+&lt;p&gt;Check out the following to learn more about &lt;a href=&quot;http://blog.plataformatec.com.br/2016/04/debugging-techniques-in-elixir-lang/&quot;&gt;debugging techniques in Elixir using IEx&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So let’s change directory and check we can run the application.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; countdown &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; mix phx.server&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;It shows us the compilation including any warnings or errors including deprecations or unused variables. Very cool.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Running CountdownWeb.Endpoint with Cowboy using http://localhost:4000
+Compiling 13 files &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;.ex&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; mime
+Compiling 1 &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;.ex&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+warning: String.strip/1 is deprecated, use String.trim/1
+  lib/mime.ex:28
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Sent 200 &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; 18ms&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Now we can take a look our app by visiting &lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt;. It should look something like…&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/phoenix_app-created-6156a13fa4805f4525300ae5e7620033-ba6af.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 782px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 76.72634271099746%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdtcEj//xAAXEAADAQAAAAAAAAAAAAAAAAAAAREg/9oACAEBAAEFAmXP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGxAAAwACAwAAAAAAAAAAAAAAAAEREJExQWH/2gAIAQEAAT8hhXnYlvexOkJ5j//aAAwDAQACAAMAAAAQM8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAZEAEBAQEBAQAAAAAAAAAAAAABEQAhMZH/2gAIAQEAAT8QuTPV4zRp9KaS6VVDJviYA8N//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Phoenix app starter&quot;
+        title=&quot;&quot;
+        src=&quot;/static/phoenix_app-created-6156a13fa4805f4525300ae5e7620033-ba6af.jpg&quot;
+        srcset=&quot;/static/phoenix_app-created-6156a13fa4805f4525300ae5e7620033-3f251.jpg 250w,
+/static/phoenix_app-created-6156a13fa4805f4525300ae5e7620033-2ce4e.jpg 500w,
+/static/phoenix_app-created-6156a13fa4805f4525300ae5e7620033-ba6af.jpg 782w&quot;
+        sizes=&quot;(max-width: 782px) 100vw, 782px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;Countdown Application&lt;/h2&gt;
+&lt;h3&gt;CRUD pattern&lt;/h3&gt;
+&lt;p&gt;We need to be able to store the events we are going to count down to.&lt;/p&gt;
+&lt;p&gt;Before we can start adding our data, we need to set up the database. Open up &lt;code class=&quot;language-text&quot;&gt;config/dev.exs&lt;/code&gt;, and edit the username and password near the bottom of the file. (They will both be set to “postgres” by default.)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-elixir&quot;&gt;&lt;code class=&quot;language-elixir&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+config &lt;span class=&quot;token atom symbol&quot;&gt;:countdown&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Countdown&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Repo&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;adapter:&lt;/span&gt; Ecto&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Adapters&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Postgres&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;username:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;auth0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;password:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;phoenixelixir&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;database:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;countdown&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;If you didn’t run it yet, let’s create the database now.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ mix ecto.create
+The database &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; Countdown.Repo has been created&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Now comes the backbone of our application, the CRUD actions for the events. In order to achieve this, Phoenix supports us with four different generators:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;mix phoenix.gen.html&lt;/code&gt;
+Gen HTML creates: model, view, controllers, repository, templates, tests&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;mix phoenix.gen.channel&lt;/code&gt;
+Gen Channel creates: channel and tests&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;mix phoenix.gen.json&lt;/code&gt;
+Gen JSON, for APIs really, creates: model, view, controllers, repository, tests&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;mix phoenix.gen.model&lt;/code&gt;
+Gen Model creates: model and repository&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We use the first generator which creates all resources and actions for us, the same as rails generators. We need to declare the name as a collection, singular and plural, and next the field names with types.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ mix phx.gen.html Events Event events title due:datetime&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;We’re pretty close to having a CRUD application ready to go!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;* creating lib/countdown_web/controllers/event_controller.ex
+* creating lib/countdown_web/templates/event/edit.html.eex
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+* injecting test/countdown/events/events_test.exs&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Go and edit &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/router.ex&lt;/code&gt; and place &lt;code class=&quot;language-text&quot;&gt;resources &amp;quot;/events&amp;quot;, EventController&lt;/code&gt; inside the &lt;code class=&quot;language-text&quot;&gt;CountdownWeb&lt;/code&gt; scope.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;   ...
+   scope &quot;/&quot;, CountdownWeb do
+     pipe_through :browser # Use the default browser stack
+
+     get &quot;/&quot;, PageController, :index
+&lt;span class=&quot;token inserted&quot;&gt;+    resources &quot;/events&quot;, EventController&lt;/span&gt;
+   end
+   ...&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Now we can migrate our new model into the database.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ mix ecto.migrate
+Compiling 10 files &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;.ex&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+Generated countdown app
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; Running Countdown.Repo.Migrations.CreateEvents.change/0 forward
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; create table events
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; Migrated &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; 0.0s&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Let’s run our server to make sure it’s still working.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ mix phx.server&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;If it is still working, this time we can head to &lt;a href=&quot;http://localhost:4000/events&quot;&gt;http://localhost:4000/events&lt;/a&gt; and see our new CRUD interfaces.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/phoenix_app-list-8a1856baba202c4a6c888d4fe0a02a3e-76553.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 764px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 49.083769633507856%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAQACBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe5pQmP/xAAVEAEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAQABBQIr/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAERIOH/2gAIAQEAAT8hm9ZELH//2gAMAwEAAgADAAAAEGAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxABAQACAwEAAAAAAAAAAAAAAREAISAxQZH/2gAIAQEAAT8QUpEK9ZBbL9cQ2XT6cP/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Phoenix CRUD List&quot;
+        title=&quot;&quot;
+        src=&quot;/static/phoenix_app-list-8a1856baba202c4a6c888d4fe0a02a3e-76553.jpg&quot;
+        srcset=&quot;/static/phoenix_app-list-8a1856baba202c4a6c888d4fe0a02a3e-d98b9.jpg 250w,
+/static/phoenix_app-list-8a1856baba202c4a6c888d4fe0a02a3e-0bf60.jpg 500w,
+/static/phoenix_app-list-8a1856baba202c4a6c888d4fe0a02a3e-76553.jpg 764w&quot;
+        sizes=&quot;(max-width: 764px) 100vw, 764px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Showing off our events&lt;/h3&gt;
+&lt;p&gt;We could list all events on our homepage, but as we are going to have countdown clocks, it’s important we only list future events. For this, we’re going to need a way to fetch events in the future. Let’s give it a go…&lt;/p&gt;
+&lt;p&gt;Edit &lt;code class=&quot;language-text&quot;&gt;lib/countdown/events/events.ex&lt;/code&gt; which is the repository module for our events.&lt;/p&gt;
+&lt;p&gt;You’ll find the query structure familiar, especially if you’ve used any well-known database abstraction layers, like Doctrine or Django ORM, or even if you are experienced with SQL itself. We’re going to be selecting &lt;code class=&quot;language-text&quot;&gt;from&lt;/code&gt; &lt;code class=&quot;language-text&quot;&gt;Countdown.Events.Event&lt;/code&gt; where &lt;code class=&quot;language-text&quot;&gt;due&lt;/code&gt; is greater than or equal to the current UTC timestamp.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-elixir&quot;&gt;&lt;code class=&quot;language-elixir&quot;&gt;query &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; from e &lt;span class=&quot;token operator&quot;&gt;in&lt;/span&gt; Countdown&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Events&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Event&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token attr-name&quot;&gt;where:&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;due &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;^&lt;/span&gt;DateTime&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;utc_now&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The docblock shows you how to run the method in IEx (interactive Elixir) and the format of the response, usually an example &lt;code class=&quot;language-text&quot;&gt;[%Map{}, ...]&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;   ...
+
+   def list_events do
+     Repo.all(Event)
+   end
+&lt;span class=&quot;token inserted&quot;&gt;+&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+   @doc &quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+   Returns the list of future events.&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+   ## Examples&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+       iex&gt; list_future_events()&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+       [%Event{}, ...]&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+   &quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+   def list_future_events do&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+     query = from e in Countdown.Events.Event,&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+       where: e.due &gt;= ^DateTime.utc_now&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+     Repo.all(query)&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+   end&lt;/span&gt;
+
+   ...&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Next, we add this to the controller and display some items on the homepage. Let’s edit our homepage controller at &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/controllers/page_controller.ex&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;   ...
+   use CountdownWeb, :controller
+&lt;span class=&quot;token inserted&quot;&gt;+  alias Countdown.Events&lt;/span&gt;
+ 
+   def index(conn, _params) do
+&lt;span class=&quot;token inserted&quot;&gt;+    events = Events.list_future_events()&lt;/span&gt;
+&lt;span class=&quot;token deleted&quot;&gt;-    render conn, &quot;index.html&quot;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    render conn, &quot;index.html&quot;, events: events&lt;/span&gt;
+   end
+   ...&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Nowe we’ll edit our homepage template at &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/templates/page/index.html.eex&lt;/code&gt; and add a very simple list of items, we’ll come back and make turn this into our countdown clocks later.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;   &amp;lt;div class=&quot;jumbotron&quot;&gt;
+     &amp;lt;h2&gt;&amp;lt;%= gettext &quot;Welcome to %{name}!&quot;, name: &quot;Phoenix&quot; %&gt;&amp;lt;/h2&gt;
+     &amp;lt;p class=&quot;lead&quot;&gt;A productive web framework that&amp;lt;br /&gt;does not compromise speed and maintainability.&amp;lt;/p&gt;
+   &amp;lt;/div&gt;
+
+&lt;span class=&quot;token inserted&quot;&gt;+  &amp;lt;ul&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  &amp;lt;%= for event &amp;lt;- @events do %&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    &amp;lt;li&gt;&amp;lt;%= event.title %&gt;, &amp;lt;%= event.due %&gt;&amp;lt;/li&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  &amp;lt;% end %&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  &amp;lt;/ul&gt;&lt;/span&gt;
+   ...&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; I’ve added last Christmas so we can see our query works, only showing future events.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/phoenix_app-list-last-xmas-93b5c378a9349bb931b60eb1dec9fdc8-c37b5.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 759px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 54.28194993412385%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe5qiKP/xAAWEAEBAQAAAAAAAAAAAAAAAAARECD/2gAIAQEAAQUCI4//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAZEAEAAgMAAAAAAAAAAAAAAAABABEgMfD/2gAIAQEAAT8hpywDcBh//9oADAMBAAIAAwAAABAzz//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABkQAQEAAwEAAAAAAAAAAAAAAAERACAxkf/aAAgBAQABPxBdVoV4Xc4C+uIsbGOn/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Phoenix adding Christmas&quot;
+        title=&quot;&quot;
+        src=&quot;/static/phoenix_app-list-last-xmas-93b5c378a9349bb931b60eb1dec9fdc8-c37b5.jpg&quot;
+        srcset=&quot;/static/phoenix_app-list-last-xmas-93b5c378a9349bb931b60eb1dec9fdc8-afe88.jpg 250w,
+/static/phoenix_app-list-last-xmas-93b5c378a9349bb931b60eb1dec9fdc8-66418.jpg 500w,
+/static/phoenix_app-list-last-xmas-93b5c378a9349bb931b60eb1dec9fdc8-c37b5.jpg 759w&quot;
+        sizes=&quot;(max-width: 759px) 100vw, 759px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Now we can see our list is limited to only events in the future. Perfect!&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/phoenix_app-home-list-7fa674c8a3bc69705809804c9c3e7b40-de178.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 775px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 77.54838709677419%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe1dgo//xAAXEAADAQAAAAAAAAAAAAAAAAAAEBEh/9oACAEBAAEFAsKo/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAZEAACAwEAAAAAAAAAAAAAAAABEQAQUZH/2gAIAQEAAT8hKb2AXAXRDK//2gAMAwEAAgADAAAAEAPP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGhABAQEAAwEAAAAAAAAAAAAAAREAITFh0f/aAAgBAQABPxAGUAdA/ufwG+rpLgNpNyTQDo3/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Phoenix future events list&quot;
+        title=&quot;&quot;
+        src=&quot;/static/phoenix_app-home-list-7fa674c8a3bc69705809804c9c3e7b40-de178.jpg&quot;
+        srcset=&quot;/static/phoenix_app-home-list-7fa674c8a3bc69705809804c9c3e7b40-9c1cf.jpg 250w,
+/static/phoenix_app-home-list-7fa674c8a3bc69705809804c9c3e7b40-5bd81.jpg 500w,
+/static/phoenix_app-home-list-7fa674c8a3bc69705809804c9c3e7b40-de178.jpg 775w&quot;
+        sizes=&quot;(max-width: 775px) 100vw, 775px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Adding our countdown clocks&lt;/h3&gt;
+&lt;p&gt;We’re going to use &lt;a href=&quot;http://flipclockjs.com&quot;&gt;FlipClock.js&lt;/a&gt; to create our countdown clocks. Edit the base app template &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/templates/layout/app.html.eex&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;    ...
+    &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;lt;%= static_path(@conn, &quot;/css/app.css&quot;) %&gt;&quot;&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+   &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css&quot; /&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+   &amp;lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&amp;lt;/script&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+   &amp;lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js&quot;&gt;&amp;lt;/script&gt;&lt;/span&gt;
+    ...&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Now edit the homepage template &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/templates/page/index.html.eex&lt;/code&gt; and replace it with the contents below. It uses a very basic jQuery loop to apply FlipClock to each &lt;code class=&quot;language-text&quot;&gt;.countdownClock&lt;/code&gt; element. The Bootstrap jumbotron is perfect for the quick and easy layout we want here because of its clear heading and very basic markup.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;%= for event &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;@events&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;jumbotron&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;h1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Days until &amp;lt;%= event.title %&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;span&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text-center&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;countdownClock&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;data-due&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&amp;lt;%= event.due %&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;span&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&amp;lt;% end %&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;
+&lt;span class=&quot;token function&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;document&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ready&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;.countdownClock&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; el&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; today &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; due &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;el&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;due&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+      &lt;span class=&quot;token function&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;el&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;FlipClock&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;due&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;today&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          clockFace&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;DailyCounter&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            countdown&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            showSeconds&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Our last little styling tweaks are just to center the countdown clocks and replace the logo with something more appropriate :)&lt;/p&gt;
+&lt;p&gt;Edit &lt;code class=&quot;language-text&quot;&gt;assets/css/app.css&lt;/code&gt; and add the following. You’re going to need your own logo!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* This file is for your main application css. */&lt;/span&gt;
+
+&lt;span class=&quot;token selector&quot;&gt;.auth0-logo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 200px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 80px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; inline-block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;background-image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token url&quot;&gt;url(http://placehold.jp/ffffff/003366/200x80.png?text=Auth0%20meets%0AElixir)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;background-repeat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; no-repeat&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;background-size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 200px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token selector&quot;&gt;.jumbotron .flip-clock-wrapper&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; center&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; relative&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; auto&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;margin-top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 8em&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; inline-block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Now edit &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/templates/layout/app.html.eex&lt;/code&gt; to use the new logo styling.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;&lt;span class=&quot;token deleted&quot;&gt;-       &amp;lt;span class=&quot;logo&quot;&gt;&amp;lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+       &amp;lt;span class=&quot;auth0-logo&quot;&gt;&amp;lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;We should see something like this, our own app in which we can control what events we display!&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/phoenix_app-home-styled-74a0c2a5fa518a4804f4e1b9aa8d5881-bf469.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 768px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 71.09375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHtoUmwH//EABsQAAIBBQAAAAAAAAAAAAAAAAABEgIDEBNB/9oACAEBAAEFAuyYiu3M0Y//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAdEAABAwUBAAAAAAAAAAAAAAABABAxAhEhMlGR/9oACAEBAAY/AoUMMkW4t6vW/8QAGxAAAwACAwAAAAAAAAAAAAAAAAERITFRYYH/2gAIAQEAAT8hbm5nZGq1Cz1AmPloSwf/2gAMAwEAAgADAAAAEFAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHxABAAIBAwUAAAAAAAAAAAAAAQARITFBYXGRodHw/9oACAEBAAE/EFaucOJ8Z7i3K4MvjfLoX17RYK7ybPEYpP/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Phoenix Countdown&quot;
+        title=&quot;&quot;
+        src=&quot;/static/phoenix_app-home-styled-74a0c2a5fa518a4804f4e1b9aa8d5881-bf469.jpg&quot;
+        srcset=&quot;/static/phoenix_app-home-styled-74a0c2a5fa518a4804f4e1b9aa8d5881-87434.jpg 250w,
+/static/phoenix_app-home-styled-74a0c2a5fa518a4804f4e1b9aa8d5881-b8c9c.jpg 500w,
+/static/phoenix_app-home-styled-74a0c2a5fa518a4804f4e1b9aa8d5881-bf469.jpg 768w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;Authentication with Auth0&lt;/h2&gt;
+&lt;p&gt;Last of all, we’ll secure administration of events with Auth0’s &lt;a href=&quot;https://auth0.com/docs/hosted-pages/login&quot;&gt;Centralized Login Page&lt;/a&gt;. Providing us with Auth0’s &lt;a href=&quot;http://jwt.io&quot;&gt;JSON Web Token&lt;/a&gt;, we will be able to securely verify users inside the application.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-46973.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1000px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75.88717015468607%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEAv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAVTPSaGH/8QAGBABAQEBAQAAAAAAAAAAAAAAAwIBBBP/2gAIAQEAAQUC1k9nTZnmS6jQX2fFWecriP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB8QAAEDAwUAAAAAAAAAAAAAAAEAAhIRMUETISJCgf/aAAgBAQAGPwIie0lwc66Jccouj2rdAadPUQ4ZX//EABoQAQADAQEBAAAAAAAAAAAAAAEAETEhUUH/2gAIAQEAAT8h6ywz5cGpnVkRivEMAJ4PYaODeZUQetn/2gAMAwEAAgADAAAAEDjP/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARMf/aAAgBAwEBPxCHV//EABYRAAMAAAAAAAAAAAAAAAAAAAEQEf/aAAgBAgEBPxChf//EABsQAQADAQEBAQAAAAAAAAAAAAEAESFRMWHR/9oACAEBAAE/ED10qoMw5yOsFKXlPT5BYthQMo5LJ5DCzUBp69l5UMirAByj8n//2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Auth0 hosted login screen&quot;
+        title=&quot;&quot;
+        src=&quot;/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-2b053.jpg&quot;
+        srcset=&quot;/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-8a2b5.jpg 250w,
+/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-b0cf5.jpg 500w,
+/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-2b053.jpg 1000w,
+/static/angular-aside-login-4e915c21980d0a8bc98897b2c94729b4-46973.jpg 1099w&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Sign Up for Auth0&lt;/h3&gt;
+&lt;p&gt;You’ll need an &lt;a href=&quot;https://auth0.com&quot;&gt;Auth0&lt;/a&gt; account to manage authentication. You can sign up for a &lt;a href=&quot;https://auth0.com/signup&quot;&gt;free account here&lt;/a&gt;. Next, set up an Auth0 Client and API so Auth0 can interface with your app and API.&lt;/p&gt;
+&lt;h3&gt;Set Up a Client App&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to your &lt;a href=&quot;https://manage.auth0.com/#/&quot;&gt;&lt;strong&gt;Auth0 Dashboard&lt;/strong&gt;&lt;/a&gt; and click the ”&lt;a href=&quot;https://manage.auth0.com/#/clients/create&quot;&gt;create a new client&lt;/a&gt;” button. &lt;/li&gt;
+&lt;li&gt;Name your new app and select “Regular Web Applications”. &lt;/li&gt;
+&lt;li&gt;In the &lt;strong&gt;Settings&lt;/strong&gt; for your new Auth0 client app, add &lt;code class=&quot;language-text&quot;&gt;http://0.0.0.0:4000/auth/auth0/callback&lt;/code&gt; to the &lt;strong&gt;Allowed Callback URLs&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click the “Save Changes” button.&lt;/li&gt;
+&lt;li&gt;If you’d like, you can &lt;a href=&quot;https://manage.auth0.com/#/connections/social&quot;&gt;set up some social connections&lt;/a&gt;. You can then enable them for your app in the &lt;strong&gt;Client&lt;/strong&gt; options under the &lt;strong&gt;Connections&lt;/strong&gt; tab. The example shown in the screenshot above utilizes username/password database, Facebook, Google, and Twitter.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: On the &lt;strong&gt;OAuth&lt;/strong&gt; tab of &lt;strong&gt;Advanced Settings&lt;/strong&gt; (at the bottom of the &lt;strong&gt;Settings&lt;/strong&gt; section) you can see the &lt;strong&gt;JsonWebToken Signature Algorithm&lt;/strong&gt; is set to &lt;code class=&quot;language-text&quot;&gt;RS256&lt;/code&gt;. This is now the default, &lt;a href=&quot;https://community.auth0.com/questions/6942/jwt-signing-algorithms-rs256-vs-hs256&quot;&gt;read more about RS256 vs HS256 here&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Install the Ueberauth module&lt;/h3&gt;
+&lt;p&gt;Edit &lt;code class=&quot;language-text&quot;&gt;mix.exs&lt;/code&gt; and add the &lt;code class=&quot;language-text&quot;&gt;Ueberauth&lt;/code&gt; module to your dependencies and application compilation order.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;   ...
+
+   def application do
+     [
+       mod: {Countdown.Application, []},
+&lt;span class=&quot;token deleted&quot;&gt;-      extra_applications: [:logger, :runtime_tools]&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+      extra_applications: [:ueberauth, :ueberauth_auth0, :logger, :runtime_tools]&lt;/span&gt;
+     ]
+   end
+
+   ...
+
+   defp deps do
+     [
+       ...
+&lt;span class=&quot;token deleted&quot;&gt;-      {:cowboy, &quot;~&gt; 1.0&quot;}&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+      {:cowboy, &quot;~&gt; 1.0&quot;},&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+      {:ueberauth, &quot;~&gt; 0.4&quot;},&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+      {:ueberauth_auth0, &quot;~&gt; 0.3&quot;}&lt;/span&gt;
+     ]
+   end
+
+   ...&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;You can also use a GitHub repository as your package source to use the latest changes. Beware—it might have breaking and unstable code. For example:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;   ...
+
+   defp deps do
+     [
+       ...
+&lt;span class=&quot;token deleted&quot;&gt;-      {:cowboy, &quot;~&gt; 1.0&quot;}&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+      {:cowboy, &quot;~&gt; 1.0&quot;},&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+      {:ueberauth_auth0, github: &quot;sntran/ueberauth_auth0&quot;}&lt;/span&gt;
+     ]
+   end
+
+   ...&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Now that it’s configured we need to install our dependencies.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ mix deps.get&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Edit &lt;code class=&quot;language-text&quot;&gt;config/config.exs&lt;/code&gt; to configure &lt;code class=&quot;language-text&quot;&gt;Ueberauth&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;...
+import_config &quot;#{Mix.env}.exs&quot;
+
+&lt;span class=&quot;token inserted&quot;&gt;+&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+# Configures Ueberauth&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+config :ueberauth, Ueberauth,&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  providers: [&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    auth0: { Ueberauth.Strategy.Auth0, [] },&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  ]&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+# Configures Ueberauth&apos;s Auth0 auth provider&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+config :ueberauth, Ueberauth.Strategy.Auth0.OAuth,&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  domain: System.get_env(&quot;AUTH0_DOMAIN&quot;),&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  client_id: System.get_env(&quot;AUTH0_CLIENT_ID&quot;),&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  client_secret: System.get_env(&quot;AUTH0_CLIENT_SECRET&quot;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Configured like this, we can now control our config through environment variables. For more information on how to define these check out &lt;a href=&quot;http://www.tricksofthetrades.net/2015/06/14/notes-bash-env-variables/&quot;&gt;this guide on bash environment variables&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Later, we’ll be looking at starting our application with environment variables included. You can choose to set them up however you wish, but they’re required at compile time to make our authentication work.&lt;/p&gt;
+&lt;p&gt;An example of how to launch the application with environment variables:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ AUTH0_DOMAIN&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Your domain&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; \
+  AUTH0_CLIENT_ID&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Your client ID&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; \
+  AUTH0_CLIENT_SECRET&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Your client secret&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; \
+  mix phx.server&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h3&gt;Setup authentication&lt;/h3&gt;
+&lt;p&gt;First, we’ll create a new model for reading user info. Open a new file at &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/models/user_from_auth.ex&lt;/code&gt;. This model, courtesy of &lt;a href=&quot;https://twitter.com/IT_Supertramp&quot;&gt;Thomas Peitz&lt;/a&gt;, will give us easy access to details obtained back from authentication payload. It also supports multiple formats of profile information. For example, providers like GitHub and Facebook give a profile image url, slightly different.
+&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-elixir&quot;&gt;&lt;code class=&quot;language-elixir&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;defmodule&lt;/span&gt; UserFromAuth &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;token attribute variable&quot;&gt;@moduledoc&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&quot;
+  Retrieve the user information from an auth request
+  &quot;&quot;&quot;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;require&lt;/span&gt; Logger
+  &lt;span class=&quot;token keyword&quot;&gt;require&lt;/span&gt; Poison
+
+  &lt;span class=&quot;token keyword&quot;&gt;alias&lt;/span&gt; Ueberauth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Auth
+
+  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; find_or_create&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;Auth&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;provider:&lt;/span&gt; &lt;span class=&quot;token atom symbol&quot;&gt;:identity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; validate_pass&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;credentials&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;token atom symbol&quot;&gt;:ok&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:ok&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; basic_info&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reason&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reason&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; find_or_create&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;Auth&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:ok&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; basic_info&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;# github does it this way&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;defp&lt;/span&gt; avatar_from_auth&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;info:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;urls:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;avatar_url:&lt;/span&gt; image&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;do:&lt;/span&gt; image
+
+  &lt;span class=&quot;token comment&quot;&gt;# facebook does it this way&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;defp&lt;/span&gt; avatar_from_auth&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;info:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;image:&lt;/span&gt; image&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;do:&lt;/span&gt; image
+
+  &lt;span class=&quot;token comment&quot;&gt;# default case if nothing matches&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;defp&lt;/span&gt; avatar_from_auth&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; auth &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    Logger&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;warn auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;provider &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; needs to find an avatar URL!&quot;&lt;/span&gt;
+    Logger&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;debug&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Poison&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;encode!&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token boolean&quot;&gt;nil&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;defp&lt;/span&gt; basic_info&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;id:&lt;/span&gt; auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;uid&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name:&lt;/span&gt; name_from_auth&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;avatar:&lt;/span&gt; avatar_from_auth&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;defp&lt;/span&gt; name_from_auth&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+      auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name
+    &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;
+      name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;first_name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;last_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+      &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; Enum&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;filter&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token capture function&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token argument variable&quot;&gt;&amp;amp;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;token argument variable&quot;&gt;&amp;amp;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+      &lt;span class=&quot;token keyword&quot;&gt;cond&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+        length&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nickname
+        &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; Enum&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;defp&lt;/span&gt; validate_pass&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;other:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;password:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Password required&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;defp&lt;/span&gt; validate_pass&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;other:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;password:&lt;/span&gt; pw&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;password_confirmation:&lt;/span&gt; pw&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;token atom symbol&quot;&gt;:ok&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;defp&lt;/span&gt; validate_pass&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;other:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;password:&lt;/span&gt; _&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Passwords do not match&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;defp&lt;/span&gt; validate_pass&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;_&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;do:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Password Required&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Next, create a new controller. Call it &lt;code class=&quot;language-text&quot;&gt;AuthController&lt;/code&gt; and create it at &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/controllers/auth_controller.ex&lt;/code&gt;. This controller has a few responsibilities:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Callback&lt;/strong&gt; Handles the success or failure of our auth request. On success, stores the user in a session.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logout&lt;/strong&gt; Drops the session.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Helpers&lt;/strong&gt; Providers a basepath for our &lt;code class=&quot;language-text&quot;&gt;Ueberauth&lt;/code&gt; strategy helpers, meaning &lt;code class=&quot;language-text&quot;&gt;/auth/auth0&lt;/code&gt; will now allow us to authenticate with the Auth0 provider we setup.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-elixir&quot;&gt;&lt;code class=&quot;language-elixir&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;defmodule&lt;/span&gt; CountdownWeb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;AuthController &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;use&lt;/span&gt; CountdownWeb&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token atom symbol&quot;&gt;:controller&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;alias&lt;/span&gt; CountdownWeb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Helpers
+
+  plug Ueberauth
+
+  &lt;span class=&quot;token keyword&quot;&gt;alias&lt;/span&gt; Ueberauth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Strategy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Helpers
+
+  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; logout&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;conn&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; _params&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    conn
+    &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; put_flash&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:info&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;You have been logged out!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; configure_session&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;drop:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; redirect&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;to:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; callback&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;assigns:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;ueberauth_failure:&lt;/span&gt; _fails&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; conn&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; _params&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    conn
+    &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; put_flash&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Failed to authenticate.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; redirect&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;to:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; callback&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;assigns:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;ueberauth_auth:&lt;/span&gt; auth&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; conn&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; _params&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; UserFromAuth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;find_or_create&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:ok&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; user&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;
+        conn
+        &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; put_flash&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:info&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Successfully authenticated as &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&gt;&lt;/span&gt; user&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; put_session&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:current_user&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; user&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; redirect&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;to:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reason&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;
+        conn
+        &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; put_flash&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reason&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;|&gt;&lt;/span&gt; redirect&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;to:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Now we need to add endpoints for the controller to the router. Edit &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/router.ex&lt;/code&gt; to configure these routes.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt; defmodule CountdownWeb.Router do
+   use CountdownWeb, :router
+&lt;span class=&quot;token inserted&quot;&gt;+  require Ueberauth&lt;/span&gt;
+
+...
+
+&lt;span class=&quot;token inserted&quot;&gt;+  scope &quot;/auth&quot;, CountdownWeb do&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    pipe_through :browser&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    get &quot;/:provider&quot;, AuthController, :request&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    get &quot;/:provider/callback&quot;, AuthController, :callback&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    post &quot;/:provider/callback&quot;, AuthController, :callback&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  end&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+&lt;/span&gt;
+
+...
+
+   scope &quot;/&quot;, CountdownWeb do
+      pipe_through :browser # Use the default browser stack
+      get &quot;/&quot;, PageController, :index
+&lt;span class=&quot;token inserted&quot;&gt;+     get &quot;/logout&quot;, AuthController, :logout&lt;/span&gt;
+
+...&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h3&gt;Secure our application&lt;/h3&gt;
+&lt;p&gt;To secure our events controller, edit &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/controllers/event_controller.ex&lt;/code&gt; and add a &lt;code class=&quot;language-text&quot;&gt;Plug&lt;/code&gt; which will be called by the controller prior to every endpoint. This will now check our current session for a verified user.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;   ...
+   alias Countdown.Events.Event
+&lt;span class=&quot;token inserted&quot;&gt;+&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  plug :secure&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  defp secure(conn, _params) do&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    user = get_session(conn, :current_user)&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    case user do&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+     nil -&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+         conn |&gt; redirect(to: &quot;/auth/auth0&quot;) |&gt; halt&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+     _ -&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+       conn&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+       |&gt; assign(:current_user, user)&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    end&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+  end&lt;/span&gt;
+
+   def index(conn, _params) do
+   ...&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Now our &lt;code class=&quot;language-text&quot;&gt;/events&lt;/code&gt; endpoints are secured, we just need a helpful menu to navigate the site.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nearly there!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Lets edit our &lt;code class=&quot;language-text&quot;&gt;PageController&lt;/code&gt; found at &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/controllers/page_controller.ex&lt;/code&gt; to add our &lt;code class=&quot;language-text&quot;&gt;current_user&lt;/code&gt; property, allowing us to access it elsewhere.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;   def index(conn, _params) do
+     events = Events.list_future_events()
+&lt;span class=&quot;token deleted&quot;&gt;-    render conn, &quot;index.html&quot;, events: events&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    render conn, &quot;index.html&quot;, events: events, current_user: get_session(conn, :current_user)&lt;/span&gt;
+   end&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;The base app template needs to be edited &lt;code class=&quot;language-text&quot;&gt;lib/countdown_web/templates/layout/app.html.eex&lt;/code&gt;, it is going to check for our current user. If we don’t have one, we’ll show a link to login.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;...
+   &amp;lt;ul class=&quot;nav nav-pills pull-right&quot;&gt;
+&lt;span class=&quot;token deleted&quot;&gt;-    &amp;lt;li&gt;&amp;lt;a href=&quot;http://www.phoenixframework.org/docs&quot;&gt;Get Started&amp;lt;/a&gt;&amp;lt;/li&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    &amp;lt;%= if @current_user do %&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    &amp;lt;li&gt;&amp;lt;a href=&quot;/&quot;&gt;Home&amp;lt;/a&gt;&amp;lt;/li&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    &amp;lt;li&gt;&amp;lt;a href=&quot;/events&quot;&gt;Events&amp;lt;/a&gt;&amp;lt;/li&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    &amp;lt;li class=&quot;active&quot;&gt;&amp;lt;a href=&quot;/logout&quot;&gt;Logout&amp;lt;/a&gt;&amp;lt;/li&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    &amp;lt;% else %&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    &amp;lt;li&gt;&amp;lt;a href=&quot;/&quot;&gt;Home&amp;lt;/a&gt;&amp;lt;/li&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    &amp;lt;li&gt;&amp;lt;a href=&quot;/auth/auth0&quot;&gt;Login&amp;lt;/a&gt;&amp;lt;/li&gt;&lt;/span&gt;
+&lt;span class=&quot;token inserted&quot;&gt;+    &amp;lt;% end %&gt;&lt;/span&gt;
+   &amp;lt;/ul&gt;
+...&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Start our application, remembering our environment variables. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ AUTH0_DOMAIN&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Your domain&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; \
+  AUTH0_CLIENT_ID&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Your client ID&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; \
+  AUTH0_CLIENT_SECRET&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Your client secret&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; \
+  mix phx.server&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Log in, have a play and it should look something like this!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/phoenix_app-end-ebc5ccfb60adbd779f3feda6309eae8f-eb434.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 774px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 70.15503875968993%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIDBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHbEhLQwf/EABkQAQADAQEAAAAAAAAAAAAAAAABAhITQf/aAAgBAQABBQL3SF6bcUP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAbEAABBAMAAAAAAAAAAAAAAAABAAIQMTIzcf/aAAgBAQAGPwKlRjIji2Oj/8QAGxAAAgMAAwAAAAAAAAAAAAAAAAERITFhgaH/2gAIAQEAAT8hbjZkizN3yTlhfY9s6JR//9oADAMBAAIAAwAAABDTD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB0QAQACAQUBAAAAAAAAAAAAAAEAETEhYYHR4fD/2gAIAQEAAT8Qtq3RifcdwCqFVopqPkqdVcotEyeCUUn/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Phoenix Countdown End&quot;
+        title=&quot;&quot;
+        src=&quot;/static/phoenix_app-end-ebc5ccfb60adbd779f3feda6309eae8f-eb434.jpg&quot;
+        srcset=&quot;/static/phoenix_app-end-ebc5ccfb60adbd779f3feda6309eae8f-71c85.jpg 250w,
+/static/phoenix_app-end-ebc5ccfb60adbd779f3feda6309eae8f-634c2.jpg 500w,
+/static/phoenix_app-end-ebc5ccfb60adbd779f3feda6309eae8f-eb434.jpg 774w&quot;
+        sizes=&quot;(max-width: 774px) 100vw, 774px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;Credits&lt;/h2&gt;
+&lt;p&gt;A big thanks to &lt;a href=&quot;https://twitter.com/IT_Supertramp&quot;&gt;Thomas Peitz&lt;/a&gt; for his help and suggestions.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;We’ve learned how to build a basic CRUD application in Elixir. It utilizes the Phoenix framework, allowing us to create applications in a straightforward way using the simple command line interface. We’ve also learned how to write some basic security using &lt;a href=&quot;https://auth0.com&quot;&gt;Auth0&lt;/a&gt; inside Elixir.&lt;/p&gt;
+&lt;p&gt;To learn more about the Phoenix Framework, check out &lt;a href=&quot;http://phoenixframework.org&quot;&gt;phoenixframework.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To learn more about Elixir, check out &lt;a href=&quot;https://elixir-lang.org&quot;&gt;elixir-lang.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I went into this project with no prior knowledge of Elixir or Phoenix. The result is, I believe I can probably deliver a robust application that is production ready and deployable faster using Phoenix than I could in some other languages. It has been an amazing and eye-opening experience and I’m looking forward to getting the opportunity to pick up more languages and doing something cool with them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The final code can be found at the &lt;a href=&quot;https://github.com/lukeoliff/auth0-elixir-countdown&quot;&gt;auth0-elixir-countdown GitHub repo&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
